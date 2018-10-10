@@ -1,0 +1,72 @@
+Romeo Rizzi was born in 1967. He received the Laurea degree in Electronic
+Engineering from the Politecnico di Milano in 1991,
+and in 1997 received a Ph.D. in Computational Mathematics and
+Informatics from the University of Padova, Italy.
+Afterwards, he held Post-Doc and other temporary positions
+at research centers like CWI (Amsterdam, Holland), BRICS (Aarhus,
+Denmark) and IRST (Trento, Italy).  
+In 2001, he became Assistant Professor at the University of Trento (INF/01).
+Since 2005, he is Associate Professor by the University of Udine (MAT/09).
+He has a background in Operations Research
+and his main interests are in Combinatorial Optimization and Algorithms.
+He is an Area Editor of 4OR and acts as a Reviewer for the
+American Mathematical Society.
+He has published more than 50 articles in a broad range of scientific journals
+in the areas of Discrete Mathematics, Combinatorics, and Algorithms.
+He has mainly contributed within the following broad subareas:
+Combinatorial Optimization, Graph Theory, Computational Biology,
+Approximation Algorithms, Parallel Architectures and Algorithms.
+Prior to entering academics,
+he has had teaching experiences in high schools of various profiles,
+ranging from commerce, to technics (ITIS), to lyceums.
+In 2000, he got national qualification for teaching in Mathematics (047A)
+and in Physics (048A).
+Even after entering academics,
+he kept on collaborating with highschools and Sovrintendenze Scolastiche (Trento and Bolzano)
+in initiatives related to the iOi (the olympics in informatics) at a local level.
+Since 2004, he has been a trainer of the Italian team for the iOi
+under commission from AICA.
+Nowadays, he collaborates with highschools in Udine, Trento, Bolzano, and Cles
+in initiatives related to the iOi.
+Inside the University, and beyond his due didactics,
+he has also hold a few PhD courses and other extra courses, both internal and external.
+During his scientific career, he has opened and closed a few mathematical conjectures
+and has been a visitor in Vancouver (Canada), Victoria (Canada), Scherbrook (Canada),
+Grenoble (France), Paris (Orsay, France), Nice (France), and Newcastle (Australia).
+Whenever possible he lives in Trento and Cavareno,
+where he mountainbikes with his children.
+
+
+FIVE MOST REPRESENTATIVE PUBLICATIONS:
+
+  1. Romeo Rizzi,
+   Indecomposable r-graphs and some other counterexamples,
+   Journal of Graph Theory
+   32(1) (1999) 1--15.
+
+  2. Ajai Kapoor, Romeo Rizzi,
+   Edge-coloring bipartite graphs,
+   Journal of Algorithms
+   34(2) (2000) 390--396.
+
+  3. Romeo Rizzi,
+   On minimizing symmetric set functions,
+   Combinatorica
+   20(3) (2000) 445--450.
+
+  4. Alessandro Mei, Romeo Rizzi,
+   Routing Permutations in Partitioned Optical Passive Stars Networks,
+   Journal of Parallel and Distributed Computing
+   63(9) (2003) 847--852.
+     - this paper received the Best Paper Award IPDPS 2002.
+
+  5. Vineet Bafna, Sorin Istrail, Giuseppe Lancia, Romeo Rizzi,
+   Polynomial and APX-hard cases of the Individual Haplotyping Problem,
+   Theoretical Computer Science
+   335(1) (2005) 109--125.
+
+
+
+
+
+ 

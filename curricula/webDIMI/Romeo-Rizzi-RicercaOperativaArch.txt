@@ -1,0 +1,133 @@
+titolo corso: Ricerca Operativa.
+corso di laurea: Laurea Specialistica in Scienze dell'Architettura.
+anno: 2
+quadrimestre: 2
+crediti: 5
+Anno accademico:   2006/2007
+
+Testi consigliati: al momento nessuno. Spero riuscire produrre delle dispense. 
+
+Propedeuticità obbligatorie: nessuna 
+
+Totale ore lezioni ed esercitazioni 50  
+ di cui di esercitazione 0
+   
+Ulteriori attività di didattica assistita Ore  0   
+    
+ Totale ore dedicate ad altre attività di didattica assistita 0  
+ Totale ore complessive 50  
+
+
+Modalità d'esame: Prova scritta e orale 
+
+
+Segue ora il programma, prima in versione inglese, poi in italiano.
+
+
+Operations Research & Management
+
+Aims & Learning Objectives: 
+To provide the first and main analytic models in construction project management.
+By means of this unit, the student should get aware
+of a range of approaches, procedures, models and techniques,
+and should have begun to understand how they may be used in managing a construction project.
+ 
+Content: 
+1. Elements of Decision theory.
+     Managing uncertainty and variation.
+     Forecasting, sensitivity, probability and expected values.
+     Decision strategies.
+     Dynamic Programming (DP).
+     Risk analysis and management.
+     Risk and utility functions.
+     Simulation.
+
+2. Models and dependency flow charts for sequencing and timing the sub-tasks in a big project.
+     PERT.
+     CPM.
+
+3. Linear Programming (LP).
+     Modeling.
+     Simplex method.
+     Duality theory.
+
+4. Combinatorial Optimization.
+     Remarks on computational limitations.
+     Maximum flows and optimal assignment models.
+     Tools and approaches for integer linear programming.
+
+5. [only if time permits - (*)] First notions in Game theory.
+     Equilibria.
+     Coalitions.
+     Politics for the promotion of socially desirable equilibria and behaviours.
+
+6. [only if time permits - (*)] Optimization in structural design.
+     Optimal designs: a role for Linear Programming. 
+
+7. [only if time permits - (*)] First steps in Queuing theory.
+      Simulation.
+
+
+Note: Of the topics tagged with an asterisk (*),
+we will possibly cover one, following the indications of the students.
+
+---------------------------------------------------------------------------------
+Ricerca Operativa e strumenti analitici per il Management.
+
+Obiettivi del corso:
+Fornire i primissimi e principali modelli analitici
+che si sono affermati nella gestione di progetti.
+Attraverso questo corso,
+lo studente riceve l'opportunita' di divenire consapevole
+dell'esistenza e dei punti di forza di una varieta' di approcci, metodi,
+modelli e tecniche di stampo analitico ed impostazione matematica
+proposti ed affermatisi nella gestione dei progetti.
+Si confida lo studente possa apprezzare il possibile ruolo del bagaglio culturale
+sottostante e degli approcci operativi descritti.
+Di fatto, ci si augura che strumeti software ispirati a questi
+modelli e concetti matematici trovino impiego, e risultino quindi di notevole impatto,
+nella gestione di progetti edili condotta nella futura
+attivita' professionale dello studente.
+ 
+ 
+Contenuti: 
+1. Elementi di Teoria delle Decisioni.
+     Gestire l'incertezza e la variabilita'.
+     Previsione di scenari possibili, sensitivita', probabilita' e valori attesi.
+     Strategie di decisione.
+     Programmazione Dinamica (DP).
+     Analisi e gestione dei rischi.
+     Funzioni di rischio e di utilita'.
+     La tecnica della simulazione.
+
+2. Modelli e diagrammi delle dipendenze per il sequenziamento e la tempistica
+   nella gestione  delle attivita' di un progetto complesso ed articolato.
+     PERT.
+     CPM.
+
+3. La Programmazione Lineare (LP).
+     Modellizzazzione di svariati problemi come problemi di PL.
+     Metodo del simplesso.
+     Teoria della dualita'.
+
+4. Ottimizzazione Combinatoria.
+     Un quadro sui limiti alla potenza computazionale.
+     Modelli di massimo flusso e di assegnamento ottimo.
+     Strumenti ed approcci per la programmazione lineare intera.
+
+5. [solo se rientriamo nei tempi - (*)] Prime nozioni in Teoria dei Giochi.
+     Gli equilibri.
+     Le coalizioni.
+     Progettazione ed architettura di politiche per la promozione di equilibri e comportamenti
+     desiderabili per una comunita'.
+
+6. [solo se rientriamo nei tempi - (*)] Ottimizzazione nel progetto strutturale.
+     Design ottimo: un ruolo per la programmazione lineare. 
+
+7. [solo se rientriamo nei tempi - (*)] Primi passi in Teoria delle Code.
+     Simulazione.
+
+Nota: Degli argomenti contrassegnati da asterisco (*),
+forse ne potremo affrontare 1 o 2, seguendo le indicazioni fornite
+e gli interessi maturati dagli studenti.
+

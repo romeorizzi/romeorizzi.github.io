@@ -1,0 +1,2 @@
+Il mio settore è la Ricerca operativa, e mi interesso di algoritmi, ottimizzazione combinaria, teoria dei grafi, e matematica discreta in generale.
+Attualmente lavoro a nuovi algoritmi per basi di cicli, reti di constraints temporali, calcolo di indici di potere in situazioni di voto, problemi di pattern matching e discovery su stringhe strutturate e di ricerca di motivi e listing su grafi con applicazioni in ambito bioinformatico. Sono autore di un centinaio di pubblicazioni internazionali.

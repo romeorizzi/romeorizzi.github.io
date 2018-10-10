@@ -1,0 +1,21 @@
+01/A6 - I Fascia
+
+Abilitazioni valide dal 20/12/2013 al 20/12/2019
+
+Elenco degli Abilitati
+#	Cognome	Nome	Abilitato	Validità abilitazione
+1	AMALDI	Edoardo	
+2	BALDACCI	Roberto	
+3	BERALDI	Patrizia	
+4	BERTAZZI	Luca	
+5	CARAMIA	Massimiliano	
+6	DANIELE	Patrizia	
+7	MANSINI	Renata	
+8	MONTEMANNI	Roberto	
+9	ORIOLO	Gianpaolo	
+10	PFERSCHY	Ulrich	
+11	RINALDI	Giovanni	
+12	RIZZI	Romeo	
+13	SANGUINETI	Marcello	
+14	SCIANDRONE	Marco	
+15	SCUTELLA'	Maria Grazia	

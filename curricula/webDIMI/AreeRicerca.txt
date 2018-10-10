@@ -1,0 +1,42 @@
+Interessi ed Aree di Ricerca:
+
+- Ricerca Operativa.
+    Problemi di cammini minimi, di taglio minimo, e di routing.
+    Problemi di selezione di portafoglio.
+    Problemi di power management.
+
+- Biologia Computazionale.
+    Haplotyping di individui e di popolazioni,
+    NMR peack analysis,
+    Confronto ed analisi di stringhe con struttura.
+
+- Ottimizzazione Combinatoria.
+    Grafi,
+    Matroidi,
+    Colorazione di archi,
+    Fattorizzazione di grafi,
+    Teoria e problemi di matching,
+    Basi di cicli,
+    Problemi di packing e covering,
+    Problemi di channel assignment.
+
+- Algoritmi.
+    Algoritmi Polinomiali e Pseudopolinomiali,
+    Algoritmi Approssimati,
+    PTAS e FPTAS,
+    Algoritmi Distribuiti,
+    Algoritmi Paralleli,
+    Algoritmi Randomizzati,
+    Algoritmi Euristici.
+
+- Complessita` Computazionale.
+    Risultati di NP-completezza,
+    Buone caratterizzazioni,
+    Risultati di APX-hardness ed inapprossimabilita`.
+
+- Calcolo ed Architetture Parallele.
+    Analisi delle POPS-networks.
+
+- Reti.
+    Problemi di frequency assignment e di channel assignment.
+    Problemi di scheduling.

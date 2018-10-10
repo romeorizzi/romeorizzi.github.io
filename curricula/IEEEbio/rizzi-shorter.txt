@@ -1,0 +1,6 @@
+Romeo Rizzi received his Ph.D. by the Department of Mathematics of Padova University, Italy, in 1997.
+He held researcher positions at centers like CWI (Amsterdam, Netherlands), BRICS (Aarhus, Denmark) and IRST (Trento, Italy), University of Trento and University of Udine, Italy.
+Since 2011, he has been an associate professor at the University of Verona, Italy. He has a background in Operations Research and his
+main interests are in Combinatorial Optimization and Algorithms.
+He is an Area Editor of 4OR. He published a hundred research papers in a broad range of scientific journals in the areas of Discrete Mathematics, Combinatorics, and Algorithms. He also authored several papers in conference proceedings, and invited chapters. Since 2004,
+he has intensively acted as a trainer of the Italian team for the iOi.

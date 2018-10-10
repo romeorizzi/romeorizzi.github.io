@@ -1,0 +1,66 @@
+Romeo Rizzi e` del 1967.
+Nel 1991 si laurea in Ingegneria Elettronica al Politecnico di Milano (100 e lode).
+Nel 1997 conclude un Ph.D. in Matematica Computazionale ed Informatica Matematica
+presso l'Universita` di Padova.
+In seguito, ricopre posizioni post-Dottorato ed altre posizioni temporanee
+presso centri di ricerca come CWI (Amsterdam, Holland), BRICS (Aarhus,
+Denmark) ed IRST (Trento, Italy).  
+Nel 2001 entra come Ricercatore all'Universita` di Trento (INF/01).
+Dal 2005, egli e` Professore Associato presso l'Universita` di Udine (MAT/09).
+Proviene da un background in Ricerca Operativa
+ed i suoi principali interessi di ricerca sono in Ottimizzazione Combinatoria ed Algoritmi.
+Egli e` Area Editor della rivista 4OR ed opera come Reviewer
+per l'American Mathematical Society.
+Ha pubblicato oltre 50 articoli in un ampio spettro di riviste scientifiche
+nelle aree della Matematica Discreta, della Combinatoria, e degli Algoritmi.
+I suoi contributi ricadono principalmente nelle seguenti sotto-aree: 
+Ottimizzazione Combinatoria, Teoria dei Grafi, Biologia Computazionale,
+Algoritmi Approssimati, Architetture ed Algoritmi Paralleli.
+Prima di poter accedere alla carriera accademica,
+ha insegnato in scuole superiori di vario profilo: commerciali (IPC, ITC),
+istituti tecnici (ITI, ITIS), e licei; sia in corsi diurni che in corsi serali.
+Nel concorso ordinario del 2000, consegue l'abilitazione all'insegnamento
+per i gruppi concorsuali di Matematica (047A) e Fisica (048A).
+Pur dopo entrato in Universita`,
+tiene collaborazioni con scuole superiori e Sovrintendenze Scolastiche (Trento and Bolzano)
+in iniziative legate alle iOi (olimpiadi in informatica) a livello locale.
+Dal 2004, e` stato selezionatore alla fase nazionale
+ed allenatore della nazionale Italiana per le iOi, sotto mandato di AICA.
+Attualmente, sempre in merito alle iOi,
+collabora con scuole superiori in Udine, Trento, Bolzano, e Cles.
+In Universita`, ed al di la` del suo carico didattico di pertinenza,
+ha tenuto diversi corsi di Dottorato ed altri corsi sia interni che esterni.
+Durante la sua carriera scientifica,
+ha aperto e chiuso congetture matematiche ed ha trascorso periodi
+di intenso lavoro in Vancouver (Canada), Victoria (Canada), Scherbrook (Canada),
+Grenoble (France), Paris (Orsay, France), Nice (France), e Newcastle (Australia).
+Quando possibile, gli piace vivere in Trento e Cavareno,
+dove gironzola e razzola con i suoi figlioli.
+
+CINQUE LAVORI RAPPRESENTATIVI:
+
+  1. Romeo Rizzi,
+   Indecomposable r-graphs and some other counterexamples,
+   Journal of Graph Theory
+   32(1) (1999) 1--15.
+
+  2. Ajai Kapoor, Romeo Rizzi,
+   Edge-coloring bipartite graphs,
+   Journal of Algorithms
+   34(2) (2000) 390--396.
+
+  3. Romeo Rizzi,
+   On minimizing symmetric set functions,
+   Combinatorica
+   20(3) (2000) 445--450.
+
+  4. Alessandro Mei, Romeo Rizzi,
+   Routing Permutations in Partitioned Optical Passive Stars Networks,
+   Journal of Parallel and Distributed Computing
+   63(9) (2003) 847--852.
+     - this paper received the Best Paper Award IPDPS 2002.
+
+  5. Vineet Bafna, Sorin Istrail, Giuseppe Lancia, Romeo Rizzi,
+   Polynomial and APX-hard cases of the Individual Haplotyping Problem,
+   Theoretical Computer Science
+   335(1) (2005) 109--125.

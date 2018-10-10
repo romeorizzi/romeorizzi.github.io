@@ -1,0 +1,3 @@
+My field is Operations Research and I work in algorithms, combinatorial optimization, graph theory, and discrete mathematics in general.
+I am presently working on new algorithms for cycle basis, temporal constraint networks, computing indices of power in voting games, pattern matching and discovery on structured strings and motif finding and listing on graphs with applications in bioinformatics.
+I have published an hundred international scientific papers.

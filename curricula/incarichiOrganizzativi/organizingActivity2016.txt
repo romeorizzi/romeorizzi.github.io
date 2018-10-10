@@ -1,0 +1,57 @@
+Attivita' didattica anche organizzativa:
+In Verona,
+oltre ai due corsi di titolarita` (Algoritmi e Ricerca Operativa) ho contribuito in TFA (2013,2015)
+e PAS (2014,15), un PLS in Programmazione Matematica al Marconi (2015), diversi interventi per le iOi al Marconi (2013-), un corso tandem in Algoritmi (2015,16).
+Organizzo il corso seminariale Math Decisions (2014-16) e lo spazio di Sfide (2013-16). Per il dottorato congiunto in matematica Trento-Verona, tengo il corso Mathmeatical Programming (2014,15,16).
+Dal 2001-, organizzo diversi corsi/interventi (Trento,Bolzano,Udine,Bologna,Learning Weeks in Lombardia) di promozione delle iOi. Sul piano nazionale, faccio parte del comitato delle iOi e sono allenatore e selezionatore della nazionale dal 2004-. Questi incarichi comportano diverse settimane di attivita' e trasferta all'anno.
+
+Incarichi presso il dipartimento:
+Referente per le olimpiadi di informatica.
+Membro della commissione tutor.
+
+Dottorandi attuali:
+Carlo Comin, "XXIX CYCLE - anno inizio: 2013/2014", dottorato in Matematica congiunto TN-VR.
+Massimo Cairo, "XXXI CYCLE - anno inizio: 2015/2016", dottorato in Matematica congiunto TN-VR.
+
+Program Commette di conferenze:
+IWOCA2015 (PC member), Verona
+AAIM 2016 (PC member)
+
+Incarichi di raggruppamento MAT/09 (italia):
+Membro della commissione per la conferma dei ricercatori.
+
+Incarichi scientifici (internazionale):
+Dal 2004 sono Area Editor per la rivista 4OR.
+Contribuisco ai Mathematical Reviews dell'American Mathematical Society dal 2004.
+
+Posizioni all'estero:
+Novembre 2009: presso l'Universit\'e Paris-Est - Marne-la-Vall\'ee. 
+Febbraio 2013: presso l'Universit\'e Paris-Est - Marne-la-Vall\'ee. 
+Novembre 2015: presso l'Universit\'e Paris-Est - Marne-la-Vall\'ee. 
+
+Inviti:
+ - Editor dei proceedings of the Oberwolfach meeting in Graph Theory, January 2003,
+organizzato da Reinhard Diestel, Alexander Schrijver, e Paul D. Seymour.
+ - Invited speaker at BioInfoSummer 2004,
+held by the Australian National University in Canberra.
+ - Coorganizer (con Giuseppe Lancia) di un invited session in Computational Biology
+ad AIRO 2005. Camerino.
+ - Invited speaker at
+``Workshop on Cycle and Cut Bases'' (2008)
+held at T\"ubingen and inserted in the framework
+SPP 1126 (Algorithmik großer und komplexer Netzwerke).
+ - altri inviti anche recenti che ho dovuto/preferito declinare.
+
+Progetti:
+2001-03: Partecipante al progetto Cofin "RE-AL-WI-NE",
+         Responsabile Nazionale: Alan  A.~Bertossi;
+2002-03: Partecipante al Progetto FIRB ``ADONIS'',
+      Responsabile Uni-TN: R.~Battiti;
+2002-04: Partecipante al Progetto UNITN-PAT ``WILMA'',
+      Responsabile Uni-TN: R.~Battiti;
+2005: Progetto Galileo (coord. parte italiana Romeo Rizzi, coord. parte francese Guillaume Fertin).
+2007: Partecipante al progetto Cofin "Modelli di data mining e di ottimizzazione per le applicazioni biologiche e mediche"
+      (coord. naz. Prof. Vercellis, coord. loc. Prof. Lancia).
+
+
+

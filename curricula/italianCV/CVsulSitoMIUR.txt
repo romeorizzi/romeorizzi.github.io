@@ -1,0 +1,347 @@
+Il curriculum in formato pdf e' scaricabile dalla home del sito personale:
+http://profs.sci.univr.it/~rrizzi/
+
+ed in particolare al link:
+https://www.dropbox.com/s/3k0773gs4f9ltdy/italianCV.pdf?dl=0
+
+Riportiamo di seguito una rendition a caratteri, come adatta a questo sito del MIUR.
+
+####################################################################
+
+                       Curriculum Vitae
+                          Rizzi Romeo
+                        (novembre 2016)
+
+___________________________________________________
+Dati personali
+Nato a Mezzolombardo (Trento), il 20 aprile 1967.
+Residenza: via Bolleri N o 16/1 Trento (Martignano) — 38121 (TN)
+Telefono: 3291780915 (cel) 045.802.7088 (ufficio)
+e-mail: Romeo.Rizzi@univr.it
+Home Page: http://profs.sci.univr.it/∼rrizzi
+____________________________________________________
+Interessi ed Aree di Ricerca
+-Ricerca Operativa. Problemi di basi di cicli, di cammini minimi, di taglio minimo, e di routing. Problemi di selezione di portafoglio. Problemi di power management.
+
+-Biologia Computazionale. Haplotyping di individui e di popolazioni. NMR peack analysis. Confronto ed analisi di stringhe con struttura. Individuazione di Motifs. Algoritmica di permutazioni motivata da genomica. Rilevamento di pathways. Protein design. Raffinamento di modelli per la lettura dei contigs. Problematiche di ottimizzazione in radioterapia.
+
+-Ottimizzazione Combinatoria. Grafi, Matroidi, Colorazione di archi, Fattorizzazione di grafi, Teoria e problemi di matching, Basi di cicli, Problemi di packing e covering, Problemi di channel assignment.
+
+-Algoritmi. Algoritmi Polinomiali e Pseudopolinomiali, Algoritmi Approssimati, PTAS e FPTAS, Algoritmi Distribuiti, Algoritmi Paralleli, Algoritmi Randomizzati, Algoritmi Euristici. Algoritmi
+efficienti per il Listing e l’Enumerazione. Controllo dinamico discreto. Reti temporali e workflows.
+Giochi combinatorici legati a problematiche di model checking.
+Complessità Computazionale. Risultati di NP-completezza, Buone caratterizzazioni, Risultati di APX-hardness ed inapprossimabilità, Risultati di PSPACE-completezza. FPT e W-hardness. Lower bounds condizionali.
+
+-Calcolo ed Architetture Parallele. Analisi delle POPS-networks.
+Reti. Problemi di frequency assignment e di channel assignment. Problemi di scheduling.
+____________________________________________________________
+Titoli di Studio
+
+(giugno 1986) Diploma di Maturità Scientifica Liceo Scientifico “Leonardo da Vinci”, Trento.
+
+(dicembre 1991) Laurea in Ingegneria Elettronica ad indirizzo matematico fisico Politecnico di Milano. Media esami: 29/30. Voto finale: 100/100 e Lode.
+Tesi di Laurea: “Il problema dell’albero minimo di cardinalità k.” Relatore: prof. F. Maffioli (Politecnico di Milano, Dipartimento di Elettronica). Aree di interesse: Ricerca Operativa, Ottimizzazione
+Combinatoria.
+
+(settembre 1997) Dottore di Ricerca. Dottorato in Matematica Computazionale ed Informatica Matematica, IX ciclo. Dipartimento di Matematica Applicata dell’Università di Padova.
+Tesi di Dottorato: “Impaccando T -tagli e T -giunti.” Relatore: prof. M. Conforti (Università di
+Padova, Dipartimento di Matematica). Controrelatore: prof. A.M.H. Gerards (Istituto di Ricerca CWI, Amsterdam). Aree di interesse: Ricerca Operativa, Teoria dei grafi, Combinatorica.
+__________________________________________________________
+Qualifiche e impegni lavorativi attuali
+
+Professore associato presso la Facoltà di Scienze MM.FF.NN di Verona
+dicembre 2011 – oggi. Settore MAT/09 (Ricerca Operativa).
+Abilitazione da ordinario in mat/09 (conseguita nella prima tornata e valida dal 20/12/2013 al 20/12/2019)
+
+(corsi) in Verona, ho tenuto i corsi di “Ricerca Operativa” per la laurea triennale in Matematica
+(2011-12, 12-13, 13-14, 14-15, 15-16) e di “Algoritmi” per la laurea magistrale in Informatica (2011-12,12-13, 13-14, 14-15, 15-16).
+Ho tenuto corsi per il TFA (2012-13, 2014-15) e per il PAS (2013-14,2014-15).
+Ho attivato e coordino il corso “Sfide di Programmazione” (2013-14, 14-15, 15-16).
+Per la magistrale di matematica, sono responsabile del corso seminariale “Mathematics for Decisions” (2014-15, 15-16).
+Sto sperimentando dei corsi tandem (rivolti al mondo delle superiori) in algoritmi (2014-15,15-16) che l’anno prossimo volgerà in un corso di aggiornamento per insegnanti.
+All’ITIS Marconi di Verona, ho condotto piú cicli di interventi e lezioni in merito alle olimpiadi di informatica (dal 2012 ad oggi), come anche un mini-corso in Programmazione Matematica in seno al PLS (2014-15).
+Per il Dottorato congiunto in Matematica Trento-Verona tengo il corso “Mathematical Programming” (2013-14, 14-15, 15-16).
+
+(incarichi in Verona) Referente del Dipartimento di Informatica per le olimpiadi di informatica.
+Referente del Dipartimento verso il coderDojo in Verona.
+Presidente della commissione paritetica del Dipartimento di Informatica. Membro della commissione tutor.
+___________________________________________________________________
+Altre Attività
+
+(impegno nelle olimpiadi di informatica) sia a livello nazionale, dove collaboro all’allenare la squadra italiana ed a portare avanti le progettualità collegate alle iOi ed alle Oii, sia a livello di realtà locali in Trento, Bolzano, Verona, Udine.
+
+(collaborazione con ditte) da autunno 2014 ho attivato delle importanti collaborazioni con ditte su problematiche di ottimizzazione dei processi produttivi.
+(la mia attività scientifica) con collaborazioni sia presso il mio dipartimento in Verona, che in Italia, che all’estero su un po’ tutto il globo.
+__________________________________________________________________
+Esperienze di lavoro
+
+-Professore associato presso la Facoltà di Ingegneria di Udine ottobre 2005 – dicembre 2011. Settore MAT/09 (Ricerca Operativa). Idoneità ottenuta nel giugno 2003.
+
+(corsi) in Udine, ho tenuto i corsi di “Matematica II” per la facoltà di architettura (2005-06, 06-
+07, 07-08, 08-09), di “Matematica” (MatI + MatII) per la facoltà di architettura (2010-11, 11-12), di
+“Ricerca Operativa” per la facoltà di ingegneria (2005-06, 06-07, 07-08, 08-09, 09-10, 10-11, 11-12) e di
+“Ricerca Operativa” per la facoltà di architettura (2006-07, 07-08, 08-09, 09-10). Membro del Collegio di Dottorato in Udine, ho ivi offerto un corso in “Complessità Computazionale” che ha accolto anche
+alcuni studenti stranieri.
+
+(tesi) Relatore di Massimiliano Cossu (laurea in Ingegneria Gestionale Industriale, “Modellizzazione di un sistema di trasporti di una realtà aziendale”) e correlatore di Francesco Cafarelli (laurea specialistica in Matematica, “Algoritmi efficienti per il problema del minimum test collection”, relatore: Prof. Franca Rinaldi) e di Stefano Michelini (laurea specialistica in Matematica, “Un algoritmo per il Train Marshalling Problem”, relatore: Prof. Franca Rinaldi) e di due tesi esterne all’ateneo di
+Udine (Luca Nardin, laurea in Informatica, Trento,“Polynomial time instances for the IKHO problem”,
+relatore: Prof. Roberto Sebastiani) e (Elia Calderan, laurea in Matematica, Trieste,“Approcci combinatorici al contenimento di fuochi”, relatore: Prof. Andrea Sgarro, secondo correlatore: Prof. Giuseppe Lancia).
+
+(fondi) Ho preso parte a progetti nazionali ed internazionali. Un progetto Italo-Francese di cui
+Paola Bonizzoni era responsabile per la parte italiana mi ha consentito una visita al gruppo di Vialette
+in Parigi. Con il gruppo di Ricerca Operativa in Udine (Paolo Serafini, Giuseppe Lancia, Franca Rinaldi, Romeo Rizzi) eravamo inseriti nel PRIN 2006 “Modelli di data mining e di ottimizzazione per le applicazioni biologiche e mediche” con coordinatore scientifico nazionale Carlo Vercellis, il titolo del
+programma dell’unitá di Udine, con responsabile Giuseppe Lancia, era “Algoritmi di ottimizzazione
+per l’analisi comparativa di dati genomici di grandi dimensioni”.
+
+(orientamento) Ho portato avanti il mio impegno nelle olimpiadi di informatica, sia sul piano
+nazionale ed internazionale per mandato di AICA, che sul piano locale in Friuli (Udine), Trentino-AltoAdige (Trento, Bolzano e Cles), Lombardia (con ACOF e con l’ITC Tosi Di Busto Arsizio),
+Bologna.
+
+-Ricercatore presso la Facoltà di Scienze di Povo (Trento)
+marzo 2001 – ottobre 2005. Settore INF/01 (Informatica).
+
+(corsi) Dopo l’ottenimento del ruolo, ho tenuto i corsi di “Laboratorio di Algoritmi e Strutture
+Dati” (II o semestre 2000-01), “a PhD Course in Linear Programming” (nov 2001 - gen 2002), “a Phd
+course in Computational Molecular Biology” (marzo 2002 ed aprile 2003), “Algoritmi e Strutture Dati
+I” (I o bimestre 2002-03), “Complessità Computazionale” (III o bimestre 2002-03, IV o bimestre 2003-04
+e II o semestre 2004-05). Fuori sede, nel II o semestre 2004-05 ho tenuto un modulo in Programmazione
+Lineare titolato “Tecniche Anvanzate per la soluzione di problemi di ottimizzazione combinatorica”
+presso il Dipartimento di Matematica e Informatica dell’Università di Perugia.
+
+(fondi) Ho preso parte a progetti locali, nazionali, ed internazionali. Presentando un progetto
+congiunto con Fertin (Nantes) e Vialette (Parigi), ho ottenuto un fondo Galileo dell’Università Italo-
+Francese, di cui nel 2005 sono stato responsabile per la parte Italiana (Trento, Milano-Bicocca e
+Udine). Con il gruppo di Algoritmi in Trento (Alan Bertossi, Cristina Pinotti, Romeo Rizzi) eravamo
+unitá nel progetto di ricerca “Algorithms for wireless networks” REAL-WINE 2001–03 di cui Bertossi
+era anche responsabile nazionale. Progetto WILMA, ed altri progetti della provincia di Trento fuori e
+dentro il contenitore CreateNet. Partecipazione con il gruppo di reti (Roberto Battiti, Mauro Brunato,
+Romeo Rizzi).
+
+(orientamento) Ho tenuto corsi ed altre iniziative per la preparazione alle Olimpiadi di Informatica sia per studenti delle Scuole Superiori di Trento che di Bolzano (inverni 2001-02, 2002-03, 2003-04,
+2004-05, 2005-06, 2006-07 e 2007-08). In particolare, nel 2004 ho collaborato utilmente per portare a
+Trento la fase nazionale delle iOi e sono stato arruolato dal Comitato Olimpico dell’AICA come allenatore e selezionatore per la squadra nazionale; ruolo che ho ricoperto fino ad oggi, collaborando alla
+buona riuscita delle fasi nazionali in Taormina 2005, Milano 2006, Bari 2007, Desenzano 2012 e con
+le settimane di allenamenti (Tirrenia 2004, Pisa 2005-06-07, Volterra 2008-2012, Desenzano 2010-12),
+ed accompagnando la squadra italiana alle olimpiadi in Polonia (2005) come team leader a fianco di Roberto Grossi.
+
+(tesi di laurea) Relatore di Marco Rospocher (vecchia laurea in Matematica,“All-Pairs and Matching-like Shortest Paths Algorithms”), di Michele Vescovi (laurea triennale in Informatica,“Algoritmi
+per la segmentazione audio basati sul criterio di informazione bayesiano”. Responsabile esterno: Mauro
+Cettolo - IRST, gli algoritmi di segmentazione audio codificati da Michele nel suo periodo di interinato
+presso l’IRST e nel suo conseguente percorso di tesi di laurea sono stati acquisiti dalla RAI), e di Paolo
+Zotti (laurea triennale in Informatica, tesi compilativa: “Gli algoritmi di ordinamento”).
+
+(stagisti) Ho seguito, in qualità di Advisor, i seguenti stagisti: Nitin Saxena e Shivi S. Bansal
+(primavera 2001), Shashank Ramaprasad e Shashanka Madhusudana (primavera 2003).
+Nell'autunno-inverno di quell'anno Nitin Saxena passo' alla storia come uno degli autori di “PRIMES is in P”.
+(tesi di dottorato) Nel periodo 2002-05 sono stato l’Advisor per il Dottorato di Marco Rospocher
+presso il DIT (tesi: “On the computational complexity of enumerating certificates of NP problems”).
+
+-Ricercatore R1 presso l’I.R.S.T.
+Agosto 2000 – febbraio 2001: inserito nel gruppo CBR (Case Based Reasoning, coordinato da Paolo Avesani) della divisione SRA (Sistemi di Ragionamento Automatico, diretta da Paolo Traverso)
+in IRST. L’IRST (Istituto Ricerca Scientifica e Tecnologica) è un organo dell’ITC (Istituto Trentino Cultura).
+
+-Posizioni temporanee presso Università ed Enti di Ricerca all’estero
++Agosto 99 – ottobre 99: Assistant Research Professor al BRICS (Università di Aarhus, Denmark).
+ 
++Aprile 2000 – giugno 2000, novembre 99 – dicembre 99, aprile 99 – giugno 99, novembre
+98 – dicembre 98: Ho ricoperto, per un totale di 10 mesi, una posizione di ricerca su fondi DONET
+presso il centro di ricerca CWI di Amsterdam. Ero inserito nel gruppo PNA (Probability, Networks,
+Algorithms) sotto la guida dei professori Alexander Schrijver e Bert Gerards.
+
++Borsista post-dottorato
+Giugno 98 – giugno 99: Per borsa bandita dall’Università di Padova ed usufruita presso il Dipartimento di Matematica della stessa, sotto la guida del prof. Michele Conforti.
+
+__________________________________________________________________
+Contratti e Collaborazioni
+
+2004–oggi: arruolato dal Comitato Olimpico dell’AICA come allenatore e selezionatore della nazio-
+nale italiana per le edizioni 2004–15 delle Olimpiadi di Informatica.
+2001–oggi: contratti con il Liceo Scientifico Galileo Galilei per dei corsi di preparazione alle Olimpiadi
+di Informatica e rivolti agli studenti interessati di tutte le scuole superiori della provincia di Trento.
+In seno all’attività di preparazione alle olimpiadi si inseriscono anche, partendo dal 2002, contratti
+sia con l’I.T.I.S. Max Valier di Bolzano che con la Sovrintendenza Scolastica Tedesca di Bolzano per
+docenze presso l’I.T.I.S. Max Valier, e nel periodo 2006-08 dei contratti presso l’Istituto di Istruzione
+Bertrand Russel di Cles.
+2009–10: contratti con ACOF (Associazione Culturale Olga Fiorini) per organizzazione e docen-
+za in Learning Weeks rivolte a ragazzi da scuole della Lombardia, da bandi su fondi Europei, e
+coordinate/gestite/organizzate anche dall’ITC Tosi di Busto Arsizio.
+2010: contratto per una settimana di studio intensiva residenziale in Volterra con una classe del Liceo
+Scientifico Enrico Fermi di Bologna.
+2012: contratto per una settimana di studio intensiva con una classe di ragazzi del Liceo Scientifico
+Enrico Fermi di Bologna.
+
+Febbraio – luglio 2000: contratto con la Libera Università di Bolzano in merito al Progetto Gior-
+nalino Virtuale. Questo progetto dell’Univerità di Bolzano ha coinvolto i bambini di varie scuole
+elementari nella realizzazione di un loro giornalino in rete. Il progetto era sorto come momento di
+ricerca sperimentale ed applicata in pedagogia dell’infanzia, con l’obbiettivo di esplorare le oppor-
+tunità offerte dalle nuove tecnologie. Ho partecipato a questo progetto in qualità di tecnico per le
+problematiche di tipo informatico, come realizzatore delle pagine centrali del sito, come coordinatore
+verso le pagine della redazione (gestite da bambini e maestri) e come docente nei corsi di formazione
+per maestri delle scuole elementari coinvolte. (La quasi totalità delle scuole italiane in provincia di
+Bolzano, ed anche qualche scuola tedesca).
+
+Giugno 97 – aprile 98: contratto con il gruppo LEA (Laboratory for Experimental Algorithmics)
+per la realizzazione di moduli software presso il Dipartimento di Matematica dell’Università di Trento.
+Uno dei temi del gruppo LEA era la realizzazione di “intertools” disponibili in rete per la soluzione
+tramite euristiche di problemi NP-completi. In seno a tale progetto, il sottoscritto era responsabile
+per lo sviluppo dell’intertool per il “graph partitioning”.
+
+-Docenze universitarie (da esterno)
+Secondo semestre anno accademico 2004-05: professore a contratto per un modulo in Pro-
+grammazione Lineare titolato “Tecniche Anvanzate per la soluzione di problemi di ottimizzazione
+combinatorica” presso il Dipartimento di Matematica e Informatica dell’Università di Perugia.
+Docenze universitarie (ante ruolo)
+Secondo semestre anno accademico 97/98: professore a contratto per un corso integrativo di
+Programmazione Combinatoria nell’ambito del corso di Programmazione Matematica al Dipartimento
+di Matematica dell’Università di Trento.
+Esercitazioni al Diploma di Laurea (ante ruolo)
+Secondo semestre anno accademico 96/97: esercitatore del corso di Analisi II per il Diploma di
+Ingegneria Informatica ed Automatica a Rovereto.
+
+-Attività come ingegnere e Progetti
+4Gennaio 94 – dicembre 96: iscritto all’Albo degli Ingegneri di Trento, ho presentato un progetto
+edile per un’abitazione in Vezzano (Trento). Tale progetto è stato approvato e realizzato.
+
+-Supplenze presso istituti di scuola superiore
+Ho tenuto le seguenti supplenze presso istituti di scuola superiore:
+
+  89-90   intero anno scolastico} & I.T.I.S. Hensenberger (Monza)
+          (elettrotecnica) (misure elettriche)
+          prima della laurea (e solo serale)
+  92-93  dal 21/9/92 al 17/10/92 I.T.I. Marconi (Rovereto)
+         LIV (informatica industriale) +LXIV (matematica applicata)
+  92-93    dal 26/10/92 al 14/11/92 & I.T.C. Martini (Mezzolombardo)
+           038A (fisica)
+  93-94   dal 13/10/93 al 18/11/93 & I.T.I.S. Buonarroti (Trento)
+          035A (elettrotecnica e applicazioni)
+  93-94    dal 12/2/94 al 26/2/94 & I.T.C. Martini (Mezzolombardo)
+           048A (matematica applicata)
+  95-96   dal 22/9/95 al 6/11/95 & I.T.I.S. Buonarroti (Trento)
+          035A (elettrotecnica e applicazioni)
+  96-97  dal 17/4/97 al 21/4/97 & I.P.C. Don Milani (Rovereto)
+         042A (informatica)
+  97-98   intero anno scolastico & I.P.C. Battisti (Trento)
+          047A (matematica) (matematica ed informatica)
+  98-99  dal 17/9/98 all' 1/10/98 & I.T.C.G. Floriani (Riva)
+         048A (matematica applicata)
+  98-99   dal 11/1/99 al 11/1/99 & I.T.C.G. Fontana (Rovereto)
+          047A (matematica)
+  99-2000   dal 15/1/00 al 31/3/00 & I.T.I.S. Buonarroti (Trento)
+            047A (matematica)
+_______________________________________________________________
+
+Abilitazioni
+
+-Abilitazione da ordinario in mat/09 (conseguita nella prima tornata e valida dal 20/12/2013 al 20/12/2019)
+
+-Professione di Ingegnere - esame di stato: Milano, giugno 1992.
+
+-Insegnamento matematica per le superiori (047A) - concorso ordinario: Bolzano, marzo 2000.
+
+-Insegnamento fisica per le superiori (048A) - concorso ordinario: Bolzano, maggio 2000.
+_________________________________________________________________
+
+Servizio militare
+Assolto:
+Incorporato il 16 novembre 92. Congedato il 15 novembre 93.
+_______________________________________________________________
+
+Altri periodi all’estero per studio e ricerca
+
+-Novembre 1995, Ottobre 1996: Ospite del prof. András Sebö presso i Laboratoires IMAG e Leibniz dell’Università di Grenoble, Francia.
+
+-Novembre–Dicembre 2000, Gennaio–Febbraio 2003: Ospite del prof. Pavol Hell presso il
+Dipartimento di Matematica della Simon Fraeser University (SFU) di Vancouver, Canada; del
+prof. Gary MacGillivray presso il Dipartimento di Matematica della University of Victoria (UV),
+Canada e del prof. Rick Brewster presso il Dipartimento di Computer Science della University of Scherbrook (Montreal), Canada.
+
+-Agosto 2001: Ospite del BRICS (Università di Aarhus, Denmark).
+
+-Novembre–Dicembre 2004: Ospite del prof. Pablo Moscato presso il Bioinformatics Center dell’University of Newcastle, Australia. Visita anche all’Australian National University in Canberra.
+
+-Settembre–Ottobre 2005: Ospite del prof. Stéphane Vialette presso l’Université Paris-Sud (Orsay).
+
+-Dicembre 2005: Ospite del prof. Guillaume Fertin presso l’Université Nantes.
+
+-Novembre 2009: Invited Professor (“Professor Invitee”) presso l’Université Paris-Est - Marnela-Vallée. Ospite del prof. Stéphane Vialette. Contratto di un mese a scopo di ricerca presso il
+gruppo del Prof. Stéphane Vialette.
+
+-Febbraio 2013: Invited Professor (“Professor Invitee”) presso l’Université Paris-Est - Marnela-Vallée. Ospite del prof. Stéphane Vialette. Ospite del prof. Stéphane Vialette presso l’Université Paris-Est - Marne-la-Vallée. Contratto di un mese a scopo di ricerca presso il gruppo del Prof. Stéphane Vialette.
+
+-Novembre 2015: Invited Professor (“Professor Invitee”) presso l’Université Paris-Est - Marne-
+la-Vallée. Ospite del prof. Stéphane Vialette. Contratto di un mese a scopo di ricerca presso il
+gruppo del Prof. Stéphane Vialette.
+_________________________________________________________________
+Seminari
+Ho divulgato i risultati dei miei lavori di ricerca mediante seminari presso i seguenti istituti:
+Laboratorio IMAG del CNRS in Grenoble (1995),
+Laboratorio Leibniz dell’Università di Grenoble (1996,2003),
+Istituto IASI del C.N.R. in Roma (1997, 1999),
+DEIS dell’Università di Bologna (1997, 1999,2001),
+DSI dell’Università di Bologna (2008),
+Istituto di Ricerca CWI in Amsterdam (1998),
+DEIS del Politecnico di Milano (2000, 2003),
+Dip. Matematica ed Informatica Università di Udine (2006),
+Dipartimento di Informatica della Bicocca di Milano (2003, 2006, 2008, 2016),
+LIGM - Université Paris-Est Marne-la-Vallée (2009,2013,2015)
+Dip. Informatica Università di Verona (2008),
+DSMI dell’Università di Reggio Emilia (2000),
+Istituto IRST dell’ITC di Trento (2000, 2001),
+Math. Dept. della Simon Freaser University di Vancouver (2000, 2003), Math. Dept. della University of Victoria (2003),
+Dipartimento di Elettronica del Politecnico di Torino (2003), Engineering Dept. dell’Università di New Castle (2004).
+_____________________________________________________________
+Riviste Internazionali
+
+NOTA: un quadro quasi completo delle mie pubblicazioni viene agevolmente fornito da DBLP:
+http://dblp.uni-trier.de/pers/hd/r/Rizzi:Romeo
+
+Attualmente riporta 85 delle 87 pubblicazioni su rivista riportate nel mio CV reperibile sulla mia homepage.
+
+_________________________________________________________________
+Conferenze
+
+NOTA: un quadro quasi completo delle mie pubblicazioni viene agevolmente fornito da DBLP:
+http://dblp.uni-trier.de/pers/hd/r/Rizzi:Romeo
+
+Attualmente riporta 58 delle 68 pubblicazioni a conferenza riportate sul mio CV reperibile sulla mia homepage.
+
+Ovviamente nessuna di tali liste vuole essere completa.
+In particolare, ulteriori miei lavori sono stati pubblicati in proceedings di conferenza nazionali e/o senza referaggio o sono stati presentati in conferenze senza proceedings o raduni informali più o meno prestigiosi.
+
+____________________________________________________
+Parti di Libro
+
+vedasi il mio CV reperibile sulla mia homepage.
+_____________________________________________________
+Riviste Nazionali
+
+vedasi il mio CV reperibile sulla mia homepage.
+_______________________________________________________________
+Incarichi ed Onori
+- Dal 2004, opero come Area Editor per la rivista scientifica 4OR.
+- Editor dei proceedings del meeting in Graph Theory tenuto ad Oberwolfach nel gennaio 2003,
+ed organizzato da Reinhard Diestel, Alexander Schrijver e Paul D. Seymour.
+- Stesura, sotto la guida del Prof. Michele Conforti, della presentazione su 4OR dell’opera “Combinatorial Optimization - Polyhedra and efficiency” di Alexander Schrijver.
+- Best Paper Award ad IPDPS 2002 per un lavoro in collaborazione con Alessandro Mei.
+- Ho tenuto il corso “Algorithmic and Complexity issues in Structure Prediciton and/or Determination” alla Third International School on Biology, Computation and Information (BCI 2006). Dobbiaco
+(BZ), Italy, September 11-15, 2006.
+15- Organizzatore di una invited session in Computational Biology ad AIRO 2005.
+- Invited speaker (International Keynote Speaker) a BioInfoSummer 2004. Australian National
+University. December 6-10, 2004. Canberra.
+- Invited speaker al “Workshop on Cycle and Cut Bases” (14-16 maggio 2008) tenutosi a Tübingen
+ed inserito nel quadro SPP 1126 (Algorithmik großer und komplexer Netzwerke).
+- Invited speaker al “28 th Ljubljana – Leoben Graph Theory Seminar”, 3-5 September 2014.
+Kooper (Capodistria).
+- Reviewer per i Mathematical Reviews dell’American Mathematical Society dal 2004.
+- La mia biografia è inclusa nelle edizioni 2007 e 2009 di Who’s Who in the World.
+- La mia biografia è inclusa nell’edizione 2009/2010 di Outstanding Intellectuals of the 21st Century
+(IBC, Cambridge).
+- Erdös number: 2.
+- Come educatore, ho ricevuto i seguenti riconoscimenti da parte dell’International Biographical
+Center, Cambridge:
+- sono stato nominato International Educator of the Year per il 2007 e 2009.
+- sono stato inserito nelle liste Top 100 Educators 2008 e 2009.
+- ho ricevuto The Decree of Excellence in Education.
+
+Verona, novembre 2016.
+Romeo Rizzi

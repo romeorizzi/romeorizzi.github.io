@@ -1,0 +1,1245 @@
+\documentclass[10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[italian]{babel}
+
+\textwidth 15.5cm
+\textheight 23.2cm
+\topmargin -1cm
+\evensidemargin 0in
+\oddsidemargin 0in
+
+
+\def\G{{\cal G}}
+\def\coNP{coN\!P}
+\def\NP{N\!P}
+
+
+\begin{document}
+
+\title{\vspace*{-2.8cm}
+            {\em I miei lavori}\\
+            {\large descrizione e collocazione per aree di interesse}}
+%           123456789012345678901234567890123456789012345678901234567890
+%                    1         2         3         4         5         6    
+
+\author{Romeo Rizzi}
+\date{{\bf BRICS}\thanks{%
+  \protect\begin{tabular}[t]{@{}l@{}}
+     Basic Research in Computer Science,\protect\\
+     Centre of the Danish National Research Foundation.
+  \protect\end{tabular}}\\
+  Department of Computer Science\\
+  University of Aarhus\\
+  Ny Munkegade\\
+  DK-8000 Aarhus C, Denmark\\
+\vspace*{2pt}
+  {e-mail: \ \tt romeo$@$cwi.nl}}
+
+\maketitle
+
+\vspace*{-20pt}
+
+
+
+\section{Introduzione: Interessi ed Aree di Ricerca}
+
+A ben guardare,
+tutti i miei lavori possono essere considerati
+come lavori in Ricerca Operativa.
+Pi\'u specificatamente l'interesse si
+accentra sull'Ottimizzazione Combinatoria
+e l'approccio \'e quasi sempre algoritmico.
+Siccome poi la maggior parte dei
+miei lavori ha qualche legame diretto
+od indiretto con i grafi,
+ho deciso di organizzare qui
+i miei lavori solamente secondo le seguenti
+aree di interesse:\\
+
+Algoritmi Approssimati.
+Algoritmi Distribuiti.
+Algoritmi Euristici.
+Complessit\'a Computazionale.
+Matroidi.
+Teoria e problemi di matching.
+Circuit Double Cover Conjecture.
+Grafi Perfetti.
+Packing e Covering.
+Colorazione di archi.
+Fattorizzazione di grafi.
+Problemi di cammini minimi.
+Problemi di taglio minimo.
+Biologia Computazionale.\\
+
+
+
+Tengo tuttavia a precisare che queste non sono
+le sole aree che stimolino il mio
+interesse e la mia curiosit\'a scientifica.
+
+La descrizione di uno stesso lavoro
+sar\'a ripetuta ove esso venga incluso in pi\'u aree.
+Ci\'o espander\'a considerevolmente la lista
+ma ne faciliter\'a l'accesso a chi abbia un interesse specifico.\\
+
+
+
+
+
+
+
+
+\section{Algoritmi Approssimati}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Romeo Rizzi},
+   \newblock  Improved Breakpoint Graph Decompositions,
+   \newblock {\em submitted}\\
+{\bf descrizione:}
+Il sorting by reversals \'e uno di quei
+problemi in biologia computazionale
+che sono venuti alla
+luce con lo sviluppo del Progetto Genoma Umano.
+L'interesse per questo problema da parte
+della biologia computazionale \'e forte.
+Caprara aveva purtroppo dimostrato che il problema
+era NP-hard.
+Sorge a questo punto l'interesse per degli algoritmi
+di tipo approssimato.
+Questi sono intesi a produrre delle soluzioni che, se non ottime,
+siano quantomeno di provata qualit\'a,
+ossia di qualit\'a superiore ad un certo bound fissato.
+Noi si \'e migliorato il miglior
+bound attuale.
+Il tutto a prezzo di un'analisi combinatorica
+di non poco peso per il lettore e per chi mai
+volesse implementare l'algoritmo.
+La complessit\'a computazionale dell'algoritmo
+tuttavia non ne ha sofferto.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On the Steiner tree $\frac{3}{2}$-approximation
+              for quasi-bipartite graphs,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Dato un insieme di nodi,
+un albero di Steiner deve toccarli tutti.
+Il problema \'e quello di trovare un albero
+di Steiner di peso minimo.
+Questo problema,
+originariamente studiato da Gauss,
+\'e NP-hard.
+La ricerca di algoritmi approssimati
+per questo problema \'e fervida ed appassionata.
+In un lavoro assai di voga,
+Rajagopalan e Vazirani avevano
+proposto un algoritmo $(\frac{3}{2}+\epsilon)$-approssimato
+nel caso di grafi quasi bipartiti,
+ossia quando ogni arco ha almeno un'estremit\'a
+in un nodo richiesto.
+Noi diamo un algoritmo $\frac{3}{2}$-approssimato
+ed assai pi\'u semplice per lo stesso problema.
+Inoltre, contrariamente all'algoritmo di Rajagopalan e Vazirani,
+la nostra soluzione \'e effettivamente pratica.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Romeo Rizzi},  
+   \newblock  Improving a Family of Approximation
+              Algorithms to Edge Color Multigraphs,
+   \newblock {\em Inf. Proc. Lett.} 68 (1998) 11-15.\\
+{\bf descrizione:}
+Coloriamo gli archi di un grafo
+in modo che archi incidenti ad uno stesso nodo
+abbiano colori diversi.
+Evidentemente non possiamo sperare di impiegare
+meno di $\Delta$ colori,
+ove $\Delta$ \'e il massimo grado di un nodo.
+Il teorema di Vizing dice che
+possiamo sempre farcela
+con $\Delta+1$ colori.
+Tuttavia ci\'o non \'e pi\'u vero
+ove si consideri la possibilit\'a di avere archi paralleli
+tra una stessa copia di nodi.
+\'E stato tuttavia definito
+un parametro $\Delta'$,
+di facile computazione,
+che costituisce una miglior stima inferiore
+che non $\Delta$ sul numero di colori necessari.
+Delle famigerate congetture
+degli anni 80
+affermano poi che ce la si pu\'o sempre
+fare con al pi\'u $\Delta'+1$ colori.
+In ogni caso,
+il problema di colorare
+gli archi con pochi colori ha importanti applicazioni.
+Questo spiega la serie di algoritmi che sono stati
+via via presentati per impiegare al pi\'u
+$\alpha \Delta'$ colori.
+Purtroppo, ogni nuovo algoritmo se ne esce
+con un valore di $\alpha$ pi\'u vicino ad 1,
+ma anche con una complessit\'a computazionale
+e di implementazione sempre maggiore.
+Noi abbiamo mostrato come con un semplice trucco fosse possibile
+migliorare il grado di approssimazione per ciascuno
+degli algoritmi sinora proposti senza incrementarne
+la complessit\'a.
+Ci\'o consente di dedurre la validit\'a della congettura
+di cui sopra per $\Delta\leq 12$.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing triangles in planar graphs,
+   \newblock {\em ready for submission}\\
+{\bf descrizione:}
+Dato un grafo planare,
+vogliamo trovare in esso il massimo numero di triangoli disgiunti.
+A seconda che li si voglia solamente disgiunti sui nodi od
+anche sugli archi abbiamo due distinti problemi.
+Tuttavia, in una trattazione assai unificata,
+diamo dei PTAS per entrambi i problemi
+avvalendoci del teorema separatore.
+Un PTAS \'e un algoritmo approssimante
+a qual si voglia precisione
+ed \'e in pratica il meglio che si possa sperare
+quando il problema in questione
+risulti essere NP-hard.
+In effetti noi si dimostra inoltre che entrambi i problemi sono
+NP-hard.
+Precedentemente solamente il caso di triangoli disgiunti
+sui nodi era noto essere tale e la dimostrazione
+basava su una ben pi\'u complessa riduzione
+che non quella da noi proposta.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing Cuts in Graphs,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Diamo svariati risultati di inapprossimabilit\'a
+per il problema di trovare il maggior numero possibile di
+tagli disgiunti in un dato grafo.
+La questione dell' NP-hardness del problema
+era stata recentemente posta al centro dell'attenzione
+da alcuni lavori di Ajeev,
+ma segue ora come conseguenza di questi ben pi\'u forti risultati.
+(Non approssimabilit\'a entro un fattore $\log n$ nel caso generale
+ed APX-hardness in svariati casi particolari).
+Diamo altres\'\i\ degli algoritmi approssimati che mostrano
+come tali risultati siano stretti.\\
+\end{itemize}
+
+
+
+\section{Algoritmi Distribuiti}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Alessandro Panconesi, Romeo Rizzi, Riccardo Silvestri},
+   \newblock  Distributed Computing in Sparse Networks,
+   \newblock {\em ready for submission}\\
+{\bf descrizione:}
+Si consideri un sistema distribuito
+ossia una rete dove i nodi rappresentano processori
+e gli archi rappresentano collegamenti tra processori.
+La rete \'e chiamata a computare
+una funzione della propria stessa topologia,
+come ad esempio:
+un insieme
+massimale indipendente,
+una colorazione degli archi in al pi\'u $2\Delta -1$ colori,
+una colorazione dei nodi in al pi\'u $\Delta +1$ colori.
+Vogliamo che ci\'o avvenga in un numero di passi
+polilogaritmico nel numero di nodi della rete
+e tramite un protocollo deterministico.
+Questa \'e una problematica che ha lungamente resistito
+agli attacchi di esperti ed affermati ricercatori.
+Noi si \'e aggirata la difficolt\'a considerando
+il caso di reti sparse.
+Infatti da un lato questo \'e il caso che
+si presenta nelle applicazioni
+e dall'altro qualora la rete fosse sufficientemente densa
+i problemi di cui sopra ammetterebbero una soluzione
+banale in pratica non distribuita.
+Sotto questa ipotesi semplificatrice abbiamo mostrato
+come si possano ottenere dei risultati positivi
+per i problemi di cui sopra.\\
+
+\end{itemize}
+
+
+
+\section{Algoritmi Euristici}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Roberto Battiti, Alan A.~Bertossi, Romeo Rizzi},  
+   \newblock  Randomized Greedy Algorithms 
+              for the Hypergraph Partitioning Problem,
+   \newblock Proceedings of the DIMACS Workshop on
+             Randomization methods in
+             algorithm design (Princeton, NJ, 1997),
+             edited by: Panos Pardalos, Sanguthevar Rajasekaran, 
+                        and Jose Rolim, 
+             American Mathematical Society,  21--35, 1998.
+   \newblock DIMACS Ser. Discrete Math. Theoret. Comput. Sci., 43,
+             Amer. Math. Soc., Providence, RI, 1999.\\
+{\bf descrizione:}
+Quando si mette un circuito su piastra
+si vorrebbero piazzare met\'a dei componenti su
+una faccia e met\'a sull'altra,
+al tempo stesso minimizzando per\'o il numero
+di collegamenti che debbano poi attraversare la piastra
+tramite foro o ponte.
+Pi\'u in generale, un problema tipico in VLSI
+\'e quello di piazzare met\'a oggetti da una parte
+e met\'a dall'altra (=partizionare),
+cercando di rompere il minor numero possibile di legami.
+Quando ogni legame riguarda coppie di nodi singoli
+questo problema \'e stato catalogato come
+GRAPH PARTITIONING ed \'e stato uno dei primi
+ad essere dimostrato NP-completo.
+Ma recentemente alcuni problemi nelle applicazioni
+sembravano abbisognare di una pi\'u fedele rappresentazione
+come problemi di HYPERGRAPH PARTITIONING,
+dove sono degli assiemi di oggetti di cardinalit\'a
+possibilmente maggiore di due
+a non voler essere separati.
+Ovviamente questo complica ulteriormente il problema.
+In questo lavoro abbiamo proposto delle semplici euristche
+di tipo greedy ed abbiamo osservato
+come esse fossero competitive nei confronti di
+ben pi\'u sofisticate euristiche proposte
+da altri ricercatori.\\
+\end{itemize}
+
+
+
+\section{Complessit\'a Computazionale}
+
+\begin{itemize}
+\vspace{1.4mm}
+  \item[] {\bf tesi di laurea,}
+          relatore: {\sc Prof.~Francesco Maffioli}
+          (Dipartimento di Elettronica, Politecnico di Milano).
+          Innanzittutto devo segnalare che la
+          mia tesi di laurea conteneva svariati risultati di NP-completezza.
+          Per vicissitudini varie,
+          dopo la tesi non mi sono occupato di questioni
+          di complessit\'a per un lungo periodo
+          e credo del materiale sia rimasto sepolto nella tesi.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing Cuts in Graphs,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Diamo svariati risultati di inapprossimabilit\'a
+per il problema di trovare il maggior numero possibile di
+tagli disgiunti in un dato grafo.
+La questione dell' NP-hardness del problema
+era stata recentemente posta al centro dell'attenzione
+da alcuni lavori di Ajeev,
+ma segue ora come conseguenza di questi ben pi\'u forti risultati.
+(Non approssimabilit\'a entro un fattore $\log n$ nel caso generale
+ed APX-hardness in svariati casi particolari).
+Diamo altres\'\i\ degli algoritmi approssimati che mostrano
+come tali risultati siano stretti.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing triangles in planar graphs,
+   \newblock {\em ready for submission}\\
+{\bf descrizione:}
+Dato un grafo planare,
+vogliamo trovare in esso il massimo numero di triangoli disgiunti.
+A seconda che li si voglia solamente disgiunti sui nodi od
+anche sugli archi abbiamo due distinti problemi.
+Tuttavia, in una trattazione assai unificata,
+diamo dei PTAS per entrambi i problemi
+avvalendoci del teorema separatore.
+Un PTAS \'e un algoritmo approssimante
+a qual si voglia precisione
+ed \'e in pratica il meglio che si possa sperare
+quando il problema in questione
+risulti essere NP-hard.
+In effetti noi si dimostra inoltre che entrambi i problemi sono
+NP-hard.
+Precedentemente solamente il caso di triangoli disgiunti
+sui nodi era noto essere tale e la dimostrazione
+basava su una ben pi\'u complessa riduzione
+che non quella da noi proposta.\\
+\end{itemize}
+
+
+
+\section{Matroidi}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi, Andr\'{a}s Seb\H{o}},
+   \newblock A note on Matroid Flows,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Il lavoro comincia con l'osservare
+come una per altro importante
+congettura di Seymour riguardante
+una certa classe di matroidi
+fosse di fatto mal posta.
+Infatti,
+ove la congettura fosse presa un po' troppo alla lettera,
+diamo un controesempio alla stessa.
+Forniamo quindi la versione rivista della congettura
+e ne esploriamo le relazioni con altre
+congetture e risultati.\\
+\end{itemize}
+
+
+
+\section{Teoria e problemi di matching}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  A short proof of K\H{o}nig's matching theorem,
+   \newblock {\em accepted by Journal of Graph Theory}\\
+{\bf descrizione:}
+``In ogni grafo bipartito la massima
+cardinalit\'a di un matching \'e pari
+alla minima cardinalit\'a di un node cover.''
+-- qui lo si dimostra succintamente senza ricorrere
+ai cammini aumentanti.
+La stessa dimostrazione consente
+inoltre di ottenere in tutta semplicit\'a
+la ben pi\'u impegnativa generalizzazione di Egerv\'ary
+al caso pesato.\\ 
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Indecomposable $r$-graphs and some other counterexamples,
+   \newblock {\it Journal of Graph Theory} 32 (1) (1999) 1--15.\\
+{\bf descrizione:}
+Un $r$-grafo
+\'e un punto intero nel cono
+generato proiettando il politopo dei matching
+perfetti in un grafo completo.
+Noi diamo dei controesempi a delle congetture
+di Seymour e di altri ricercatori
+e mostriamo come le altezze per le basi
+di Hilbert di questi coni non siano limitate
+da costante alcuna.
+Paul Seymour in persona mi ha chiesto
+di sottomettere questo lavoro al suo giornale
+spendendo significativi apprezzamenti.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Richard C.~Brewster, Pavol Hell, Sarah H.~Pantel, Romeo Rizzi, Anders Yeo},
+   \newblock  Packing paths in digraphs,
+   \newblock {\em accepted by Journal of Graph Theory}\\
+{\bf descrizione:}
+Un matching pu\'o essere considerato
+come una collezione di copie di $K_2$
+disgiunte sui nodi.
+Una generalizzazione del probema di trovare un matching
+di massima cardinalit\'a \'e pertanto quella di,
+fissata una famiglia di grafi $\G$,
+e dato un certo grafo in input $G$,
+trovare una collezione di sottografi di $G$ disgiunti sui nodi,
+tutti isomorfi a qualche membro di $\G$.
+Questo problema, noto come il $\G$-packing problem,
+ha ricevuto molta attenzione nella letteratura.
+Tuttavia poco era noto nel caso $\G$
+sia una famiglia di grafi diretti,
+se non che questa
+cornice fosse pi\'u generale.
+In questo lavoro si \'e dato inizio all'esplorazione
+del caso in cui $\G$
+\'e una famiglia di grafi diretti.
+In particolare, si \'e affrontato
+e completamente caratterizzato
+il caso in cui $\G$ \'e una famiglia di cammini diretti.
+Il problema di coprire il maggior numero di nodi di
+$G$ \'e risolvibile in tempo
+polinomiale se $\G$ \'e riducibile
+o alla famiglia $\G=\{\vec{P}_1\}$
+o alla famiglia $\G=\{\vec{P}_1,\vec{P}_2\}$.
+In tutti gli altri casi il
+problema risulta essere $\NP$-completo.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  The $T$-join cone,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Forniamo la descrizione del cono
+dei $T$-joins tramite un sistema di diseguaglianze
+lineari. Ci\'o generalizza la ben nota
+descrizione di Seymour per il cono dei cicli.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Efficiently solvable extensions of the MS-matching problem,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Vogliamo accoppiare macchine e lavori con
+il vicolo che se un certo lavoro (slave)
+viene eseguito allora anche un altro lavoro (il suo master)
+viene eseguito.
+Obbiettivo: trovare un accoppiamento che massimizzi il numero
+di lavori assegnati a macchine.
+Questo \'e un problema squisitamente di Ricerca Operativa.
+Purtroppo il problema \'e NP-hard in generale
+e tuttavia \'e di interesse risolverlo anche in casi
+particolari.
+Una formula min-max era nota per un caso particolare.
+Noi estendiamo l'ambito di validit\'a di tale formula
+e consideriamo generalizzazioni di casi risolvibili
+mostrando come esse stesse siano risolvibili.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  K\H{o}nig's Edge Coloring Theorem without augmenting paths,
+   \newblock {\it Journal of Graph Theory} 29 (1998) 87.\\
+{\bf descrizione:}
+Il teorema dei balli \'e uno di
+quei risultati con cui K\H{o}nig
+ha posto le basi della teoria dei grafi per come oggi \'e conosciuta.
+Il teorema ha applicazioni dirette in problemi di scheduling e timetabling,
+ma anche in discipline pi\'u lontane come la statistica.
+Nonostante la sua importanza, il risultato veniva derivato
+come corollario di un'altro fondamentale teorema di K\H{o}nig.
+Noi introduciamo  un'operazione elementare che
+trasforma un grafo bipartito e $\Delta$-regolare
+in un suo fratellino minore.
+La dimostrazione \'e ora per induzione
+ed \'e diretta.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Finding $1$-factors in bipartite regular graphs,
+              and edge-coloring bipartite graphs,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Questo lavoro migliora ulteriormente
+lo stato del problema di colorare gli archi in un grafo
+bipartito con al pi\'u $\Delta$ colori.
+Il collo di bottiglia per la complessit\'a
+computazionele dell'algoritmo proposto
+da Kapoor
+e Rizzi in ``Edge-coloring bipartite graphs''
+era la procedura presa in prestito da Hopcroft e Cole
+per il reperimento di un accoppiamento perfetto
+in un grafo bipartito e regolare.
+Qui si migliora su questa procedura
+grazie a degli argomenti algebrici.
+In lavoro mette in luce il legame tra
+la fattorizzazione di grafi e la fattorizzazione
+di numeri interi.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Simple proofs for the bipartite matching politope,
+   \newblock {\em Rapporto Interno n.5},
+   \newblock {Dipartimento di Matematica Pura ed Applicata},
+   \newblock {Universit\`a di Padova}, Italia.\\
+{\bf descrizione:}
+Questo rapporto interno vuole offrire
+una trattazione semplice ed elegante
+per il problema del matching su grafi bipartiti.
+Abbiamo raccolto qui
+alcune nostre dimostrazioni originali
+ed altre prese in prestito.
+Il lavoro va inteso come sussidio alla didattica.
+I principali risultati del settore
+vengono ottenuti senza sforzo.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Minimum $T$-cuts and optimal $T$-pairings,
+   \newblock {\em submitted}\\
+{\bf descrizione:}
+Diamo una formula di min-max
+per la minima cardinalit\'a di un $T$-taglio.
+Mostriamo inoltre come nel minimal TDI system
+per il poliedro dei $T$-tagli
+siano presenti disuguaglianze a coefficienti comunque grandi.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  A Simple Minimum $T$-Cut Algorithm,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Diamo un' algoritmo diretto per il computo
+di un minimo $T$-taglio.
+L'algoritmo, pur basandosi sulle stesse propriet\'a
+di submodularia\'a ed uncrossing al pari
+delle soluzioni precedenti,
+purtuttavia presenta dei vantaggi
+di semplicit\'a e praticit\'a.
+L'algoritmo reperisce inoltre
+un $T$-accoppiamento ottimo,
+fornendo quindi dimostrazione algoritmica
+della ``buona caratterizzazione''
+da noi fornita nel lavoro
+``Minimum $T$-cuts and optimal $T$-pairings''.\\
+\end{itemize}
+
+
+
+\section{Circuit Double Cover Conjecture}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  A note on range-restricted circuit covers,
+   \newblock {\em accepted by Graphs and Combinatorics}\\
+{\bf descrizione:}
+Una delle pi\'u belle ed ambite congetture
+in teoria dei grafi afferma che per ogni grafo
+connesso che non possa essere separato
+con la rimozione di un solo arco esiste
+una famiglia di circuiti tali
+che ogni arco del grafo
+\'e contenuto in precisamente due di questi.
+%La congettura implicherebbe ad esempio il ben noto
+%teorema dei 4 colori.
+Quando una questione \'e difficile
+i matematici amano scavarle un fosso tutt'attorno
+andando ad investigare questioni affini, rafforzamenti od
+indebolimenti, casi particolari o generalizzazioni.
+In questo caso,
+alcuni studiosi avevano
+considerato il seguente problema
+di carattere generale:
+per quali insiemi di numeri interi \'e vero che se piazzo
+numeri da questo insieme sugli archi del grafo,
+soddisfando l'ovvia condizione che le somme debbano essere
+pari tutt'intorno ad ogni nodo,
+allora esiste sempre
+una famiglia di circuiti tali che ogni arco
+si trova coinvolto nel prescritto numero di circuiti?
+In pratica, se l'insieme di interi $\{2\}$
+avesse questa proprit\'a
+la congettura seguirebbe. 
+Era stato congetturato che
+ogni insieme di interi non contenente l'uno
+avesse questa propriet\'a.
+Qui noi si \'e dato un controesempio
+a questo rafforzamento evidentemente eccessivo.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  The Petersen graph is not the only $3$-edge
+              connected superstrong snark,
+   \newblock {\em ready for submission}\\
+{\bf descrizione:}
+Bill Jackson aveva osservato come
+un controesempio minimale alla
+{\em Double Cover Conjecture}
+dovesse essere un
+{\em $3$-edge connected superstrong snark}.
+Ad oggi l'unico $3$-edge connected superstrong snark
+conosciuto era il grafo di Petersen,
+e per esso la congettura vale.
+Qui noi forniamo una famiglia infinita di
+$3$-edge connected superstrong snarks.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Cycle cover property and $CPP=SCC$ property are not equivalent,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Controesempio ad una congettura di Zhang.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On $3$-connected graphs without even cycle decompositions,
+   \newblock {\em submitted}\\
+{\bf descrizione:}
+Era stato congetturato che $K_5$,
+il grafo completo su 5 nodi,
+fosse l'unico grafo euleriano $3$-connesso
+con un numero pari di archi a non poter essere
+decomposto in circuiti di lunghezza pari.
+Qui noi esibiamo una famiglia infinita
+di controesempi.\\
+\end{itemize}
+
+
+
+\section{Grafi Perfetti}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On the Recognition of $P_4$-Indifferent Graphs,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Un grafo \'e
+$P_4${\em -indifferent}
+se ammette un ordinamento dei nodi
+tale che per ogni cammino indotto
+da quattro nodi $a,b,c,d$
+si ha che $a<b<c<d$
+oppure che $a>b>c>d$.
+La famiglia dei grafi $P_4$-indifferent
+include quella degli {\em indifferent}
+ed inoltre ogni grafo che sia $P_4$-indifferent
+\'e {\em perfectly orderable}.
+L'interesse per grafi perfectly orderable
+\'e motivato dall'osservazione di Chv\'atal
+che un semplice algoritmo greedy
+lungo l'ordinamento
+produce sempre una colorazione ottima dei nodi.
+Tuttavia il riconoscimento di grafi perfectly orderable
+in generale \'e NP-completo.
+Recentemente, Ho\`ang, Maffray e Noy
+avevano dato una caratterizzazione dei grafi $P_4$-indifferent
+in termini di sottografi indotti proibiti.
+Noi riorganizziamo la loro dimostrazione
+e ne deriviamo un algoritmo lineare per il riconoscimento
+di grafi $P_4$-indifferent.
+Se il grafo in input \'e $P_4$-indifferent,
+allora l'algoritmo produce inoltre un ordinamento $<$
+come le propriet\'a di cui sopra.\\
+\end{itemize}
+
+
+
+\section{Packing e Covering}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing triangles in planar graphs,
+   \newblock {\em ready for submission}\\
+{\bf descrizione:}
+Dato un grafo planare,
+vogliamo trovare in esso il massimo numero di triangoli disgiunti.
+A seconda che li si voglia solamente disgiunti sui nodi od
+anche sugli archi abbiamo due distinti problemi.
+Tuttavia, in una trattazione assai unificata,
+diamo dei PTAS per entrambi i problemi
+avvalendoci del teorema separatore.
+Un PTAS \'e un algoritmo approssimante
+a qual si voglia precisione
+ed \'e in pratica il meglio che si possa sperare
+quando il problema in questione
+risulti essere NP-hard.
+In effetti noi si dimostra inoltre che entrambi i problemi sono
+NP-hard.
+Precedentemente solamente il caso di triangoli disgiunti
+sui nodi era noto essere tale e la dimostrazione
+basava su una ben pi\'u complessa riduzione
+che non quella da noi proposta.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Alessandro Panconesi, Romeo Rizzi},
+   \newblock  Packing Cuts in Graphs,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Diamo svariati risultati di inapprossimabilit\'a
+per il problema di trovare il maggior numero possibile di
+tagli disgiunti in un dato grafo.
+La questione dell' NP-hardness del problema
+era stata recentemente posta al centro dell'attenzione
+da alcuni lavori di Ajeev,
+ma segue ora come conseguenza di questi ben pi\'u forti risultati.
+(Non approssimabilit\'a entro un fattore $\log n$ nel caso generale
+ed APX-hardness in svariati casi particolari).
+Diamo altres\'\i\ degli algoritmi approssimati che mostrano
+come tali risultati siano stretti.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Richard C.~Brewster, Pavol Hell, Sarah H.~Pantel, Romeo Rizzi, Anders Yeo},
+   \newblock  Packing paths in digraphs,
+   \newblock {\em accepted by Journal of Graph Theory}\\
+{\bf descrizione:}
+Un matching pu\'o essere considerato
+come una collezione di copie di $K_2$
+disgiunte sui nodi.
+Una generalizzazione del probema di trovare un matching
+di massima cardinalit\'a \'e pertanto quella di,
+fissata una famiglia di grafi $\G$,
+e dato un certo grafo in input $G$,
+trovare una collezione di sottografi di $G$ disgiunti sui nodi,
+tutti isomorfi a qualche membro di $\G$.
+Questo problema, noto come il $\G$-packing problem,
+ha ricevuto molta attenzione nella letteratura.
+Tuttavia poco era noto nel caso $\G$
+sia una famiglia di grafi diretti,
+se non che questa
+cornice fosse pi\'u generale.
+In questo lavoro si \'e dato inizio all'esplorazione
+del caso in cui $\G$
+\'e una famiglia di grafi diretti.
+In particolare, si \'e affrontato
+e completamente caratterizzato
+il caso in cui $\G$ \'e una famiglia di cammini diretti.
+Il problema di coprire il maggior numero di nodi di
+$G$ \'e risolvibile in tempo
+polinomiale se $\G$ \'e riducibile
+o alla famiglia $\G=\{\vec{P}_1\}$
+o alla famiglia $\G=\{\vec{P}_1,\vec{P}_2\}$.
+In tutti gli altri casi il
+problema risulta essere $\NP$-completo.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi, Andr\'{a}s Seb\H{o}},
+   \newblock A note on Matroid Flows,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Il lavoro comincia con l'osservare
+come una per altro importante
+congettura di Seymour riguardante
+una certa classe di matroidi
+fosse di fatto mal posta.
+Infatti,
+ove la congettura fosse presa un po' troppo alla lettera,
+diamo un controesempio alla stessa.
+Forniamo quindi la versione rivista della congettura
+e ne esploriamo le relazioni con altre
+congetture e risultati.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On packing $T$-joins,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Investighiamo il legame tra
+il problema della fattorizzazione di $r$-grafi
+ed il problema dell'impaccamento di $T$-joins.
+\end{itemize}
+
+
+
+\section{Colorazione di archi}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\bf tesi di dottorato,}
+          relatore: {\sc Prof.~Michele Conforti}
+          (Dipartimento di Matematica, Universit\'a di Padova),
+          controrelatore: {\sc Prof.~Bert Gerards}
+          (Istituto di Ricerca CWI, Amsterdam).
+          Innanzittutto devo segnalare che la
+          mia tesi di dottorato aveva toccato questo argomento
+          fornendo dei contributi originali.
+          Il materiale in essa contenuto e riguardante
+          la {\em Colorazione di archi} ha trovato
+          spazio in alcuni dei seguenti lavori.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Ajai Kapoor, Romeo Rizzi},
+   \newblock  Edge-coloring bipartite graphs,
+   \newblock {\em accepted by Journal of Algorithms}\\
+{\bf descrizione:}
+Battiamo (o meglio battevamo)
+il record asintotico
+sulla complessit\'a computazionale
+per produrre una soluzione ottima al
+problema di colorare gli archi di un grafo
+bipartito col minor numero possibile di colori.
+Inoltre davamo un algoritmo di complessit\'a lineare
+(e meglio di cos\'\i\ non \'e ovviamente possibile
+per una macchina sequenziale)
+per produrre una soluzione
+che impieghi solamente un colore in pi\'u
+che non la soluzione ottima.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Finding $1$-factors in bipartite regular graphs,
+              and edge-coloring bipartite graphs,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Questo lavoro migliora ulteriormente
+lo stato del problema di colorare gli archi in un grafo
+bipartito con al pi\'u $\Delta$ colori.
+Il collo di bottiglia per la complessit\'a
+computazionele dell'algoritmo proposto
+da Kapoor
+e Rizzi in ``Edge-coloring bipartite graphs''
+era la procedura presa in prestito da Hopcroft e Cole
+per il reperimento di un accoppiamento perfetto
+in un grafo bipartito e regolare.
+Qui si migliora su questa procedura
+grazie a degli argomenti algebrici.
+In lavoro mette in luce il legame tra
+la fattorizzazione di grafi e la fattorizzazione
+di numeri interi.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Romeo Rizzi},  
+   \newblock  Improving a Family of Approximation
+              Algorithms to Edge Color Multigraphs,
+   \newblock {\em Inf. Proc. Lett.} 68 (1998) 11-15.\\
+{\bf descrizione:}
+Coloriamo gli archi di un grafo
+in modo che archi incidenti ad uno stesso nodo
+abbiano colori diversi.
+Evidentemente non possiamo sperare di impiegare
+meno di $\Delta$ colori,
+ove $\Delta$ \'e il massimo grado di un nodo.
+Il teorema di Vizing dice che
+possiamo sempre farcela
+con $\Delta+1$ colori.
+Tuttavia ci\'o non \'e pi\'u vero
+ove si consideri la possibilit\'a di avere archi paralleli
+tra una stessa copia di nodi.
+\'E stato tuttavia definito
+un parametro $\Delta'$,
+di facile computazione,
+che costituisce una miglior stima inferiore
+che non $\Delta$ sul numero di colori necessari.
+Delle famigerate congetture
+degli anni 80
+affermano poi che ce la si pu\'o sempre
+fare con al pi\'u $\Delta'+1$ colori.
+In ogni caso,
+il problema di colorare
+gli archi con pochi colori ha importanti applicazioni.
+Questo spiega la serie di algoritmi che sono stati
+via via presentati per impiegare al pi\'u
+$\alpha \Delta'$ colori.
+Purtroppo, ogni nuovo algoritmo se ne esce
+con un valore di $\alpha$ pi\'u vicino ad 1,
+ma anche con una complessit\'a computazionale
+e di implementazione sempre maggiore.
+Noi abbiamo mostrato come con un semplice trucco fosse possibile
+migliorare il grado di approssimazione per ciascuno
+degli algoritmi sinora proposti senza incrementarne
+la complessit\'a.
+Ci\'o consente di dedurre la validit\'a della congettura
+di cui sopra per $\Delta\leq 12$.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  K\H{o}nig's Edge Coloring Theorem without augmenting paths,
+   \newblock {\it Journal of Graph Theory} 29 (1998) 87.\\
+{\bf descrizione:}
+Il teorema dei balli \'e uno di
+quei risultati con cui K\H{o}nig
+ha posto le basi della teoria dei grafi per come oggi \'e conosciuta.
+Il teorema ha applicazioni dirette in problemi di scheduling e timetabling,
+ma anche in discipline pi\'u lontane come la statistica.
+Nonostante la sua importanza, il risultato veniva derivato
+come corollario di un'altro fondamentale teorema di K\H{o}nig.
+Noi introduciamo  un'operazione elementare che
+trasforma un grafo bipartito e $\Delta$-regolare
+in un suo fratellino minore.
+La dimostrazione \'e ora per induzione
+ed \'e diretta.\\
+
+\vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Impaccando $T$-tagli e $T$-giunti,
+   \newblock {\em Bollettino Sezione B dell'Unione Matematica Italiana},
+   \newblock {Fascicolo speciale dedicato alle tesi di dottorato}
+             (8) 1-A Suppl. (1998) 201-204.\\
+{\bf descrizione:}
+L'UMI offriva uno spazio di 4 pagine per
+presentare la tesi di dottorato nel suo prestigioso bollettino.
+In italiano, e con delle figure,
+ho cercato di attirare l'attenzione del lettore
+introducendo solo un paio dei problemi affrontati
+nella mia tesi.
+Risultato? Un successo:
+qualcuno ha risposto
+chiedendomi copia della tesi.\\
+\end{itemize}
+
+
+
+\section{Fattorizzazione di grafi}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\bf tesi di dottorato,}
+          relatore: {\sc Prof.~Michele Conforti}
+          (Dipartimento di Matematica, Universit\'a di Padova),
+          controrelatore: {\sc Prof.~Bert Gerards}
+          (Istituto di Ricerca CWI, Amsterdam).
+          Innanzittutto devo segnalare che la
+          mia tesi di dottorato aveva toccato questo argomento
+          fornendo dei contributi originali.
+          Il materiale in essa contenuto e riguardante
+          la {\em Fattorizzazione di grafi} ha in gran parte trovato
+          spazio in alcuni dei seguenti lavori.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Indecomposable $r$-graphs and some other counterexamples,
+   \newblock {\it Journal of Graph Theory} 32 (1) (1999) 1--15.\\
+{\bf descrizione:}
+Un $r$-grafo
+\'e un punto intero nel cono
+generato proiettando il politopo dei matching
+perfetti in un grafo completo.
+Noi diamo dei controesempi a delle congetture
+di Seymour e di altri ricercatori
+e mostriamo come le altezze per le basi
+di Hilbert di questi coni non siano limitate
+da costante alcuna.
+Paul Seymour in persona mi ha chiesto
+di sottomettere questo lavoro al suo giornale
+spendendo significativi apprezzamenti.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Finding $1$-factors in bipartite regular graphs,
+              and edge-coloring bipartite graphs,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Questo lavoro migliora ulteriormente
+lo stato del problema di colorare gli archi in un grafo
+bipartito con al pi\'u $\Delta$ colori.
+Il collo di bottiglia per la complessit\'a
+computazionele dell'algoritmo proposto
+da Kapoor
+e Rizzi in ``Edge-coloring bipartite graphs''
+era la procedura presa in prestito da Hopcroft e Cole
+per il reperimento di un accoppiamento perfetto
+in un grafo bipartito e regolare.
+Qui si migliora su questa procedura
+grazie a degli argomenti algebrici.
+In lavoro mette in luce il legame tra
+la fattorizzazione di grafi e la fattorizzazione
+di numeri interi.\\
+
+\vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Impaccando $T$-tagli e $T$-giunti,
+   \newblock {\em Bollettino Sezione B dell'Unione Matematica Italiana},
+   \newblock {Fascicolo speciale dedicato alle tesi di dottorato}
+             (8) 1-A Suppl. (1998) 201-204.\\
+{\bf descrizione:}
+L'UMI offriva uno spazio di 4 pagine per
+presentare la tesi di dottorato nel suo prestigioso bollettino.
+In italiano, e con delle figure,
+ho cercato di attirare l'attenzione del lettore
+introducendo solo un paio dei problemi affrontati
+nella mia tesi.
+Risultato? Un successo:
+qualcuno ha risposto
+chiedendomi copia della tesi.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  K\H{o}nig's Edge Coloring Theorem without augmenting paths,
+   \newblock {\it Journal of Graph Theory} 29 (1998) 87.\\
+{\bf descrizione:}
+Il teorema dei balli \'e uno di
+quei risultati con cui K\H{o}nig
+ha posto le basi della teoria dei grafi per come oggi \'e conosciuta.
+Il teorema ha applicazioni dirette in problemi di scheduling e timetabling,
+ma anche in discipline pi\'u lontane come la statistica.
+Nonostante la sua importanza, il risultato veniva derivato
+come corollario di un'altro fondamentale teorema di K\H{o}nig.
+Noi introduciamo  un'operazione elementare che
+trasforma un grafo bipartito e $\Delta$-regolare
+in un suo fratellino minore.
+La dimostrazione \'e ora per induzione
+ed \'e diretta.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On packing $T$-joins,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Investighiamo il legame tra
+il problema della fattorizzazione di $r$-grafi
+ed il problema dell'impaccamento di $T$-joins.
+\end{itemize}
+
+
+
+\section{Problemi di cammini minimi}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Michele Conforti, Romeo Rizzi},  
+   \newblock  Shortest Paths in Conservative Graphs,
+   \newblock {\em accepted by Discrete Mathematics}\\
+{\bf descrizione:}
+L'algoritmo di Ford e Fulkerson
+computa i cammini minimi in un grafo orientato
+con pesi razionali sugli archi,
+accertando al contempo l'assenza di cicli di peso totale
+negativo.
+Ma quando il grafo non \'e orientato,
+nessun algoritmo specifico era noto per lo stesso problema,
+che doveva venir risolto con tecniche di matching.
+In effetti queste tecniche mostravano come
+il problema fosse di fatto pi\'u difficile che non nel caso diretto.
+In questo lavoro abbiamo definito due operazioni elementari
+che, combinate, riescono a ridurre il grafo dato in input
+ad un nodo singolo
+a meno che un'{\em anomalia} non venga riscontrata
+in una certa fase del processo di riduzione.
+Se il grafo si riduce ad un nodo singolo
+allora ne deduciamo che esso non conteneva
+cicli negativi ed i cammini correntemente impugnati sono ottimi.
+Se un'anomalia \'e riscontrata,
+allora, procedendo a ritroso,
+o scopriamo di poter migliorare uno dei cammini correntemente considerati,
+o reperiamo un ciclo negativo.
+Ci\'o ci consente di ottenere
+un algoritmo specifico
+per il problema dei cammini minimi su grafi non diretti
+e conservativi (= senza cicli negativi).
+L'algoritmo pu\'o essere
+considerato come un algoritmo alternativo
+per problemi di matching in generale.
+Inoltre tramite esso \'e possibile
+fornire dimostrazione algoritmica
+di varie propriet\'a strutturali
+di grafi conservativi e cammini minimi.\\ 
+\end{itemize}
+
+
+
+\section{Problemi di taglio minimo}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  On minimizing symmetric set functions,
+   \newblock {\em accepted by Combinatorica}\\
+{\bf descrizione:}
+Talvota una dimostrazione semplice \'e la base
+di una nuova generalizzazione.
+\'E il caso di questo lavoro dove si \'e data
+una dimostrazione del tutto elementare
+di un lemma un po' magico che legava
+certi ordinamenti dei nodi di un grafo
+con delle coppie di nodi che erano buone,
+nel senso che consentivano di ridurre
+il problema del taglio minimo.
+Il metodo era stato generalizzato precedentemente da
+Queyranne per la minimizzazione
+di funzioni simmetriche e submodulari,
+ma i suoi argomenti erano complessi e poco trasparenti.
+Noi si \'e data una dimostrazione induttiva
+talmente elementare da non richiedere
+quasi alcuna ipotesi.
+Ci\'o ha portato a definire una classe di funzioni
+sulla base delle sole propriet\'a utilizzate
+ed a derivare poi le varie generalizzazioni precedentemente
+conosciute come casi particolari
+della nostra analisi.
+Il tutto in grande semplicit\'a.
+Questo lavoro mi ha meritato l'apprezzamento da parte
+dei pi\'u insigni studiosi nel settore.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Excluding a simple good pair approach to directed cuts,
+   \newblock {\em accepted by Graphs and Combinatorics}\\
+{\bf descrizione:}
+Un controesempio non particolarmente difficile ma tecnicamente
+necessario.
+Recentemente, un nuovo ed efficace approccio
+era stato proposto per
+il problema del taglio minimo
+su grafi non-diretti.
+Volevamo assicurarci che lo stesso approccio
+non poteva essere esteso in quanto tale al caso di grafi diretti.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  Efficient implementations of greedy order algorithms,
+   \newblock {\em submitted} \\
+{\bf descrizione:}
+Nel caso del problema del taglio minimo,
+Nagamochi ed Ibaraki avevano mostrato come
+alcuni accorgimenti fossero effettivi nel migliorare
+le performances dell'algoritmo da loro stessi proposto
+per il problema.
+Questa analisi non era stata possibile per
+le successive generalizzazioni del loro approccio causa
+l'eccessiva complessit\'a delle stesse.
+A seguito del nostro successo
+in ``On minimizing symmetric set functions'',
+tale strada diviene per\'o percorribile.
+Qui noi mostriamo come gli accorgimenti di Nagamochi ed Ibaraki
+possano essere di fatto inclusi
+nell'impostazione assiomatica da noi proposta
+nel lavoro di cui sopra.
+Di fatto il nostro approccio
+consente persino di perfezionare da un lato,
+e di semplificare dall'altro,
+gli accorgimenti in questione,
+Tali perfezionamenti si applicano
+anche nel caso particolare ed originale
+del problema del taglio minimo.\\
+
+  \vspace{1.4mm}
+  \item[] {\sc Romeo Rizzi},
+   \newblock  A new method for finding cuts of minimum weight,
+   \newblock {\em in preparation}\\
+{\bf descrizione:}
+Forniamo un metodo nuovo
+ed invero semplice per il problema del taglio minimo
+in grafi.
+Il metodo generalizza al problema del taglio minimo in ipergrafi.
+Inoltre l'idea base promette bene
+in quanto ad applicabilit\'a ad altri problemi di edge-connectivity.
+\end{itemize}
+
+
+
+\section{Biologia Computazionale}
+
+\begin{itemize}
+  \vspace{1.4mm}
+  \item[] {\sc Alberto Caprara, Romeo Rizzi},
+   \newblock  Improved Breakpoint Graph Decompositions,
+   \newblock {\em submitted}\\
+{\bf descrizione:}
+Il sorting by reversals \'e uno di quei
+problemi in biologia computazionale
+che sono venuti alla
+luce con lo sviluppo del Progetto Genoma Umano.
+L'interesse per questo problema da parte
+della biologia computazionale \'e forte.
+Caprara aveva purtroppo dimostrato che il problema
+era NP-hard.
+Sorge a questo punto l'interesse per degli algoritmi
+di tipo approssimato.
+Questi sono intesi a produrre delle soluzioni che, se non ottime,
+siano quantomeno di provata qualit\'a,
+ossia di qualit\'a superiore ad un certo bound fissato.
+Noi si \'e migliorato il miglior
+bound attuale.
+Il tutto a prezzo di un'analisi combinatorica
+di non poco peso per il lettore e per chi mai
+volesse implementare l'algoritmo.
+La complessit\'a computazionale dell'algoritmo
+tuttavia non ne ha sofferto.\\
+\end{itemize}
+
+
+
+\vspace{1.6cm}
+Amsterdam,
+November 1999.\\
+\vspace{2mm}
+
+Romeo Rizzi
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
