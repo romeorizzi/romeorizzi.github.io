@@ -11,7 +11,7 @@ __In ogni caso, i materiali che segnalerò, non significa che vadano pappati tut
 stà a voi valutare quando un materiale a coprire una competenza che in realtà già avete, e non perderci tempo sopra. Oppure quando una proposta possa non essere alla vostra portata in quel momento. Cercherò di taggare i materiali proposti con delle meta-info al riguardo.
 Ricordiamoci che gli obiettivi sono le competenze.__
 
-Sono apertissimo (anzi in grande necessità) anche ad idee su come organizzare ogni cosa (ad esempio in questo momento sono in grande dubbio su quali strumenti utilizzare per aprire stanze con classi aperte che consentano ouna comunicazione all-to-all. In questo momento tra i candidati ho Discord e jitsi meet, ma non mi è facile così da profano azzeccare la scelta giusta).
+Sono apertissimo (anzi in grande necessità) anche ad idee su come organizzare ogni cosa (ad esempio in questo momento sono in grande dubbio su quali strumenti utilizzare per aprire stanze con classi aperte che consentano una comunicazione all-to-all e momenti di discussione aperta. In questo momento tra i candidati ho Discord e jitsi meet, ma non mi è facile così da profano azzeccare la scelta giusta).
 
 __OBIETTIVO PER LA PRIMA PARTE__ Incominceremo dal costruire una sensibilità e background algoritmico di base.
 Un testo che non sbaglio a consigliarvi è il [mitico Cormen](https://mitpress.mit.edu/books/introduction-algorithms-third-edition) di cui esistono numerose versioni. Il problema è che non credo vi sia facile procurarvi una copia in prestito in queste circostanze ed ad acquistarlo costerebbe un pacco (ma al link che vi ho dato potete scaricare qualche capitolo ed anche materiali a corredo gratuitamente).
