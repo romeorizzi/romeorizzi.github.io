@@ -20,3 +20,7 @@ If you find any sources or links that could be useful, please let us know, but o
 We are still discussing about which channels and instruments to use for an all-to-all communication. At this moment, we are considering Discord and Jitsi Meet for streaming live lectures, but we still have to decide. If you know any other tools, just suggest.
 For sure, all communications and immediate messages will be through the Telegram group of the course:
 https://t.me/MathDecisions2020
+
+
+Romeo (romeo.rizzi@univr.it)
+Alice (alice.raffaele@univr.it)
