@@ -1,7 +1,7 @@
 # Prima Lezione del Corso Ricerca Operativa #
 
 Benvenuti alla prima lezione del corso.
-E' un corso che richiede la vostra partecipazione attiva, passo passo, per l'acquisizione anche autonoma di competenze il più autentiche ed elevate possibile. Di più su questo ho detto nella cartella padre di questa.
+E' un corso che richiede la vostra partecipazione attiva, passo passo, per l'acquisizione anche autonoma di competenze il più autentiche ed elevate possibile. Di più su questo ho detto nel file README.md che si trova nella cartella padre di questa.
 Dopo queste dovute premesse __SI PARTE__:
 
 __COSE DA FARE SUBITO__:
