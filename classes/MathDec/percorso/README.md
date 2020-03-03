@@ -1,29 +1,22 @@
-# Benvenuti al Corso Ricerca Operativa #
+# Welcome to the Mathematics for Decisions course #
 
-Benvenuti al corso di Ricerca Operativa, UniVR, edizione 2020.
-E' un corso che richiede la vostra partecipazione attiva, passo passo, per l'acquisizione anche autonoma di competenze il più autentiche ed elevate possibile.
+Welcome to the Mathematics for Decisions course, 2020 edition.
 
-Richiede anche la vostra assertività per guidare il corso stesso, segnalarmi le vostre esigenze, avanzare proposte per migliorare le cose, segnalare buchi o difficoltà, aiutare i compagni, o per dare una mano a mè (perchè nò?) che ne ho un sacco di bisogno.
+In the previous editions (November-December 2018 and 2019), the course was organized as a mini-course of 20 hours.
+Now we have the chance to extend it to 48 hours of lectures and 24 hours of tutoring.
 
-In questa situazione di emergenza (coronavirus) mi sarà ancora più difficile riuscire a stare dietro alla preparazione di tutto il materiale. Chi volesse darmi una mano nel produrre materiale può saltare come/quando vuole dall'altra parte del muro e darmi una mano. Cerchiamo tutti di essere propositivi anche in tal verso. Un modo molto semplice ma efficace di contibuire è anche quello di segnalare eventuali materiali che trovate in giro e che avete sperimentato esservi stati di aiuto. Non ho nessun problema a proporre materiali presi da internet, YouTube, ... il più delle volte questo non viola copyrights ed anzi gli autori originali possono esserne contenti (ed io non sono geloso, sò che in internet si trovano filmati e materiali molto più curati e professionali di quelli che posso produrre io). Però sono anche esigente: segnalatemi quei soli materiali che avvertite abbiano effettivamente un valore e di buona pertinenza agli obiettivi come mano a mano vi diventeranno più chiari. Non sbaglierete quando mi segnalerete materiali effettivamente sperimentati, che hanno effettivamente aiutato voi stessi, nel caso peggiore questo mi servirà a prendere meglio le coordinate. Quando segnalate del materiale, spendete una vostra valutazione critica che spieghi perchè secondo voi quel materiale è un'ottima aggiunta a quelli da mettere a disposizione. Dobbiamo scongiurare il pericolo di dispersione.
+The course aims to show several techniques and methodologies to model problem with Mathematical Programming.
+For each topic, we will present you the required theoretical concepts but most of the part will be practical. You will have an active role doing exercises, individually or in groups, reasoning about problems, modelling and coding too.
 
-__In ogni caso, i materiali che segnalerò, non significa che vadano pappati tutti:
-stà a voi valutare quando un materiale a coprire una competenza che in realtà già avete, e non perderci tempo sopra. Oppure quando una proposta possa non essere alla vostra portata in quel momento. Cercherò di taggare i materiali proposti con delle meta-info al riguardo.
-Ricordiamoci che gli obiettivi sono le competenze.__
+This course can be seen as the continuation of the Operations Research course, but it is not mandatory to have attended that (in case you never studied Linear Programming, we will recall all the needed basics: just let us know).
 
-Sono apertissimo (anzi in grande necessità) anche ad idee su come organizzare ogni cosa (ad esempio in questo momento sono in grande dubbio su quali strumenti utilizzare per aprire stanze con classi aperte che consentano una comunicazione all-to-all e momenti di discussione aperta. In questo momento tra i candidati ho Discord e jitsi meet, ma non mi è facile così da profano azzeccare la scelta giusta).
+All problems we are going to discuss are derived from real situations, real issues companies may encounter in their working days. In particular, a case study from a company will be soon presented, already in one of the first classes, and will accompany us throughout all these months. We will analyze data, propose models and try to solve with techniques we'll study, but also with other you think may be suitable!
 
-__OBIETTIVO PER LA PRIMA PARTE__ Incominceremo dal costruire una sensibilità e background algoritmico di base.
-Un testo che non sbaglio a consigliarvi è il [mitico Cormen](https://mitpress.mit.edu/books/introduction-algorithms-third-edition) di cui esistono numerose versioni. Il problema è che non credo vi sia facile procurarvi una copia in prestito in queste circostanze ed ad acquistarlo costerebbe un pacco (ma al link che vi ho dato potete scaricare qualche capitolo ed anche materiali a corredo gratuitamente).
-Ah, per scambiarci materiali tra di noi possiamo usare Telegram, il bello di Telegram è anche la protezione sicura.
-Potete anche considerare un libro meno costoso ([attualmente in offerta](https://www.ibs.it/algoritmi-strutture-di-dati-libro-alan-a-bertossi-alberto-montresor/e/9788825173956)) ed in italiano, che contiene parte degli argomenti del Cormen.
+This course requires your active participation, step by step, to acquire the more authentic competences and skills, independently too.
+It also requires your assertiveness to support us, so tell us your needs, suggest how we can improve the whole organization and the resources, indicate difficulties, help your colleagues.
 
-Guardando invece in alto, dove ho mestiere, metodologia e mesaggi preziosi da trasmettere, vi segnalo da subito che la Teoria della Complessità è una musa metodologica cui io faccio costante riferimento e che è mio obiettivo riuscire a presentarvi questa grande amica.
-La bibbia di questo incredibile strumento metodologico è il [Garey & Johnson](https://kupdf.net/download/3-computers-and-intractability-a-guide-to-the-theory-of-np-completeness-garey-amp-johnson_58deb1e4dc0d60a26b8970eb_pdf) che mi pare di capire possa essere scaricato gratuitamente anche da [quì](https://www.semanticscholar.org/paper/Computers-and-Intractability%3A-A-Guide-to-the-Theory-Garey-Johnson/bdede1e17c947540b50e6e2db9e8467ddc6e7336).  
-
-## OBIETTIVI DI LUNGO CORSO ##
-
-Sopra ho suggerito di concentrarsi sull'obiettivo primario dell'acquisizione da subito di competenze, anche operative.
-Nel tracciare e disporre degli obiettivi di più lungo corso, che possano farvi a riferimento, viene però strumentale parlare di esame.
+In this situation of emergency for COVID-19, the commitment of us all is very important.
+If you find any sources or links that could be useful, please let us know, but only after your incisive evaluation. 
+We are still discussing about which channels and instruments to use for an all-to-all communication. At this moment, we are considering Discord and Jitsi Meet for streaming live lectures, but we still have to decide. If you know any other tools, just suggest.
 Confido siate abbastanza solidi da non farvi però sviare da questo, e rimanere concentrati sull'acquisizione delle competenze e dei messaggi più profondi del corso.
 Resta il fatto che un'obiettivo di lungo corso che fà da buon paletto è che, coronavirus o no, all'esame dovrete saper dimostrare le competenze che vi chiedevo come negli scorsi anni, nulla meno o nulla più. Alla pagina del corso trovate tutti i temi degli anni precedenti e relative correzioni. E' molto materiale e credo possa costituire un riferimento molto chiaro.
