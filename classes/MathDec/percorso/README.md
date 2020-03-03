@@ -18,5 +18,5 @@ It also requires your assertiveness to support us, so tell us your needs, sugges
 In this situation of emergency for COVID-19, the commitment of us all is very important.
 If you find any sources or links that could be useful, please let us know, but only after your incisive evaluation. 
 We are still discussing about which channels and instruments to use for an all-to-all communication. At this moment, we are considering Discord and Jitsi Meet for streaming live lectures, but we still have to decide. If you know any other tools, just suggest.
-Confido siate abbastanza solidi da non farvi però sviare da questo, e rimanere concentrati sull'acquisizione delle competenze e dei messaggi più profondi del corso.
-Resta il fatto che un'obiettivo di lungo corso che fà da buon paletto è che, coronavirus o no, all'esame dovrete saper dimostrare le competenze che vi chiedevo come negli scorsi anni, nulla meno o nulla più. Alla pagina del corso trovate tutti i temi degli anni precedenti e relative correzioni. E' molto materiale e credo possa costituire un riferimento molto chiaro.
+For sure, all communications and immediate messages will be through the Telegram group of the course:
+https://t.me/MathDecisions2020
