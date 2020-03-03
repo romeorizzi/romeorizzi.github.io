@@ -19,7 +19,7 @@ Ah, per scambiarci materiali tra di noi possiamo usare Telegram, il bello di Tel
 Potete anche considerare un libro meno costoso ([attualmente in offerta](https://www.ibs.it/algoritmi-strutture-di-dati-libro-alan-a-bertossi-alberto-montresor/e/9788825173956)) ed in italiano, che contiene parte degli argomenti del Cormen.
 
 Guardando invece in alto, dove ho mestiere, metodologia e mesaggi preziosi da trasmettere, vi segnalo da subito che la Teoria della Complessità è una musa metodologica cui io faccio costante riferimento e che è mio obiettivo riuscire a presentarvi questa grande amica.
-La bibbia di questo incredibile strumento metodologico è il [Garey & Johnson](https://kupdf.net/download/3-computers-and-intractability-a-guide-to-the-theory-of-np-completeness-garey-amp-johnson_58deb1e4dc0d60a26b8970eb_pdf) che mi pare di capire possa essere scaricato gratuitamente xnche da [quì](https://www.semanticscholar.org/paper/Computers-and-Intractability%3A-A-Guide-to-the-Theory-Garey-Johnson/bdede1e17c947540b50e6e2db9e8467ddc6e7336).  
+La bibbia di questo incredibile strumento metodologico è il [Garey & Johnson](https://kupdf.net/download/3-computers-and-intractability-a-guide-to-the-theory-of-np-completeness-garey-amp-johnson_58deb1e4dc0d60a26b8970eb_pdf) che mi pare di capire possa essere scaricato gratuitamente anche da [quì](https://www.semanticscholar.org/paper/Computers-and-Intractability%3A-A-Guide-to-the-Theory-Garey-Johnson/bdede1e17c947540b50e6e2db9e8467ddc6e7336).  
 
 ## OBIETTIVI DI LUNGO CORSO ##
 
