@@ -2,7 +2,7 @@
 
 Welcome again!
 
-In this first folder you'll find three files.
+In this first folder you'll find ___three files___.
 
 ___O_Introduction___
 What is "modeling"? When and why we do it? And what is "Mathematical Programming"?
