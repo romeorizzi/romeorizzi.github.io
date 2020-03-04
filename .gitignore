@@ -109,6 +109,3 @@ ENV/
 
 # vscode
 .vscode
-
-# MathDecisions exceptions
-!classes/MathDec/*.pdf
