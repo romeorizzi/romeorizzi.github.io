@@ -5,8 +5,9 @@ Game theory studies interaction between agents acting to achieve their own goals
 
 The course is divided in two parts.
 
-In the first one (lectures by ___Stefano Benati___) the basic concepts of game theory are introduced and a knowledge of Linear Programming (LP) is assumed as a prerequisite (the student missing the necessary background in the theory of Linear Programming is advised to look at the slides 2a_Basics_LinearProgramming in the lectures of the Mathematics for Decisions course).
-_Modeling players’ preferences_: Utility functions and expected utility. 
+In the first one (lectures by ___Stefano Benati___) the basic concepts of game theory are introduced and a knowledge of Linear Programming (LP) is assumed as a prerequisite (the student missing the necessary background in the theory of Linear Programming is advised to look at the slides ___2a_Basics_LinearProgramming___ in the lectures of the Mathematics for Decisions course).
+
+_Modeling players’ preferences_: Utility functions and expected utility.
 _Games in extensive and normal form_: Solving games by backward induction. Nash equilibria in games.
 _Zero-Sum games_: pure and mixed strategies and the Nash equilibrium.
 _Some classic games_: The Prisoners’ Dilemma, the Dating Game, Chicken, the Ultimatum Game. An application to politics: the median voter theorem. Repeated games.
