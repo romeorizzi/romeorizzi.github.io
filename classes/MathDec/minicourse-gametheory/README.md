@@ -1,27 +1,16 @@
-# Welcome to the Mathematics for Decisions course #
+# Introduction to Game Theory (20 hours) #
 
-Welcome to the Mathematics for Decisions course, 2020 edition.
+___Course program:___
+Game theory studies interaction between agents acting to achieve their own goals. Main results of game theory are widely applied in various fields of Science. In particular, it plays a crucial role in modern Economics. 
 
-In the previous editions (November-December 2018 and 2019), the course was organized as a mini-course of 20 hours.
-Now we have the chance to extend it to 48 hours of lectures and 24 hours of tutoring.
+The course is divided in two parts.
 
-The course aims to show several techniques and methodologies to model problem with Mathematical Programming.
-For each topic, we will present you the required theoretical concepts but most of the part will be practical. You will have an active role doing exercises, individually or in groups, reasoning about problems, modelling and coding too.
+In the first one (lectures by ___Stefano Benati___) the basic concepts of game theory are introduced and a knowledge of Linear Programming (LP) is assumed as a prerequisite (the student missing the necessary background in the theory of Linear Programming is advised to look at the slides 2a_Basics_LinearProgramming in the lectures of the Mathematics for Decisions course).
+_Modeling players’ preferences_: Utility functions and expected utility. 
+_Games in extensive and normal form_: Solving games by backward induction. Nash equilibria in games.
+_Zero-Sum games_: pure and mixed strategies and the Nash equilibrium.
+_Some classic games_: The Prisoners’ Dilemma, the Dating Game, Chicken, the Ultimatum Game. An application to politics: the median voter theorem. Repeated games.
+_Simulation of Games through Agent Based Models_: the Schelling’s segregation game. The persistence of ethnocentric behavior.
 
-This course can be seen as the continuation of the Operations Research course, but it is not mandatory to have attended that (in case you never studied Linear Programming, we will recall all the needed basics: just let us know).
-
-All problems we are going to discuss are derived from real situations, real issues companies may encounter in their working days. In particular, a case study from a company will be soon presented, already in one of the first classes, and will accompany us throughout all these months. We will analyze data, propose models and try to solve with techniques we'll study, but also with other you think may be suitable!
-
-This course requires your active participation, step by step, to acquire the more authentic competences and skills, independently too.
-It also requires your assertiveness to support us, so tell us your needs, suggest how we can improve the whole organization and the resources, indicate difficulties, help your colleagues.
-
-In this situation of emergency for COVID-19, the commitment of us all is very important.
-If you find any sources or links that could be useful, please let us know, but only after your incisive evaluation. 
-We are still discussing about which channels and instruments to use for an all-to-all communication. At this moment, we are considering Discord and Jitsi Meet for streaming live lectures, but we still have to decide. If you know any other tools, just suggest.
-For sure, all communications and immediate messages will be through the Telegram group of the course:
-https://t.me/MathDecisions2020
-
-
-Romeo (romeo.rizzi@univr.it)
-
-Alice (alice.raffaele@univr.it)
+The second part (lectures by ___Sylvain Sorin___) deals with strategic games and introduces the main concepts, such as value and equilibria. Several proofs of the minmax theorem based on dynamical processes will be provided: unilateral procedure in discrete time, continuous time and ODE, fictitious play in discrete and continuous time, replicator dynamics.  The relation with approachability theory will be presented.
+Then existence proofs for equilibria and links between equilibria and variational inequalities will be discussed. Supermodular, potential and dissipative games will be treated as well as correlated equilibrium, leading to elementary existence proofs. If time permits, a short presentation of “stochastic approximation tools” will be done.
