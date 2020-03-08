@@ -25,14 +25,11 @@ Il motivo per cui vi consiglio C++ è la sua libreria STL, acronimo di Standard 
 È una libreria che per molte caratteristiche è simile a quella di Java, 
 in quanto offre funzioni per manipolare gli array (quali sort, ricerca binaria, ecc...) e contenitori per immagazzinare e ricercare in modo efficiente i dati.
 
-Questa pagina verrà aggiornata ogni volta che sarà necessario introdurre dei nuovi strumenti per risolvere i problemi proposti.
-Se conoscete delle risorse che potrebbero essere utili a 
-
 Per chi è interessato ad approfondire il linguaggio, propongo dei link utili:  
 https://www.w3schools.com/cpp/ -> corso di c++ che copre anche le basi.  
 https://www.tutorialspoint.com/cplusplus/cpp_stl_tutorial.htm -> introduzione molto veloce alla STL.  
 https://www.geeksforgeeks.org/containers-cpp-stl/ -> schema dei container STL.  
-https://www.cplusplus.com/reference/stl/ -> documentazione completa della libreria standard c++.  
+https://www.cplusplus.com/reference/stl/ -> documentazione completa della libreria standard c++. Consiglio solo di imparare a consultarla, di quello che contiene all'esame vi serve solo la punta dell'iceberg, e per questo sarà tra i materiali consultabili. 
 https://www.hackerrank.com/ -> sito che propone varie challenge algoritmiche, simili a quelle affrontate nel corso.  
 https://training.olinfo.it/#/overview -> portale ufficiale delle olimpiadi di informatica, 
 ha molti problemi molto simili a quelli del corso, ed utilizza la stessa piattaforma (CMS) per valutare i problemi.
@@ -172,7 +169,10 @@ Il C++ mette a disposizione un metodo molto efficente per farlo, attraverso la f
 	}
 
 
-WORK IN PROGRESS...
+__WORK IN PROGRESS...__
+I materiali in questa unit, se non questo stesso file, verranno aggiornati ogni volta che sarà necessario introdurre dei nuovi strumenti per risolvere i problemi proposti.
+Se conoscete delle risorse che potrebbero essere utili a facilitare l'acquisizione delle competenze sul piano della programmazione nella pratica ...
+
 
 
 <!-- Map -->
