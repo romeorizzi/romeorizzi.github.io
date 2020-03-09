@@ -1,6 +1,6 @@
 ## Il Calendario di Math Decisions, Magistrale di Matematica, Verona
 
-<iframe src="https://calendar.google.com/calendar/embed?src=mfdlpb138ondrhdu14vibocb8o%40group.calendar.google.com&ctz=Europe%2FRome" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+&lt;iframe src="https://calendar.google.com/calendar/embed?src=mfdlpb138ondrhdu14vibocb8o%40group.calendar.google.com&ctz=Europe%2FRome" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Integra il calendario di Math Decisions
 
