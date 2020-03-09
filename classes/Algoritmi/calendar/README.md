@@ -1,10 +1,10 @@
-## Il Calendario di Algoritmi, corso di Algoritmi e Complessità, Verona
+## Calendario degli incontri per il Modulo di Algoritmi, corso di Algoritmi e Complessità, Verona
 
 <iframe src="https://calendar.google.com/calendar/embed?src=8m5ri4t5cbutt35sflm5foejks%40group.calendar.google.com&ctz=Europe%2FRome" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 (Se qualche informatico sà come evitare di far cliccare sull'obbrobrio qui sopra ...)
 
-## Integrazioni ed accessibilità del calendario di Math Decisions
+## Integrazioni, accessibilità ed interoperabilità del calendario
 
 ID calendario: **8m5ri4t5cbutt35sflm5foejks@group.calendar.google.com**
 
