@@ -18,9 +18,7 @@ Then existence proofs for equilibria and links between equilibria and variationa
 
 --------------------------------------------------------------------
 
-___About the first part___
-
-Game Theory: Supplementary material
+___About the first part: Game Theory supplementary material___
 
 _Books:_
 If you want to have something to remind you the basic of game theory, those short texts are fantastic:
