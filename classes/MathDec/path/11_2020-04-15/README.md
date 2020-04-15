@@ -2,7 +2,7 @@
 
 This week and the next one we are going to talk about ___NetLogo___:
 
-If you have followed Prof. Benati's lectures during the mini-course on game theory, you should have already seen NetLogo in action: it's used to model situations and several scenarios using agents-based simulation techniques, in order to analyze possible outcomes. During the mini-course you just had a look to what it can do, but why not trying to designing and developing your own models?
+If you have followed Prof. Benati's lectures during the mini-course on game theory, you should have already seen NetLogo in action: it's used to model situations and several scenarios using agents-based simulation techniques, in order to analyze possible outcomes. During the mini-course you just had a look to what it can do, but why not trying to design and develop your own models?
 
 In this first folder you'll find:
 - ___3a_NetLogo-Introduction.pdf___: preliminary concepts about NetLogo and three initial tutorials;
