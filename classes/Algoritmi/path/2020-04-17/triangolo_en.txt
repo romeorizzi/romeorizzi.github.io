@@ -1,0 +1,14 @@
+The triangle (triangolo)
+
+Description of the problem
+
+This is a triangle!
+Write a program that calculates the greatest possible sum of numbers attainable by following a path from the top of the trianlge to the bottom. At each step it can continue diagonally downwards either left or right.
+
+Input file
+
+The program must read a file with name input.txt. The first line of the file contains a single whole number N, the number of rows of the triangle. The next N lines contain an increasing number of whole numbers i, the n-th row contains the n whole numbers separated by spaces.
+
+Output file
+
+The program must create a file named output.txt containing the sum of the maximum sum that can be obtained from the triangle
