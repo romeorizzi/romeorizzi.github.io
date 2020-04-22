@@ -4,9 +4,9 @@
 
 Il tandem/sinergia e stretta interrelazione tra i seguenti due problemi/modelli:
 
-1. PL: la programmazione lineare (in P)
++ PL: la programmazione lineare (in P)
 
-2. PLI: la programmazione lineare intera (NP-hard)
++ PLI: la programmazione lineare intera (NP-hard)
 
 costituiscono il principale cavallo di battaglia della Ricerca Operativa.
 La PL, con la sua struttura ed i suoi teoremi, fornisce inoltre cornice concettuale e metodologica in più discipline della matematica e campi applicativi della stessa.
@@ -17,11 +17,11 @@ Uno strumento fondamentale è l'algoritmo del simplesso. Vediamo di portarcelo a
 
 1. Vi ho consigliato di lavorare sui primi 5 capitoli del Vanderbei:
 
-   1. [il testo di Robert J. Vanderbei](http://freecomputerbooks.com/Linear-Programming-Foundations-and-Extensions.html)
+   + [il testo di Robert J. Vanderbei](http://freecomputerbooks.com/Linear-Programming-Foundations-and-Extensions.html)
 
 2. Valido anche e complementare ad esso:
 
-   1. [il testo di Frederick S. Hillier](https://www.academia.edu/33097442/Hillier_Lieberman_Introduction_to_operation_research_1_.pdf)
+   + [il testo di Frederick S. Hillier](https://www.academia.edu/33097442/Hillier_Lieberman_Introduction_to_operation_research_1_.pdf)
 
 
 ## materiali di riferimento
@@ -40,7 +40,9 @@ Sappiamo come i funzionali lineari offrano in generala la prima approssimazione,
 La programmazione lineare si pone il problema di massimizzare
 una funzione lineare
 
-\sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)
+$$\sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)$$
+[se sul vostro browswer non si vede il LaTex via MathJax, dentro Markdown: \sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)]
+
 
 ossia di guadagnare un punto che sia il più possibile in là nella direzione di dove ci porta il gradiente (e noi pensiamo esso sia un vento uniforme su tutto R^n).
 
@@ -54,12 +56,13 @@ Quindi:
 
 1 dimensione
 
-x <= 3
-
+Raprresentiamo la diseguaglianza $x \leq 3$:
+```
 #################
 ________________*___________________>
                x=3
                 ##################################
+```
 
 La tecnica generale per capire un vincolo di diseguaglianza è che prima si capisce quello ad eguaglianza e poi sì fa picking su un singolo punto non sulla ciccatrice dell' =. Questa ciccatrice partizione R^n sotto condizioni abbastanza generali, che certo valgono nel caso di funzionali lineari.
 
@@ -68,13 +71,16 @@ La tecnica generale per capire un vincolo di diseguaglianza è che prima si capi
 
 x+y = 1   (1,1)(x,y) = 1
 
-|
-|
-|\
-| \
-|  \
-____\______
-     \
+```
+ |
+\|
+ |\
+ | \
+ |  \
+_|___\______
+ |    \
+```
+(dove la slope vorrebbe ovviamente essere a $45°$)
 
 3 dimensioni
 
@@ -142,7 +148,7 @@ COSA SE AVESSI UNA VARIABILE LIBERA
 
 Def: una variabile libera è una variabile che può essere sia arbitrariamente grande che arbitrariamente piccola.
 
-COme rappresentare una variabile free:
+Come rappresentare una variabile free:
 <------   ------>   x LIBERA
 
 In termini di variabili non-negative:
@@ -165,17 +171,40 @@ Esempio:
 
 max 3x +2y
 
-    x + y <= 5
-    x -2y <= 4
-x >= 0, y free
+    x + y \leq 5
+    x -2y \leq 4
+    x >= 0, y free
 
 Lo rappresento come:
-max 3x_1 +2(x^+_2 -x^-_2) = 3x_1 +2x_2^+ -2x_2^-
+
+max 3x +2(y^+ -y^-) = 3x +2y^+ -2y^-
 
     x + y^+ -y^-  <= 5
     x -2y^+ -2y^- <= 4
-y_1, y^+_2, y^-_2 >= 0
+    x, y^+, y^- >= 0
 
+
+Solo per testare se il supporto a MathJax funzionerebbe per tutti, provo a riscrivere l'ultimo sistema sopra in LaTex embeddato via MathJax entro Markdown:
+
+$$
+\begin{array}{l}
+\max \; 3x +2(y^+ -y^-) = 3x +2y^+ -2y^-\\
+\left\{
+ \begin{array}{l}  
+  \begin{array}{rrrcr}
+    x &+y^+ &-y^-  &\leq& 5\\
+    x &-2y^+ &-2y^- &\leq& 4
+  \end{array}
+\\
+  \begin{array}{l}
+     x, y^+, y^- \geq 0
+  \end{array}
+ \end{array}
+\right.
+\end{array}
+$$
+
+In ogni caso, quale scrittura risulterebbe poi preferibile? Mah...
 __________
 
 
