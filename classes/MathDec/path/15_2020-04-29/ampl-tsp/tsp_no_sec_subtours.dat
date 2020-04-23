@@ -1,0 +1,14 @@
+set V := A B C D E F;
+set E := (A,B) (A,C) (A,D) (B,E) (B,F) (C,D) (C,F) (D,E) (E,F);
+param cost := 
+[A,B] 5
+[A,C] 5
+[A,D] 4
+[B,E] 2
+[B,F] 3
+[C,D] 3
+[C,F] 8
+[D,E] 4
+[E,F] 4;
+
+
