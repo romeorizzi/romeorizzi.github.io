@@ -6,7 +6,7 @@ ___4-ProgrammazioneLineare2___
 Oggi vediamo come risolvere un problema non a origine ammissibile attraverso il metodo delle due fasi.<br>
 
 ___5-ProgrammazioneLineare3-parziale___
-Iniziamo poi ad accennare qualcosa sulla teoria della dualità, introducendo le nozioni di problema ``primale'' e problema ``duale'' e le regole per passare da uno all'altro.
+Iniziamo poi ad accennare qualcosa sulla teoria della dualità, introducendo le nozioni di problema primale e problema duale, nonché le regole per passare da uno all'altro.
 
 Romeo (romeo.rizzi@univr.it)
 
