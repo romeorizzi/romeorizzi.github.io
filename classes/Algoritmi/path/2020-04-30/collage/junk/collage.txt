@@ -1,0 +1,59 @@
+ARCOBALENO E COLLAGE
+
+Nel pianeta Wobniar ogni mattina splende il suo bellissimo e caratteristico
+arcobaleno. La particolarita` consiste nella disposizione dei colori, che
+compongono strisce verticali anziche` orizzontali, e nel numero degli stessi che
+possono presentarsi piu` volte all'interno dell'arco.
+
+Il famoso artista Ed Esor decide un giorno di voler catturare lo splendido arco
+per incidere cosi` un'opera che durera` nel tempo. Ed Esor e` molto noto per la
+sua capacita` di fare collage, arte tremendamente apprezzata in Wobniar, ed i
+suoi quadri sono valutati dalla critica in modo assai curioso. I piu` grandi
+collage di Ed Esor sono stati cosi` considerati infatti dal ridotto numero di
+pezzi di carta usati per comporre l'immagine, tecnica sopraffina che fa della
+sovrapposizione un'arte. Guardando il loro maestro lavorare, i discepoli
+dell'arte del Collage di Ed Esor si chiedono quanti pezzi colorati serviranno
+all'artista per il suo prossimo capolavoro.
+
+Aiuta i discepoli a scoprire la soluzione, ricorda che Ed Esor, da grande
+artista, sfrutta con abilita` impeccabile la sovrapposizione dei pezzi di carta
+per fare di un semplice collage un capolavoro. Se per esempio l'arcobaleno fosse
+composto da sole 3 strisce di 2 colori diversi alternati, Ed Esor riuscirebbe a
+fare un collage usando due semplici pezzi di carta: il primo, disposto come
+base, dello stesso colore delle due strisce alle estremita`, il secondo al
+centro del primo pezzo stesso.
+
+INPUT E OUTPUT
+
+L'input e` composto da piu` numeri interi: il primo numero N (0<N<=1000), nella
+prima riga, indica il numero di strisce dell'arcobaleno, nella seconda riga sono
+invece posti i successivi N numeri che indicano il colore della striscia. Ogni
+colore C e` un numero intero compreso tra 0 e 255. A Wobniar infatti i colori
+sono chiamati come numeri seguendo una logica ancora a noi sconosciuta. Le
+strisce piu` lunghe sono indicate da piu` numeri uguali consecutivi. L'output
+del programma sara` composto da un unico numero: il numero minimo di pezzi di
+carta che Ed Esor potra` usare.
+
+Es. 1
+
+input: 
+3 
+1 2 1
+
+output:
+2
+
+Es. 2
+
+input:
+7
+1 1 2 3 1 2 1
+
+output:
+4
+
+
+VINCOLI
+0 < N <= 1000
+0 <= C <= 255
+Il programma deve terminare entro 6 secondi.
