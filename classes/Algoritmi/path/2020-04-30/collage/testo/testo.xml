@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE EXAMPLE [
+<!ENTITY agrave "à">
+<!ENTITY eacute "é">
+<!ENTITY egrave "è">
+<!ENTITY igrave "ì">
+<!ENTITY ograve "ò">
+<!ENTITY ugrave "ù">
+<!ENTITY le "≤">
+<!ENTITY lt "<">
+]>
+<layout>
+<gara>Finali Nazionali 2004</gara>
+<titolo>Arcobaleno e Collage</titolo>
+<short>collage</short>
+<problema>
+<p>Nel pianeta Wobniar ogni mattina splende un bellissimo e caratteristico
+arcobaleno. La particolarit&agrave; consiste nella disposizione dei colori, che
+possono presentarsi pi&ugrave; volte all'interno dell'arco.</p>
+
+<p>Il famoso artista Ed Esor decide un giorno di voler catturare lo
+splendore dell'arco in un collage di strisce colorate.
+I suoi quadri sono valutati dalla critica in modo assai curioso. Tra
+questi, i critici giudicano come migliori quelli
+costituiti da poche diverse strisce: per
+l'intellighenzia di Wobniar, usare poche strisce colorate &egrave; una tecnica
+sopraffina che fa della sovrapposizione un'arte.</p>
+
+<p>Aiuta Ed Esor a minimizzare il numero di strisce del suo collage!</p>
+
+<p>Se, ad esempio, l'arcobaleno fosse composto da sole 3 strisce di 2
+colori diversi alternati, Ed Esor riuscirebbe a fare un collage usando
+due sole strisce di carta: una, disposta come base, dello stesso
+colore delle due strisce alle estremit&agrave; dell'arcobaleno, l'altra
+posata sul centro della prima.</p>
+</problema>
+
+<input>
+<p>Il file <samp>input.txt</samp> &egrave; composto da
+pi&ugrave; numeri interi: sulla prima riga il numero <var>N</var> a indicare il
+numero di strisce dell'arcobaleno; sulla seconda riga sono posti <var>N</var>
+numeri interi <var>C<sub>1</sub></var>, <var>C<sub>2</sub></var>, ..., <var>C<sub>N</sub></var>
+a indicare i colori della striscia.
+Ogni colore <var>C<sub>i</sub></var> &egrave; un numero
+intero compreso tra 0 e 255.
+Strisce uniformi di colore sono indicate da pi&ugrave; numeri uguali
+consecutivi.</p>
+</input>
+
+<output>
+<p>Il file <samp>output.txt</samp> dovr&agrave; contenere un
+unico numero: il numero minimo di strisce per riprodurre l'arcobaleno.</p>
+</output>
+
+<assunzioni>
+<li><var>0 &lt; N &le; 1000</var></li>
+<li>Per ogni <var>C<sub>i</sub></var>, <var>0 &le;
+C<sub>i</sub> &le; 255</var></li>
+<li>Il tempo di esecuzione massimo &egrave; fissato in 4 secondi</li>
+</assunzioni>
+
+<esempio>
+<li>
+<input>
+3 
+1 2 1
+</input>
+<output>
+2
+</output>
+</li>
+
+<li>
+<input>
+7
+1 1 2 3 1 2 1
+</input>
+<output>
+4
+</output>
+</li>
+</esempio>
+
+</layout>
