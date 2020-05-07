@@ -1,0 +1,268 @@
+commentavamo: ci ha una struttura a parentesi
+((()(()))()())
+cosa? il problema? 
+
+prendiamoci il tempo di affinare quasta sensazione/sentimento
+
+forse paga soffermarsi a guardare alla struttura delle soluzioni:
+
+obiettivo: inventarsi una bella rappresentazione di quello che sono le soluzioni (ottimo se riusciamo
+a rappresentarcela con una sola riga di roba).
+Insieme, siamo arrivati a questa:
+
+ 1   2   1   3   1   4   2   4   1   3
+(   ( )     ( )     (   ( )   )   ) ( )
+
+credo che ogni soluzione ammissibile sia passibile di una tale rappresentazione.
+
+innanzitutto data una stringa così (una stringa di parentesi ben formata,
+con sapienti spaziature), essa codifica una soluzione ammissibile.
+Dove il numero delle coppie di parentesi è il numero di fogli che uso.
+Di fatto offrono una rappresentazione dei fogli.
+Viceversa, data una soluzione, ossia dei fogli impiallacciati, se la leggo da sinistra a destra
+posso tracriverla con una tale stringa.
+
+Fatto: considera una qualsiasi soluzione. Ossia dei fogli impiallacciati
+       che all'occhio danno l'effetto chromatico prescritto in input.txt.
+       (O, se preferisci,
+       una qualsiasi stringa come quella sopra.)
+       Se due posizioni i e j sono serviti da uno stesso foglio
+       e se anche le due posizioni h e k sono servite da uno stesso foglio
+       allora come siam messi?   
+    
+
+caso 1: è possibile che uno dei due intevalli [i,j] versus [h,k] abbracci l'altro?     
+sì, ecco un esempio:
+ i h   k j
+ 1 2 3 2 1
+ ( ( . ) )
+
+quì la soluzione ottima è unica, ed in effetti [i,j] include al suo interno [h,k].
+
+caso 2: è possibile che uno dei due intervalli sia piazzato totalmente prima dell'altro?
+        (ossia, è possibile che i<j<h<k ?)
+ i  j   h   k 
+
+ 1 3 1 2 4 2
+ ( . ) ( . )
+ 1 2 1 3 4 3
+
+caso 3: è possibile che in due intervalli si accavvallino?
+ i  h  j  k 
+proof:
+solo per queste 4 posizioni, dovrebbero esserci almeno 3 fogli, due non bastano.
+
+proof:
+ma scusa, uno dei due fogli deve stare sopra e l'altro sotto.
+Ma allora, di quello stà sotto, uno dei due estremi mi resta nascoso e l'occhio non lo vede.
+
+abbiamo già misurato, con dei controesempi che gli approcci grredy non sembrano potersi applicare
+
+sembra sia necessario un approccio di tipo programmazione dinamica
+
+in effetti, la programmazione dinamica si sposa molto bene con una struttura a parentesi,
+ossia con una struttura ad albero ordinato e più in generale con ogni struttura ad albero
+(e più generale con ogni poset).
+
+1   2   1   3   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3
+                                    (                       )
+
+supponi che su una generica istanza come questa mi venga dato un indizio, tipo uno dei tanti fogli mi viene dato.
+Quello dal 3 al 3 quì sopra.
+Il problema si spezza?
+POtrebbe sepzzarsi così:
+quello che stà dentro, e quello che stà fuori.
+
+Quello che sta furoi sarebbe:
+1   2   1   3   1   4   2   4   2   2   4   1   3
+
+Quello ceh sta dentro sarebbe rischioso vederlo come:
+
+    1   2   1   3   4 
+
+meglio vederlo come:
+3   1   2   1   3   4   3
+
+così il 3  in mezzo potrebbe essere una risbirciatina al foglio sotto.
+
+Non mi piace però la struttura del problema fuori che non è un intevallo ma un intervallo ocon buco.
+
+Espediente: i colori dell'arcobaleno sono un total order da posizione 1 a posizione N.
+Ossia ci sono due poszioni molto particolari. Concentrimoci ad esempio sulla posizione 1.
+E qui guessiamo con chi lei vada a sposarsi.
+
+
+1   2   1   3   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3
+
+Con chi và l'uno in prima posizione?
+
+E guessiamo forte. Ad esempio, invece di farmi solo dire chi è il prossimo uno sul mio stesso foglio: 
+
+1 3 4 1 4 3 1 2 1 5 6 7 5
+            ^
+
+Potrei farmi dire dove si chiude il mio foglio.
+
+1 3 4 1 4 3 1 2 1 5 6 7 5
+                ^
+
+Una volta che qualche entità avesse il garbo di rispondere a questo guess, come potrei approffitarne?
+(Approfittarne vuol dire spezzare il problema in problemi più piccoli).
+
+Quali sarebbero i sottoproblemi che genererei a questo punto?
++               + 
+1 3 4 1 4 3 1 2 1 5 6 7 5
+XXXXXXXXXXXXXXXXX  <--- foglio di colere 1, che poggia sul tavolo.
+tutti gli altri fogli o sono sopra di lui, o sono alla sua destra.
+
+Quindi ho i problemi:
+
+5 6 7 5 dove devo minizzare il numero di fogli
+ed il problema sopra il foglio XXXXXXXXXXX:
+
+3 4 1 4 3 1 2
+
++1 per il foglio del primo elemento?
+
+No, meglio tenerli i bordi, perchè il colore potrebbe riaffiorare:
+
+1 3 4 1 4 3 1 2 1
+
+Cioè, se il guess è corretto, allora:
+ Min(1 3 4 1 4 3 1 2 1 5 6 7 5)
+ = Min(1 3 4 1 4 3 1 2 1) + Min(5 6 7 5)
+
+ ma in 1 3 4 1 4 3 1 2 1   il guess è poco informativo.
+
+ Forse non è stata una buona idee guessare grosso, forse è meglio che come aiutino ai sacrim numi,
+ chiedo di dirmi quale è il prossimo punto dove il foglio riaffiora.
+ In questo modo, posso togliere il foglio, nell'istanza dei fogli sopra di lui.
+ Però così devo risolvere il problema che rischio di riconteggiarlo.
+
+Come risolvere questo problema?
+
+Di fornite al guess:
+
+1 3 4 1 4 3 1 2 1 5 6 7 5
+            ^
+potremmo forse fare così:
+
+Min(3 4 1 4 3) + 1  +Min(2 1 5 6 7 5)  mh... non mi piace, perchè ottengo un +1 ogni volta che il foglio riaffiora \dots
+
+Se invece faccio coì non pago mai per i fogli:
+Min(3 4 1 4 3) + Min(2 1 5 6 7 5)
+
+E se provassimo:
+
+  Min(1 3 4 1 4 3 1 2 1 5 6 7 5)
+  = Min(3 4 1 4 3) + Min(1 2 1 5 6 7 5)
+
+Il foglio lo pago quando il guess (il nume, l'oracolo) mi risponde che il foglio si richiude lì.
+Allora pago +1 e tolgo la prima posizione dell'arcobaleno.
+
+
+FAMIGLIA DEI PROBLEMI:
+
+siccome un sottointervallo di un sottointervallo è un sottointervallo,
+dovrebbe bastare considerare un problema per ogni sottointervallo.
+(Anzi, questo avrebbe potuto essere preso come un'assunzione con cui partire per attaccare il probema.)
+
+
+min(i,j) := il minimo numero di fogli per fare il collage di colore[i] ... colore[j]
+
+questo è il contratto.
+
+Possiamo ora provare a scrivere il codice.
+
+
+1   2   1   3   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3
+                ^                           ^
+                i                           j
+data la posizione di due ditinei sull'istanza, resta definito il sottoproblema:
+
+1   4   2   4   2   3   1   2
+
+di trovare il minimo numero di fogli per risolvere questo arcobaleno
+colore[i], colore[i+1], ... colore[j]
+
+stà a dire che il problema originale fa parte di questa famiglia di sottoproblemi:
+
+1   2   3   1   3   2   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3
+^                                                                                   ^    
+*                       *
+
+            1
+        3   3   3
+    2   2   2   2   2
+1   1   1   1   1   1   1   1   1   1   1   1   1  2   2
+
+
+min(titto) = min(2   3   1   3   2)
+             + min(1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3)   
+
+
+e se il foglio che parte col primissimo elemento si chiude anche col primissimo elemento?
+
+allora usiamo un'altra decomposizione?
+
+1 + e sposto ditino di partenza ^ alla posizione dopo.
+
+min(tutto) = 1 + min(2   3   1   3   2   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3)
+
+
+min[i,j] := (per definizione) = minimo numero di fogli sufficienti a comporre l'arcobaleno:
+    colore[i], colore[i+1], ... colore[j]
+
+ora come si può calcolare (ricorsivamente):
+
+
+
+Casi Base: i=j   (arcobaleno di un solo elemento)
+           rispondo 1
+
+           i>j   (arcobaleno di nessun elemento)
+           rispondo 0
+
+
+Passo Induttivo:  0 <= i < j < N:
+
+l'idea è di considerare tutte le possibiità su dove possa riaffiorare, per la sua seconda volta, il primissimo foglio.
+
+Caso 1: e se il primissimo foglio non riaffiorasse mai (fosse visibile solo su i?)
+
+in questo caso:
+
+min[i,j] = 1 + min[i+1,j]
+
+altrimenti, guessata la posizione i' dove riaffiora per la sua seconda volta:
+
+Caso 2.1. se i' = j allora
+
+min[i,j] = 1+min[i+1,j-1]
+      
+
+Caso 2.2. se i' < j allora
+
+min[i,j] = min[i+1,i'-1] + min[i',j]
+
+
+
+1   1   1   1   1
+^
+    *
+min[i,j] = min[i+1,i'-1] + min[i',j]
+
+
+
+
+
+
+    |               |   ?                                                           ?
+1   2   3   1   3   2   1   4   2   4   2   3   1   2   1   3   4   3   2   4   1   3
+^                                                                                   ^    
+*                       *                                                           j
+
+i                       i'
+
+
+
