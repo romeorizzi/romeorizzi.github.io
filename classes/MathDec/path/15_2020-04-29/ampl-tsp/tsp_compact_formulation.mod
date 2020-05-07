@@ -46,5 +46,5 @@ subject to MillerTuckerZemlin{i in V, j in V: i > 1 and j > 1 and i <> j}: # pos
 	u[i] - u[j] + n*x[i,j] - (n-2)*x[j,i] <= n-1;
 subject to InitialPosition: # the first vertex has position 1
 	u[1] = 1;
-subject to PositionsUB{i in V: i >= 2}: # LB on the positions of other vertices
+subject to PositionsLB{i in V: i >= 2}: # LB on the positions of other vertices
 	u[i] >= 2;
