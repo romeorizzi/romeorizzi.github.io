@@ -1,0 +1,95 @@
+Un DAG è un grafo diretto nel quale non siano presenti cicli diretti, ossia non sia possibile partire da un qualche nodo v e,
+dopo aver percorso una qualche sequenza di archi (sempre rispettando il verso di percorrenza previsto per l'arco)
+non si possa fare infine ritorno a v.
+DAG è un acronimo per Directed Acyclic Graph.
+
+I DAGS sono in fondo i PARTIAL ORDERS, sono lo stesso concetto sia nel caso finito che in quello infinito.
+
+Vorremo disporre di un algoritmo polinomiale per distinguere se un dato grafo diretto sia un DAG o meno (DAG recognition).
+
+Ciò ci conduce alla seguente domanda:
+IL SEGUENTE PROBLEMA E' IN P?
+
+PROBLEMA (reperimento di clicli diretti):   dato un grafo diretto G=(V,A), trovare se in esso sia presente un qualche ciclo.
+
+Dato che questo problema è chiaramente in NP (il ciclo gioca da certificato),
+possiamo quindi dire che il Problema DAG-recognition è in co-NP.
+
+Per altro viene naturale chiedersi altresì se, in tempo polinomiale, non si possa reperire il ciclo più piccolo.
+
+Prenditi il tuo tempo per pensare a questi problemi e domande prima di proseguire.
+
+
+Abbiamo sottolineao che spesso la prima cosa da fare con un problema non è trovare subito l'algoritmo più efficiente,
+ma tentare di collocarlo. Ci siamo cioè posti prima l'obiettivo di esprimere qualche ragione per la quale il problema debba essere in P.
+A tale proposito abbiamo osservato che:
+
+  FATTO OVVIO: un grafo ha un ciclo se e solo se per un suo qualche nodo v (posso guessare il nodo v dato
+che i nodi non sono poi troppi, ossia sono al più in numero polinomiale) esiste un ciclo che passa per quel nodo.
+
+Ci siamo così ritrovati per le mani il problema di capire se esiste un ciclo che passi per un quache nodo v. Ed ora?
+
+Il problema di capire se esista un ciclo passante per v può essere facilmente ridotto al seguente problema di reachability:
+
+capire se esista un cammino per andare da v^+ a v^- nel grafo G' ottenuto da G rimpiazzando il nodo v coi due nodi:
+  nodo v^+, con lo stesso insieme di archi uscenti che v, e nessun arco entrante,
+  nodo v^-, con lo stesso insieme di archi entranti che v, e nessun arco uscente.
+
+Abbiamo visto come un tale problema possa essere facilmente risolto con la BFS.
+
+La BFS fà molto di più: lanciata da un nodo s consente di costruire l'albero dei cammini minimi da s.
+
+(Se trovate un bel video sulla BFS da suggerire quì fatemi sapere.)
+
+Abbiamo anche visto come l'algoritmo di Dijkstra (una specie di event driven simulation ottenuta sostituendo la coda FIFO
+della BFS con una coda di priorità, dove resta comunque vero che un nodo parla solo quando
+è ormai determinata la sua distanza da s) riesca a calcolare l'albero dei cammini minimi nel caso più generale
+dove ogni arco presenti un valore (non negativo) di lunghezza.
+
+POSSIAMO QUINDI DIRE CHE IL PROBLEMA DI RICONOSCIMENTO DI UN DAG E' IN P MA RESTA INTERESSANTE DARE ALGORITMI PIU' EFFICIENTI.
+
+Una soluzione rapida anche da codificare è avvalersi della DFS:
+https://www.youtube.com/watch?v=rKQaZuoUR4M
+
+
+UN PROBLEMA DI SCHEDULING:
+Dato un insieme di attività, con relazioni binarie di precedenza (A<B) tra di loro,
+è possibile eseguire queste attività una dopo l'altra (metterle in fila indiana)
+in modo che tutte le precedenze siano rispettate?
+
+RAPPRESENTAZIONE DEL PROBLEMA DI SCHEDULING COME UN PROBLEMA SU GRAFI DIRETTI:
+Si introduce un nodo per ogni attività.
+La precedenza A<B può essere rappresentata con l'arco (A,B) con coda in A e testa in B.
+La domanda è se esista un ordinamento dei nodi tale che per ogni arco (X,Y) la coda X preceda la testa Y nell'ordine.
+Un tale ordine, se esiste, viene chiamato ordine topologico.
+Posta in altri termini, la domanda è se sia possibile disporre i nodi lungo una semiretta (ad esempio l'asse delle x),
+in modo che per ogni arco (X,Y) la coda X preceda la testa Y lungo la semiretta.
+In realtà potremo sempre limitarci ad utilizzare i punti della semiretta con coordinate intere da 1 a N.
+
+GOOD QUESTION:
+esiste sempre un ordine topologico? Oppure esistono dei grafi diretti che non ammettono ordine topologico?
+Quali sono questi grafi? (Buona caratterizzazione.)
+
+Ah, ma allora questo problema è il rovescio della medaglia del problema di riconoscimento dei DAG.
+Un fatto che viene rimarcato nel seguente breve video:
+https://www.youtube.com/watch?v=PfiFnXg2G2I
+
+Come utilizzare la DFS per produrre un Topological sort in tempo lineare:
+https://www.youtube.com/watch?v=n_yl2a6n7nM
+
+Ovviamente la cosa migliore è utilizzare la DFS (od altro approccio) per ottenere un algoritmo self-certifying
+che preveda due modi diversi e mutualmente esclusivi di terminare:
+1. o viene ritornato un ciclo diretto che vive nel grafo,
+2. o viene ritornato un ordinamento topologico dei nodi del grafo.
+
+I seguenti video spiegano diversi algoritmi su grafi (se trovate materiali migliori fate sapere):
+https://www.youtube.com/watch?v=09_LlHjoEiY
+https://www.youtube.com/watch?v=RqQBh_Wbcu4
+
+Questo ultimo video è breve ed efficace, ma non curato nei dettagli, e si intravede la possibilità di impostare le cose in modo migliore.
+Possibili progetti per il corso potrebbero porsi l'obiettivo di andare istituire un workflow opportuno per andare a produrre dei video di questo tipo (https://www.youtube.com/watch?v=RqQBh_Wbcu4) ma ben curati in ogni dettaglio (credo saprei specificare cosa intendo e guidare tali progetti ad esempio fornendo scritture e dialoghi voce).
+Il video dovrebbe essere un'animazione come quì, che andremmo a montare partendo da file sorgente.
+Vorrei avere controllo e impostare un prodotto che possa essere rivisto e migliorato nonchè un approccio che possa essere
+più o meno serialmente applicato per l'esposizione di più argomenti.
+
+
