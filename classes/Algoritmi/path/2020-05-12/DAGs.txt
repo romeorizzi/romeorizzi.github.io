@@ -1,4 +1,4 @@
-Un DAG è un gafo diretto nel quale non siano presenti cicli diretti, ossia non sia possibile partire da un qualche nodo v e,
+Un DAG è un grafo diretto nel quale non siano presenti cicli diretti, ossia non sia possibile partire da un qualche nodo v e,
 dopo aver percorso una qualche sequenza di archi (sempre rispettando il verso di percorrenza previsto per l'arco)
 non si possa fare infine ritorno a v.
 DAG è un acronimo per Directed Acyclic Graph.
@@ -27,7 +27,7 @@ A tale proposito abbiamo osservato che:
   FATTO OVVIO: un grafo ha un ciclo se e solo se per un suo qualche nodo v (posso guessare il nodo v dato
 che i nodi non sono poi troppi, ossia sono al più in numero polinomiale) esiste un ciclo che passa per quel nodo.
 
-CI siamo così ritrovati per le mani il problema di capire se esiste un ciclo che passi per un quache nodo v. Ed ora?
+Ci siamo così ritrovati per le mani il problema di capire se esiste un ciclo che passi per un quache nodo v. Ed ora?
 
 Il problema di capire se esista un ciclo passante per v può essere facilmente ridotto al seguente problema di reachability:
 
@@ -84,12 +84,12 @@ che preveda due modi diversi e mutualmente esclusivi di terminare:
 
 I seguenti video spiegano diversi algoritmi su grafi (se trovate materiali migliori fate sapere):
 https://www.youtube.com/watch?v=09_LlHjoEiY
-
-Possibili progetti potrebbero porsi l'obiettivo di andare a produrre dei video ben curati, ad esempio il seguente è breve ed efficace,
-ma non curato:
 https://www.youtube.com/watch?v=RqQBh_Wbcu4
-Si potrebbe cercare di produrre materiali efficaci e brevi tipo questo, ma precisi in ogni dettaglio
-(credo saprei dettagliare cosa intendo e guidare tali progetti).
+
+Questo ultimo video è breve ed efficace, ma non curato nei dettagli, e si intravede la possibilità di impostare le cose in modo migliore.
+Possibili progetti per il corso potrebbero porsi l'obiettivo di andare istituire un workflow opportuno per andare a produrre dei video di questo tipo (https://www.youtube.com/watch?v=RqQBh_Wbcu4) ma ben curati in ogni dettaglio (credo saprei specificare cosa intendo e guidare tali progetti ad esempio fornendo scritture e dialoghi voce).
 Il video dovrebbe essere un'animazione come quì, che andremmo a montare partendo da file sorgente.
 Vorrei avere controllo e impostare un prodotto che possa essere rivisto e migliorato nonchè un approccio che possa essere
 più o meno serialmente applicato per l'esposizione di più argomenti.
+
+
