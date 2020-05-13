@@ -12,9 +12,6 @@ vediamo come definire un problema di programmazione lineare, come inserire varia
 Più che sulla risoluzione, attraverso questi esercizi ci concentriamo più sulla parte di modellizzazione:<br>
 partiamo da descrizioni testuali di problemi e proviamo a mapparle in formulazioni matematiche, come problemi di PL e PLI.
 
-___5bis-ProgrammazioneLineare4.pdf___
-Queste slides contengono quattro esercizi sotto forma di descrizioni testuali di problemi, da modellizzare e risolvere con PuLP in autonomia.
-
 __Link utili su PuLP__:<br>
 - [PuLP su PyPI](https://pypi.org/project/PuLP/)<br>
 - [Documentazione tecnica di PuLP](https://coin-or.github.io/pulp/technical/pulp.html)
