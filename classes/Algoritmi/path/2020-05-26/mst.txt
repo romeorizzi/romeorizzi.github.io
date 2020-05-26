@@ -1,0 +1,198 @@
+Albero ricoprente di peso minimo (Minimum Spanning Tree, MST)
+disponibile un problema sul cms
+
+INPUT: un grafo G=(V,E) che ha per nodi dei PC che vorreste connettere tra di loro in un'unica rete. Come archi avete i possibili collegamenti (nodo-nodo) che potreste tirare, con relativo costo espresso come peso di corredo all'arco.
+
+TASK: decidere quali collegamenti tra quelli possibili tirare effettivamente per connettere il tutto, pagando però il meno possibile (il costo di una soluzione è dato dalla somma dei pesi degli archi scelti).
+
+In pratica una soluzione è un sottoinsieme F di archi tale che il grafo (V,F) sullo stesso insieme di nodi V originale risulti essere connesso.
+Il peso (costo da minimizzare) di una soluzione è la somma dei pesi degli archi che la compongono.
+
+In realtà F non deve essere necessariamente un albero, il vero requirement di ammissibilità è che ogni nodo in V resti collegato agli altri.
+Ad esempio: se aggiungete archi ad una soluzione ammissibile essa rimarrà ammissibile.
+Ed allora perchè questo problema di network design si chiama MST?
+Affronteremo gradualmente questo problema, per meglio comprenderne la sturttura, ed altrettanto gradualmente otterremo risposte a questa prima domanda, come ad altre che incontreremo nel nostro incedere.
+
+Ecco un'altra domanda con cui iniziare:
+come fare a capire se esite una soluzione ammissibile?
+
+Data la proprietà di monotonia vista sopra (ossia che sovrainsieme di soluzione ammissibile è soluzione ammissibile),
+per rispondere a questa domanda non serve affrontare alcun non-determinismo. Nessuna scelta difficile:
+per ogni arco la scelta ovvia è di prenderlo!
+
+La domanda a quel punto è se il grafo G ricevuto in input sia connesso oppure nò.
+
+Fact:
+Se il grafo G con tutti i collegamenti acquisibili come archi NON è connesso, allora il problema NON ha soluzione.
+Altrimenti una soluzione c'è di sicuro (ad esempio F=E).
+
+Lemma: se un arco uv ha un peso negativo w(uv), allora ogni soluzione ottima lo include.
+proof:
+   Per assurdo: sia F una soluzione di costo minimo che non contenga uv.
+   Allora, F' := F \cup \{uv\} è anche essa soluzione ammissibile (per la monotonia detta sopra) e w(S') = w(S) + w(uv) < w(S),
+   contraddicendo l'ottimalità di S.
+QED
+
+Cosa viene quindi naturale fare a questo punto:
+ sia E_- l'insieme di tutti quegli archi in E che hanno peso negativo.
+ Abbiamo già deciso di includere tutti gli archi di E_- dentro la nostra soluzione F
+ e siamo così rimasti col problema di trovare un sottoinsieme F' di E\E_- di archi da includere, di peso totale minimo,
+ e tale per cui F'\cap E_- sia connesso.
+
+Issue: vedi possibile rappresentare il problema e non-determinismo residuo come un problema nella forma originale?
+       Ossia, riesci a costruire un grafo G' dove gli archi (scelte) in E_- non siano più presenti e per il quale le soluzione ammissibili F'
+       corripondano 1 a 1 con le soluzioni F in G (nel senso che F = F'\cup E_- è soluzione per G se e solo se F' lo è per G'?)
+
+IDEA: vi siete inventati la contrazione di archi (contraete quelli di peso negativo) per poter rappresentare nello stesso linguaggio l'istanza ridotta (a valle della scelta ovvia di includere tutti gli archi di peso negativo o anche nullo).
+Contrarre un arco significa risucchiarlo come uno spaghetto come Lilly e il Vagabondo: ossia i due nodi estremi dell'arco si fondono in un unico nodo.
+Infatti, se quell'arco hai deciso di prenderlo, a quel punto i suoi estremi sono in connessione e possono a tutti gli effetti essere riguardati come un unico supernodo. Questa idea spettacolare da videogioco fù quella che consentì di ottenere le prime dimostrazioni semplici della formula di Eulero (dimostrata pienamente solo 160 anni dopo essere stata congetturata). E rimane a tutt'oggi un'operazione fondamentale in teoria dei grafi. (Complimenti!)
+
+Fact: dopo esserci sbarazzati degli archi di peso negativo (o anche nullo, why not) con la contraction, ci ritroviamo con un'istanza dove tutti gli archi hanno peso strettamente positivo.
+
+A questo punto, che struttura avrà la soluzione?
+
+Observation: se tutti i pesi sono strettamente positivi allora una soluzione ottima non può contenere cicli.
+proof:
+   Infatti, se F è una soluzione e C è un ciclo dentro F, e uv è un qualsiasi arco di C,
+   allora SF\uv è anche essa una soluzione (e pesa meno di F dato che il peso è strettamente positivo).
+QED
+
+Definizione: Chiamiamo foresta un qualsiasi grafo aciclico.
+             Chiamiamo albero una qualsiasi foresta connessa.
+Il gioco di parole è che ogni foresta si compone di alberi. :))) questa è la teoria dei grafi bellezza
+
+Ecco perchè il problema si chiama:
+albero ricoprente di peso minimo (a valle delle scelte ovvie, ossia di includere tutti gli archi di peso negativo, è un albero nel grafo ridotto ciò che vò cercando).
+Ma partire dal senso autentico del problema piuttosto che dalla sua versione scolastica che si trova nei libri ci ha fatto già meglio penetrare nella musica del problema, ed abbiamo già portato a casa degli inestimabili tesori come il concetto di contrazione di arco.
+
+Ora che sappiamo che alla soluzione possiamo imporre la struttura di un albero
+conviene però rivolgere la nostra attenzione a quanto sia stringente tale struttura.
+Il lemma zero che ci dischiude la comprensione del mondo degli alberi è il seguente
+
+Lemma: ogni albero con n >= 2 ha almeno una foglia (ossia un nodo di grado 1).
+proof: esiste un solo albero di un solo nodo (n=1). Esso non ha archi nè foglie, e ci piace chiamarlo seme.
+       Ok, il seme ha grado 0, ma non appena i nodi sono almeno due allora il grado (cioè il numero di vicini)
+       di ogni nodo è almeno 1 dato che altrimenti verrebbe meno la connessione.
+       Mostreremo che a questo punto le foglie di fatto sono almeno due (una ci basta ed avanza come punto di attacco per mangiarci gli alberi,
+       solo per questo siamo stati modesti nello statement).
+       Prendo un qualsiasi arco uv e, per generare una foglia che stia dal lato di v (ossia da cui si possa raggiungere v senza passare per u)
+       eseguo la sequente commedia (algoritmo/conversazione):
+       Dispongo una freccia rossa e bella lampeggiante con coda in u a testa in v, con la quale al nodo v io gli dico:
+       v mio bello, sappiamo entrambi che u è un tuo vicino, ma dimmi il vero: sei tù la foglia che vò cercando nevvero?
+       v potrebbe arrendersi e dirmi: è vero, u è il mio unico vicino.
+       In caso contrario è tenuto a darmi un suo altro vicino z, come certificato che non mi stà mentendo.
+       Questo lo vedo come una fraccia rossa e lampeggiante da v a z, con la quale porgo a z la stessa cortese richiesta.
+       E così via finchè troverò un nodo che dovrà pur arrendersi (non posso ripassare per uno stesso nodo dato che un albero è aciclico mentre
+       gli archi rossi che ho lasciato sul terreno andrebbero a formare un lazzo).
+QED
+
+Ovviamente, quando io da un albero pilucco via una foglia mi resta un albero con un nodo in meno (sicuramente resto una foresta dato che togliendo roba mica si può formare un ciclo, ma anche resto connesso poichè una foglia ben poco aiuta a mettere in collegamento gli altri nodi).
+Questo significa che tutti gli alberi crescono dal seme per germinazione, ossia per aggiunta di una foglia alla volta.
+Facciamo un pò di botanica:
+n = 1:   *    il seme detto anche: K_1 (grafo completo di un nodo), P_0 (cammino di 0 archi), S_0 (stella a 0 punte ed il solo centro)
+n = 2: *---*  il K_2, o P_1, o S_1 (stella a una punta)
+n = 3: *--*--*  P_2 o S_2 (stella a due punte)
+n = 4: P_3, S_3
+n = 5: P_4, S_4, *--*--*--*
+                    |
+		    *
+Avere a disposizione un tale processo generativo in grado di produrre tutti gli alberi di questo mondo
+significa avere salda in mano la chiave per dimostrare un sacco di cose (in particolare per induzione su n).
+Ad esempio:
+   1. Un albero di n nodi ha precisamente n-1 archi.
+   2. Dati due qualsiasi nodi x e y di un albero T esiste uno ed un solo cammino tra di loro dentro T;
+   possiamo chiamarlo T[u,v] come se fosse un'intervallo di T.
+   Pertanto, se aggiungo un qualsiasi arco uv ad un albero, si forma precisamente un ciclo,
+   che di necessità include uv ed è dato da uv+T[u,v], questo è chiamato il ciclo fondamentale di uv rispetto a T.
+   3. Dualmente, se da T rimuoviamo un arco uv, allora T\uv consta di precisamente due componenti connesse; quella che contiene u e quella che contiene v. Reinserendo l'arco uv queste due componenti di fondono in una.
+
+Abbiamo visto come l'operazione di contrazione consenta di esprimere entro lo stesso formato (cosa necessaria se vogliamo procedere ricorsivamente)
+il problema residuo che si ottiene dalla scelta di includere obbligatoriamente degli archi nella soluzione.
+E se invece volessi concentrarmi su quelle soluzioni F che con includono un certo arco e?
+Beh, allora il gioco è semplice: basterà considerare il grafo (V,E\e) ottenuto da G cacellando (delete) l'arco e.
+
+Chiaramente la cancellazione di un arco (ossia la rinuncia ad avvalersene nella soluzione) potrebbe portarmi da un grafo che ammette
+soluzione ammissibile ad uno che non ne ha pi nessuna. Potrebbe pagare dei dividendi caratterizzare quando oquesto succede.
+
+Abbiamo detto che, se il problema ha soluzione, allora G deve essere connesso.
+Se cancellando l'arco e=uv non è più connesso allora significa che in G non esiste alcun cammino da u a v che eviti e,
+ossia che, equivalentemente, non esiste in G alcun ciclo C passante per e.
+Un arco e con queste proprietà vien detto bridge.
+In realtà, se e è un bridge esso è allora contenuto in ogni soluzione ammissibile e pertanto potremmo contrarlo.
+
+Ma chiediamoci anche: questo fatto che G è connesso come lo possiamo prendere in mano in senso operativo?
+Beh, dicendo che esiste un certificato di connessione entro esso, che, quando abbiamo studiato la BFS,
+abbiamo visto essere un albero. Ovviamente un albero che ricopre l'insieme dei suoi stessi nodi V.
+Comunque incontriamo di nuovo alberi e sempre alberi.
+
+Ma anche i cicli sembrano giocare: se su e abbiamo scelta se prenderlo oppure no allora significa che e è contenuto in un ciclo C.
+Questo significa anche che, dato un qualsiasi ciclo C che contiene e ed un albero T che contiene e,
+allora deve esserci un'altra soluzione ammissibile dentro (T\e)\cup C.
+Questa conclusione ci mette già in condizioni di dimostrare il seguente lemma, che, combinata con l'operazione di deletion (cancellazione di arco),
+basta a mettere il problema in P.
+
+Lemma: se e è un arco di peso massimo dentro un qualche ciclo C allora esiste una soluzione ottima che evita e. 
+proof:
+  Sia T una soluzione ottima.
+  Se e non appartiene a T abbiamo vinto.
+  Se e appartiene a T allora abbiamo detto sopra che deve esserci un'altra soluzione ammissibile dentro (T\e)\cup C.
+  Questo sigifica che un arco f di C\e ha i due estremi in componenti diverse di T\e.
+  Quindi T\e+f è un albero ricoprente di G. Inoltre w(f) <= w(e) dato che e è di peso massimo tra gli archi di C.  
+QED
+
+Lemma: se un arco è di peso massimo (in senso stretto) dentro un ciclo allora ogni soluzione ottima che lo evita. 
+proof:
+   Corollario del precedente.
+   Cosidera infatti che nel grafo col peso di quell'arco abbassato al secondo massimo nel ciclo (comunque ancora arco di peso massimo nel ciclo quindi) esiste una soluzione ottima che non usa quell'arco. Se poi risollevo il peso di quel solo arco la soluzione ottima che non lo contiene finisce col battere ogni soluzione che invece lo contiene.
+QED
+
+
+Algoritmo:
+1. finchè c'è un qualche ciclo C nel grafo istanza:
+       butto a mare un qualsiasi arco di C tra quelli di peso massimo in C.
+
+2. Quando l'istanza si è ridotta ad un albero, allora non posso rinunciare a nessun arco.
+   A questo punto posso ritornare tale albero come soluzione certamente ottima.
+
+
+Si noti che quando esco dall'algoritmo sopra sono una foresta, e se il grafo di partenza era connesso,
+lo sono ancora, e quindi sono un albero. Siccome sono arrivato qui sulla base di scelte tutte sicure, sono per forza una soluzione ottima.
+
+Oltre all'algoritmo cui siamo pervenuti, le idee sviluppate sopra consentono anche di comprendere la correttezza del famoso algoritmo di Kruskal,
+di cui trovate copiose esposizioni in internet ma anche nei testi.
+
+Torniamo però al momento magico nella dimostrazione del lemma chiave,
+dove abbiamo reperito un arco f in C\e che, aggiunto a T\e ne ripristinava la connessione.
+Mi pongo ora l'obiettivo di caratterizzare più in generale quali siano quegli archi di G\e che aggiunti a T\e ne ripristino la connessione.
+Più sopra ci eravamo già arrivati a tiro quando osservammo la seguente proprietà degli alberi:
+   3. Dualmente, se da T rimuoviamo un arco e=uv, allora T\e consta di precisamente due componenti connesse; quella che contiene u e quella che contiene v. Reinserendo l'arco uv queste due componenti di fondono in una.
+Chiaramente, gli archi di G che saprebbero ripristinare la connessione di T\e sono precisamente quelli con un estremo nella componente di u e l'altro nella componente di v. 
+Questo ci conduce al concetto di taglio:
+
+Definizione: dato un sottoinsieme X di V, chiamiamo taglio indotto da X
+l'insieme di archi delta(X) := {xy in E, con x in X e y in V\X}.
+
+Nota:
+se T è un albero in G e uv è arco di T, allora gli unici archi di G
+la cui aggiunta ripristinerebbe la connessione di T\uv sono quelli in delta(X).
+
+Il seguente fatto gioca un ruolo profondo in vari punti salienti della teoria dei grafi (ad esempio, se ci fai caso, lavora anche nella caratterizzazione di quei grafi dotati di ciclo Euleriano).
+
+Fatto: Siano C un ciclo e delta(X) un taglio di un dato grafo G.
+       Allora |C\cap delta(X)| è sempre un numero pari.
+
+Questo lemma fornisce un modo alternatico per argomentare, dentro il lemma chiave, che quell'arco f debba esistere.
+
+Inoltre ci consente di dualizare tutta la teoria.
+Per meglio esemplificare come lavori l'orecchio nel far lavorare questo tipo di dualità,
+mi limito a dualizzare solo gli statements dei due lemmi sul ciclo,
+limitandomi a segnalare che anche le dimostrazioni dualizzano in tutto seguendo lo stesso spartito.
+
+
+Lemma: se e è un arco di peso minimo dentro un qualche taglio allora esiste una soluzione ottima che lo include. 
+proof: prova a dualizzare la proof del lemma di ciclo corrispondente.
+
+Lemma: se un arco è di peso minimo (in senso stretto) dentro un taglio allora ogni soluzione ottima lo include. 
+proof: prova a dualizzare la proof del lemma di ciclo corrispondente.
+
+
