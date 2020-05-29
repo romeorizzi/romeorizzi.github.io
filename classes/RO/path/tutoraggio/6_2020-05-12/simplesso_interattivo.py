@@ -12,7 +12,9 @@ from numpy import *
  
 class Tableau:
  
-    def __init__(self, obj, prob_type):
+    def __init__(self, n, m, obj, prob_type):
+        self.n = n
+        self.m = m
         self.rows = []
         self.cons = []
         self.basis = []
@@ -24,6 +26,7 @@ class Tableau:
     def aggiungi_vincolo(self, expression, value):
         self.rows.append([Fraction(0)] + [Fraction(x) for x in expression])
         self.cons.append(Fraction(value))
+
  
     def is_optimal(self):
         if max(self.obj[1:-1]) <= 0:
@@ -116,9 +119,12 @@ class Tableau:
         self.obj = array(self.obj + [0])
         
         # Setto le slack come variabili di base
-        dim = len(self.rows)
-        for i in range(dim):
-            self.basis += [dim+1+i]
+        if self.n==self.m:
+            for i in range(1,self.m+1):
+                self.basis += [self.n+i]
+        else: 
+            for i in range(0,self.m):
+                self.basis += [(self.m-self.n)+self.n+i]
  
     def _pivot(self, row, col):
         #print('row = ' + str(row))
@@ -188,3 +194,29 @@ class Tableau:
                 print("Tale soluzione NON è ammissibile ma soddisfa le condizioni di ottimalità -> Continua con il simplesso duale")
             else:
                 print("Tale soluzione NON è né ammissibile né ottima")
+                
+# c = [2,3]
+# b = [4,7,5]
+# A = [[2,1], [1,2], [0,1]]
+# n = 2 # numero variabili
+# m = 3 # numero vincoli
+
+# t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
+# # Vincoli
+# for i in range(len(A)):
+#     t.aggiungi_vincolo(A[i],b[i])
+# t.crea_primo_tableau()
+# t.mostra_tableau()
+# nb_iter = 1
+# while not t.is_optimal():
+#     print('\nIterazione ' + str(nb_iter))
+#     t.step_primale()
+#     t.mostra_tableau()
+#     nb_iter += 1
+#     input()
+
+
+
+
+
+
