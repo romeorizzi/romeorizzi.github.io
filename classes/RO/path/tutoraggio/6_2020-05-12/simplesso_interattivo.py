@@ -71,7 +71,7 @@ class Tableau:
         lhs = [self.rows[i][col] for i in range(len(self.rows))]
         ratio = []
         for i in range(len(rhs)):
-            if lhs[i] == 0:
+            if lhs[i] <= 0:
                 ratio.append(Fraction(99999999 * abs(max(rhs))))
                 continue
             ratio.append(Fraction(rhs[i],lhs[i]))
@@ -195,25 +195,24 @@ class Tableau:
             else:
                 print("Tale soluzione NON è né ammissibile né ottima")
                 
-# c = [2,3]
-# b = [4,7,5]
-# A = [[2,1], [1,2], [0,1]]
-# n = 2 # numero variabili
-# m = 3 # numero vincoli
+c = [3,2]
+b = [4,2,1]
+A = [[2,1], [-2,1], [1,-1]]
+n = 2 # numero variabili
+m = 3 # numero vincoli
 
-# t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
-# # Vincoli
-# for i in range(len(A)):
-#     t.aggiungi_vincolo(A[i],b[i])
-# t.crea_primo_tableau()
-# t.mostra_tableau()
-# nb_iter = 1
-# while not t.is_optimal():
-#     print('\nIterazione ' + str(nb_iter))
-#     t.step_primale()
-#     t.mostra_tableau()
-#     nb_iter += 1
-#     input()
+t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
+# Vincoli
+for i in range(len(A)):
+    t.aggiungi_vincolo(A[i],b[i])
+t.crea_primo_tableau()
+t.mostra_tableau()
+nb_iter = 1
+while not t.is_optimal():
+    print('\nIterazione ' + str(nb_iter))
+    t.step_primale()
+    t.mostra_tableau()
+    nb_iter += 1
 
 
 
