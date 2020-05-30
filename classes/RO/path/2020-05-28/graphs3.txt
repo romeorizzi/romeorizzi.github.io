@@ -1,0 +1,101 @@
+GRAFI
+
+Obiettivi di oggi:
+
+Kuratowski, Wagner, graph minor theorem
+2. max-flow min-cut? (difficile ci riusciamo)
+
+Per i seguenti argomenti DAGs, mst, dualità grafi planari vi aggiungerò dei video fatti di lezioni ad Algoritmi.
+
+In questa stessa cartella vedi file mst.txt che ho rubato dal percorso insieme per Algoritmi.
+
+_____
+
+Quando la teoria dei grafi si è reincontrata con la topologia
+dando nascita alla topologia algebrica (o combinatorica)
+
+[1930, teorema di Kuratowski](https://en.wikipedia.org/wiki/Planar_graph)
+
+In cartella di volta precedente (2020-05-28) trovi definizioni di grafi completi K_k e bipartiti completi K_{h,k}. Trovi inoltre delle proof che K_5 e K_{3,3}
+non sono grafi planari. Alcune delle proof sfruttano la formula di Eulero
+che invece abbiamo dimostrato oggi.
+
+Ecco quanto trascritto del percorso di oggi:
+
+Def [grafo planare]:
+un grafo è planare se e solo se ammette un planar embedding, ossi un suo disegno nel piano dove ogni punto del piano comune a due archi è estremo di entrambi gli archi.
+
+Def [(multi-)grafo (diretto)]: una coppia (V,E) dove V è un insieme di oggetti chiamati nodi, ed E è un (multi-)insieme di coppie non-ordinate (ordinate) di nodi.
+
+Def [sottografo]: H = (V',E') è un sottografo di G=(V,E) se
+1. V' sottoinsieme di V
+2. E' sottoinsieme di E
+3. H è un grafo.
+
+Per ottenere un sottografo di G, prenditi i nodi e gli archi di G che vuoi,
+ma assicurati essere un grafo (ossia ogni volta che prendi un arco (tra gli archi) devi prendene anche entrambi gli estremi (tra i nodi))
+
+Def [sottografo ricoprente]: H = (V',E') è un sottografo ricoprente di G=(V,E) se:
+1. H è un sottografo di G
+2. V' = V
+
+Def [sottografo indotto]: H = (V',E') è un sottografo di G=(V,E) se
+1. H è un sottografo di G
+2. per ogni {u,v} in E con u,v in V', {u,v} in E allora {u,v} in E'.
+
+Come un sottografo ma in più, ogni volta che prendi entrambi gli estremi di un arco, allora devi prendere anche l'arco.
+
+In realtà stai scegliendo solo sugli estremi e poi gli archi presi sono univocamente determinati.
+
+
+Buona Congettura:
+un grafo è planare a meno che non abbia K_{3,3} come sottografo.
+
+Def [subdivision]:
+è subdivision di un grafo un qualsiasi grafo ottenuto da lui piantando dei nodi in mezzo a degli archi e suddivendoli in cammini.
+
+Buona Congettura:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} come sottografo.
+
+Buona Congettura:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} oppure una suddivisione di K_5 come sottografo.
+
+Kaiser è vera!
+
+Buon Teorema di Kuratowski [1930]:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} oppure una suddivisione di K_5 come sottografo.
+
+
+Wagner [1931]:
+
+Osservazione: la planarità è proprietà chiusa non solo rispetto a deletion ma anche rispetto a contraction.
+
+Def: un minore di un grafo G è un qualsiasi grafo che posso ottenere da G con delle opportune deletions e contractions.
+
+Buona Congettura: 
+un grafo è planare a meno che non posso ottenerne un K_{3,3} oppure un K_5 con una sequenza di deletions e contractions (ossia se non ha nè un K_{3,3} nè un K_5 minor).
+proof: corollario del seguente lemma ovvio.
+
+Lemma: Se G contiene una suddivisione di H allora ha H come minore.
+
+Il teorema di Wagner non è più debole del teorema di Kuratowski.
+
+Lemma: Se G contiene H come minore allora contiene una suddivisione di H (contiene H come topological minor). (Vero almeno quando il massimo grado di un nodo in H è al più 3).
+
+Congettura [Wagner 1931]:
+ogni proprietà di grafi che è chiusa rispetto a prendere minore presenta un numero finito di forbidden minors.
+
+[Graph Minor Meta-Conjecture](https://en.wikipedia.org/wiki/Robertson%E2%80%93Seymour_theorem):
+--> Theorem annunciato 1986 credo (ma preso avvio con primi paperi pubblicati nel 1983)
+dimostrazione conclusa nel 2001 (ultimi paperi necessari pubblicati nel 2004).
+
+Da questo teorema otteniamo come corollario dimostrazione esistenziale che dei problemi debbano essere in P. Questo è mlto utile per segnalare direzioni promettenti lungo cui sviluppare la ricerca.
+In fondo la Graph Minor Meta-Conjecture era stata utilizzata in questo modo ancora prima di essere dimostrata (da cui meritava l'appellativo di metacongettura).
+
+Una situazione simile l'avevamo vista col risultato ottimizzazione=separazione derivato dal metodo dell'elissoide per la PL, solo chè lì la dimostrazione era costrutiva nel senso che, chiamando il metodo dell'elissoide come oracolo, si otterrebbe un algoritmo effettivo (per quanto inutilizzabile nella pratica).
+
+
+Per la planarità mi piace darvi i linguaggi di SI (planar embedding, non discretizzato) e di NO (Kuratowski) e lasciarvi a fare i maghetti Merlinetti perchè entrare nelle rappresentazioni discrete di un planar embedding sarebbe pco siglificativo (aggiungerebbe solo una strato che probabilmente vi allontanerebbe la cosa) ed inoltre mi piace che realizzaite il potere dell'avere simultaneamente il linguaggio del SI e del NO.
+Da questo potere espressivo può prendere forza la vostra capacità di intuire e trovare da soli la verità.
+
+NP \cap coNP =? P

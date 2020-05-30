@@ -1,0 +1,167 @@
+GRAFI
+
+Grande potere espressivo nella rappresentazione di problemi.
+L'enfasi è quella di studiare problemi difficili che possono sorgere in altri contesti o discipline. 
+
+Esempio 1: noi stessi li abbiamo già utilizzati per meglio comprendere le configurazioni possibii per un pirellone soggeto a mosse.
+
+Esempio 2: grafo delle configurazioni del cubo di Rubik. Risolvere una configurazione corrisponde a trovare un cammino che va dalla data configurazione fino alla configurazione dove il cubo è risolto.
+Quindi ci interassono nei grafi problemi di natura algoritmica come la raggiungibilità o il computo di cammini minimi. 
+
+Esempio 3: l'oggetto base della matematica che chimiamo relazione (sottoinsieme di prodotti cartesiani) è un grafo diretto. Ma può essere rappresentata anche in più di un modo come un grafo (anche non diretto).
+
+
+DEF: un grafo diretto è una coppia (V,A), dove V è l'insieme dei nodi
+     e A è l'insieme degli archi. Ognia arco è una coppia ordinata di nodi in V.
+
+DEF: un grafo (o grafo non diretto) è una coppia (V,E), dove V è l'insieme dei nodi e E è l'insieme degli spigoli. Ogni spigolo è una coppia non-ordinata di nodi in V.
+
+Nota: quando di un grafo diretto dimentico, per ogni arco, l'ordine tra i due nodi estremo dell'arco (dimentico chi sia la coda e chi sia la testa dell'arco)
+ottengo un grafo (non diretto).
+
+_______________________________________________________
+
+COME RAPPRESENTARE UN GRAFO:
+
+1. rappresentazione come matrice di adiacenza:
+
+questa matrice ha una riga per ogni nodo ed una colonna per ogni nodo
+M[u,v] = 1 se l'arco (u,v) \in A
+M[u,v] = 0 se l'arco (u,v) \not \in A
+
+Note:
+se il grafo è pesato sugli archi (ogni arco è una strada con una sua lunghezza)
+allora posso memorizzare nella matrice il peso dell'arco invece che limitarmi a scriverci un 1.
+
+Vantaggi:
+in O(1) posso stabilire se tra u e v ci sia oppure no un arco, e leggerne in peso.
+
+Svantaggi:
+a. occupo \Omega(n^2) memoria anche per grafi sparsi (dove gli archi sono o(n^2)).
+b. per listare i vicini di un nodo devo spendere \Omega(n) anche se i vicini sono solo o(n).
+
+
+2. rappresentazione con liste di adiacenza:
+
+IDEA: per ogni nodo v del grafo si offre la lista dei suoi vicini.
+
+Nota: Se il grafo è pesato sugli archi, ogni elemento della lista sarà una copia (ID nodo, peso arco).
+
+Nota: Se il grafo è diretto di liste ogni nodo ne ha due: una per gli archi entranti ed una per gli archi uscenti.
+
+Svantaggi:
+
+per capire se (u,v) è un arco devo scandirmi tutta la lista degli out-neighbours di u.
+
+Vantaggi:
+
+a. occupazione di memoria O(m+n)
+
+b. dato un nodo, posso scandirne uno per uno i vicini pagando O(1) per ogni vicino.
+
+__________________________________________
+
+COMPONENTI CONNESSE E CAMMINI MINIMI
+
+Prendiamo a riferimento un grafo non diretto (ad esempio il grafo delle configurazioni del cubo di Rubik dove due configurazioni sono adiacenti se posso andare da una all'altra con una mossa).
+
+Diciamo che u \sim v iff esiste un cammino con estremi u e v. 
+
+Questa relazione ha le seguenti proprietà:
+
+1. riflessiva:  u \sim u  (prendi il cammino fatto del solo nodo u)
+2. simmetrica:  se u \sim v allora v \sim u  (dicevamo che il grafo era non diretto)
+3. transitiva: se u \sim v e v \sim z allora u \sim z (concatena i due cammini)
+
+Quindi \sim è una relazione di equivalenza.
+Sappiamo che gli corrisonde una partizione dell'insieme dei nodi V.
+Le classi di questa partizione vengono chiamate le componenti connesse di G.
+
+Un grafo è connesso se ha un'unica componente connessa.
+
+In pratica \sim è la chiusura transitiva della relazione di adiacenza (due nodi si dicono adiacenti se vi è un arco che li ha per estremi).
+
+Come fare ad individuare tutti i nodi connessi ad un dato nodo?
+
+IDEA: lo metto a fuoco e vedo chi va a fuoco?
+
+Questa è l'idea alla base della BFS (Breadth First Search)
+Nell'implementazione è importante (se vogliamo assicurarci che il tempo di calcolo sia O(m+n) che ogni nodo parli una volta sola per trasmettere il fuoco che si è di lui impossessato).
+
+Il costo del trasmettere su tutto l'algoritmo diventa quindi:
+
+\sum_{v\in V} d^+(v) = m
+
+dove n := |V| è il numero degli nodi
+dove m := |E| è il numero degli archi
+d^+(v) := è il nuero egli archi con coda in v
+
+
+def BFS(s):
+for v in V:
+   dist[v] = INFTY
+   papà[v] = None
+dist[s] = 0
+papà[s] = s
+FIFOq.push(s)
+while not FIFOq.empty():
+    u = FIFOq.pop(s)
+    for v in out_nei[u]:
+       if dist[v] == INFTY:
+          papà[v] = u
+	  dist[v] = dist[u] +1
+          FIFOq.push(v)
+	  
+
+def print_shorest_path_to(v):
+   if v == s:
+     print(s)
+   else:
+     print_shorest_path_to( papà[v] )
+     print(v)
+
+-------------------------------------------------------
+
+Algoritmo di Dijkstra
+vi serve quando ad ogni arco è associata una lunghezza >= 0
+
+Risoviamo questo problema più generale generalizzando l'algoritmo BFS.
+
+Cosa c'è di più bello e magico nell'algoritmo BFS?
+
+Giudico sia l'albero dei cammini minimi.
+
+Domanda naturale: esiste anche nel caso di lunghezze non-unitarie degli archi?
+
+Proviamo a capire perchè un tale oggetto esiste.
+
+Lemma: sia P un cammino minimo da s a v e sia w un nodo intermedio.
+       Allora il prefisso di P fino a w è cammino ottimo da s a w.
+
+proof:
+per assurdo, se esiste un cammino P_w migliore di P[s:w] per arrivare in w
+allora metti indsieme P_w con P[w:v] per ottenere un cammino migliore per arrivare in v.
+(il solito Ctrl-C Ctrl-V giocato sui certificati).
+
+Corollary: esiste l'albero dei cammini minimi.
+
+
+def Dijkstra(s):
+for v in V:
+   dist[v] = INFTY
+   papà[v] = None
+dist[s] = 0
+papà[s] = s
+PRIORITYq.push(s,dist[s])
+while not PRIORITYq.empty():
+    u,d = PRIORITYq.pop()
+    for v in out_nei[u]:
+       if dist[v] >= dist[u] + length(u,v):
+          papà[v] = u
+	  dist[v] = dist[u] + length(u,v)
+          PRIORITYq.push(v,dist[v])
+
+Nota: la priorità di un nodo è tanto più alta quanto più piccola è la sua distanza confermata da s.
+
+Nota: resta importante che ogni nodo parli una ed una sola volta. E' quindi necessario che parli solo quando ormai la sua distanza è definitiva.
+

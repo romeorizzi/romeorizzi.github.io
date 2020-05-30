@@ -1,0 +1,317 @@
+GRAFI
+
+COMPONENTI CONNESSE E CAMMINI MINIMI
+
+PER ISOLARE LE COMPONENTI CONNESSE POTREI AVVALERMI DEL SEGUENTE ALGORITMO:
+
+1. all'inizio tutti i nodi erano bianchi
+
+2. for v in Nodi:
+   se v è ancora bianco,
+   appiccica un fuoco di un nuovo colore in v e lascialo propagare (ad esempio con una BFS).
+
+Alla fine tutti i nodi avranno ricevuto almeno un colore (se un nodo era ancora bianco quando è arrivato il suo turno nel ciclo for allora lo abbiamo colorato a quel punto).
+Una volta terminato di propagare un fuoco (metti il primo, metti rosso, metti di averlo appiccato al nodo R)
+non abbiamo alcun arco con un estremo rosso e l'altro nò, altrimenti anche l'altro avrebbe dovuto diventare rosso.
+Pertanto, il fuoco rosso ha identificato tutti e soli i nodi che sono connessi a R.
+Pertanto a terminazione ogni nodo ha ricevuto precisamente un colore. 
+Per ogni componente connessa consideriamo il suo nodo di attizzo fuoco
+come il suo rappresentante di classe.
+I nodi di una stessa classe hanno il colore di quel nodo,
+colori diversi distinguono le diverse componenti connesse.
+Non vi è alcun arco che abbia estremi di diverso colore (appartenenti a componenti connesse diverse).
+
+Abbiamo osservato che di fatto la BFS calcolava anche gli alberi dei cammini minimi da ciascun rappresentante di classe (per ogni nodo, tranne il rappresentante di classe ossia quello di avvio del fuoco (che sarà la radice dell'albero), tieniti il padre, ossia quel nodo che ti ha trasmesso il fuoco).
+
+
+max \sum_{v\in V, v \neq s} d(v)
+d(v) <= d(u) + w(u,v) per ogni (u,v) \in A
+d(s) = 0
+
+min \sum_{(u,v)\in A} w_{(u,v)} y_{(u,v)}
+   y(\delta^-(v)) - y(\delta^+(v)) >= 1  per ogni v\in V, v \neq s
+y \geq 0
+
+
+"IN GENERALE", un grafo diretto è un oggetto più genrale che un grafo non diretto.
+
+Ad esempio: se mi viene dato un grafo senza sensi unici e mi viene chiesto di trovare tutti i cammini minimi da s,
+allora posso costruire un nuovo grafo rimpiazzando ogni arco non-diretto {u,v} di lunghezza L({u,v})
+con due archi diretti (u,v) e (v,u) entrambi di lunghezza lunghezza L({u,v}).
+
+L'algoritmo di Dijkstra (e la BFS) computano l'albero dei cammini minimi per un grafo diretto (e quindi, data la riduzione sopra,
+funziona anche per grafi non-diretti o anche se preferisci per grafi misti, dove alcuni archi sono diretti ed alcuni no).
+
+__________
+
+MINIMUM SPANNING TREE
+
+Dato un grafo non-diretto e pesato con costi sugli archi che rappresentano possibili collegamenti da acquistare,
+ci chiediamo quale sia il sottoinsieme di archi da acquistare per garantire la connettività di tutti i nodi
+(che si crei una componente connessa unica).
+
+__________
+
+Nel mondo dei grafi, due contesti ideali per la programmazione dinamica sono i DAGs e gli alberi.
+
+DAGs
+
+Un DAG è un grafo diretto nel quale non siano presenti cicli diretti, ossia non sia possibile partire da un qualche nodo v e,
+dopo aver percorso una qualche sequenza di archi (sempre rispettando il verso di percorrenza previsto per l'arco)
+non si possa fare infine ritorno a v.
+DAG è un acronimo per Directed Acyclic Graph.
+
+I DAGs sono in fondo i PARTIAL ORDERS, sono lo stesso concetto sia nel caso finito che in quello infinito.
+
+Vorremo disporre di un algoritmo polinomiale per distinguere se un dato grafo diretto sia un DAG o meno (DAG recognition).
+
+Ciò ci conduce alla seguente domanda:
+IL SEGUENTE PROBLEMA E' IN P?
+
+PROBLEMA (reperimento di clicli diretti):   dato un grafo diretto G=(V,A), trovare se in esso sia presente un qualche ciclo.
+
+Dato che questo problema è chiaramente in NP (il ciclo gioca da certificato),
+possiamo quindi dire che il Problema DAG-recognition è in co-NP.
+
+Per altro viene naturale chiedersi altresì se, in tempo polinomiale, non si possa reperire il ciclo più piccolo.
+
+Prenditi il tuo tempo per pensare a questi problemi e domande prima di proseguire.
+
+
+Abbiamo sottolineato che spesso la prima cosa da fare con un problema non è trovare subito l'algoritmo più efficiente,
+ma tentare di collocarlo. Ci siamo cioè posti prima l'obiettivo di esprimere qualche ragione per la quale il problema debba essere in P.
+Ne vedi alcune? Come te lo senti in corpo?
+
+
+A tale proposito abbiamo osservato che:
+
+  FATTO OVVIO: un grafo ha un ciclo se e solo se per un suo qualche nodo v (posso guessare il nodo v dato
+che i nodi non sono poi troppi, ossia sono al più in numero polinomiale) esiste un ciclo che passa per quel nodo.
+
+Ci siamo così ritrovati per le mani il problema di capire se esista un ciclo che passi per un quache nodo v. Ed ora?
+
+Il problema di capire se esista un ciclo passante per v può essere facilmente ridotto al seguente problema di reachability:
+
+capire se esista un cammino per andare da v^+ a v^- nel grafo G' ottenuto da G rimpiazzando il nodo v coi due nodi:
+  nodo v^+, con lo stesso insieme di archi uscenti che v, e nessun arco entrante,
+  nodo v^-, con lo stesso insieme di archi entranti che v, e nessun arco uscente.
+
+Già sappiamo, ed abbiamo rivisto anche insieme, come un tale problema possa essere facilmente risolto con la BFS.
+
+La BFS fà molto di più: lanciata da un nodo s consente di costruire l'albero dei cammini minimi da s.
+
+(Se trovate un bel video sulla BFS da suggerire quì fatemi sapere.)
+
+Abbiamo anche visto come l'algoritmo di Dijkstra (una specie di event driven simulation ottenuta sostituendo la coda FIFO
+della BFS con una coda di priorità, dove resta comunque vero che un nodo parla solo quando
+è ormai determinata la sua distanza da s) riesca a calcolare l'albero dei cammini minimi nel caso più generale
+dove ogni arco presenti un valore (non negativo) di lunghezza.
+
+POSSIAMO QUINDI DIRE CHE IL PROBLEMA DI RICONOSCIMENTO DI UN DAG E' IN P MA RESTA INTERESSANTE DARE ALGORITMI PIU' EFFICIENTI.
+
+Una soluzione rapida anche da codificare è avvalersi della DFS:
+https://www.youtube.com/watch?v=rKQaZuoUR4M
+
+
+UN PROBLEMA DI SCHEDULING:
+Dato un insieme di attività, con relazioni binarie di precedenza (A<B) tra di loro,
+è possibile eseguire queste attività una dopo l'altra (metterle in fila indiana)
+in modo che tutte le precedenze siano rispettate?
+
+RAPPRESENTAZIONE DEL PROBLEMA DI SCHEDULING COME UN PROBLEMA SU GRAFI DIRETTI:
+Si introduce un nodo per ogni attività.
+La precedenza A<B può essere rappresentata con l'arco (A,B) con coda in A e testa in B.
+La domanda è se esista un ordinamento dei nodi tale che per ogni arco (X,Y) la coda X preceda la testa Y nell'ordine.
+Un tale ordine, se esiste, viene chiamato ordine topologico.
+Posta in altri termini, la domanda è se sia possibile disporre i nodi lungo una semiretta (ad esempio l'asse delle x),
+in modo che per ogni arco (X,Y) la coda X preceda la testa Y lungo la semiretta.
+In realtà potremo sempre limitarci ad utilizzare i punti della semiretta con coordinate intere da 1 a N.
+
+GOOD QUESTION:
+esiste sempre un ordine topologico? Oppure esistono dei grafi diretti che non ammettono ordine topologico?
+Quali sono questi grafi? (Buona caratterizzazione.)
+
+Sei il grafo è schedulabile Merlino evita i ghiaggi di Morgana esibendo a Re Artù uno scheduling che Re Artù
+può verificare benchè un mortale (il problema è in NP).
+La buona congettura è intesa a salvare Merlino dai ghiacci di MOrgana anche qualora la risposta fosse NO
+(ail problema và messo in coNP).
+
+BUONA CONGETTURA 0: la risposta è sempre SI (sono tutti schedulabili).
+
+Purtroppo non è vera.
+
+NO, nel caso di cicli diretti non esiste.
+
+BUONA CONGETTURA risorta: la risposta è sempre SI tutte le volte che non ho cicli diretti dentro il grafo da esibire come certificato di NO.
+
+
+Ah, fosse così, allora questo problema è il rovescio della medaglia del problema di riconoscimento dei DAG.
+Un fatto che viene rimarcato nel seguente breve video:
+https://www.youtube.com/watch?v=PfiFnXg2G2I
+
+Come utilizzare la DFS per produrre un Topological sort in tempo lineare:
+https://www.youtube.com/watch?v=n_yl2a6n7nM
+
+Ovviamente la cosa migliore è utilizzare la DFS (od altro approccio) per ottenere un algoritmo self-certifying
+che preveda due modi diversi e mutualmente esclusivi di terminare:
+1. o viene ritornato un ciclo diretto che vive nel grafo,
+2. o viene ritornato un ordinamento topologico dei nodi del grafo.
+
+I seguenti video spiegano diversi algoritmi su grafi (se trovate materiali migliori fate sapere):
+https://www.youtube.com/watch?v=09_LlHjoEiY
+https://www.youtube.com/watch?v=RqQBh_Wbcu4
+
+Questo ultimo video è breve ed efficace, ma non curato nei dettagli, e si intravede la possibilità di impostare le cose in modo migliore.
+Possibili progetti per il corso potrebbero porsi l'obiettivo di andare istituire un workflow opportuno per andare a produrre dei video di questo tipo (https://www.youtube.com/watch?v=RqQBh_Wbcu4) ma ben curati in ogni dettaglio (credo saprei specificare cosa intendo e guidare tali progetti ad esempio fornendo scritture e dialoghi voce).
+Il video dovrebbe essere un'animazione come quì, che andremmo a montare partendo da file sorgente.
+Vorrei avere controllo e impostare un prodotto che possa essere rivisto e migliorato nonchè un approccio che possa essere
+più o meno serialmente applicato per l'esposizione di più argomenti.
+
+________________________________________
+ADDENDUM:
+
+PERCORSO PER DIMOSTRARE LA BUONA CONGETTURA:
+un grafo diretto è un DAG se e solo se esiste un ordinamento
+dei suoi nodi dove tutti gli archi sono in avanti.
+
+Formulazione equivalente delle punoa congettura:
+
+un grafo delle precedenze è schedulabile se e solo se non contiene cicli diretti.
+
+
+ECCO UNA TECNICA/ACCORGIMENTO DI VALENZA ABBASTANZA GENERALE NEL CERCARE DI DARE DIMOSTRAZIONE AD UN BUONA CONGETTURA:
+
+CREDERCI (FINO A PROVA CONTRARIA), PRENDERLA PER VERA, DERIVARNE LE ESTREME CONSEGUENZE E COROLLARI.
+
+Faciamo esempio di prenderla per vera dove è rilevante:
+
+Se G non ha cicli diretti allora e schedulabile. Come che no. E allora? Che conseguenze posso trarne su come è fatto G?
+
+Che proprietà particolari ha u grafo che è schedulabile?
+
+Schedulabile significa che ho messo in ordine i suoi nodi in mdo che tutti gli archi sono in avanti.
+
+In ogni ordine totla ec'è qualcuno di MOLTO speciale.
+
+In una fila di formiche che marcia in fila indiana, chi si sente molto speciale?
+
+Il primo: deve esistere un nodo che ha solo archi uscenti!  (Lo chiamiamo sorgente, o buco bianco).
+
+L'ultimo: deve esister un nodo che ha solo archi entranti (Lo chiamiamo pozzo, o buco nero).
+
+Se c'è un tale nodo, è anche facile trovarlo no?  (per facile intendiamo: si può fare in tempo polinomiale). Polinomiale = cheap, perchè il nostro obiettivo è innanzitutto arrivare ad un algoritmo polinomiale, e polinomio per polinomio (ed anche olinomio odi polinomio) è polinomio.
+
+Avere questo nodo (un pozzo v) in tasca, ci fa fare un passo avanti col problema (anche toglierne una sola scheggia, ma riducendo a figlio unico almeno un bit di non-detrminismo).
+
+Di quale problema?
+
+1. Calcolo del topological sort:
+
+beh, strappo via v e mi faccio proddurre da fatina ricorsina un ordinamento di G\v, poi metto v in fondo in modo da non introdurre archi indietro.
+
+2. Ricerca di un ciclo:
+
+può un ciclo diretto passare per v?  No, dato che v è un pozzo.
+
+Quello che si fà è che in realtà non si costruisce mai un algoritmo che tesse solo la tela del SI oppure solamente a la tesa del NO. L'algoritmo le deve tessere entrambe contemporanemante, solo alla fine saprà quale delle due (certificato di SI oppure di NO) si chiude.
+
+Quindi, è più corretto vederla che noi stiamo progettando un algoritmo biforcuto (parla la lingua del SI e contemporaneamente quella del NO).
+
+INPUT: un grafo diretto
+
+TASK: restituire un certificato di SI oppure un certificato di NO
+      ________
+      |      |----> cert SI
+----->|      |
+      |______|----> cert NO
+
+Siamo pronti (CON FIDUCIA IN FATINA RICORSINA) per darlo:
+
+Cerco un pozzo v.
+Supponiamo di averlo trovato.
+Lo strappo via e passo a FATA G\v.
+
+Se fata mi restituisce un topological sort di G\v (certificato che G\v aciclico)
+   allora io restituisco il topological sort di v ottenuto aggiungendo v in fondo (certificato che G aciclico)  
+
+Se fata mi restituisce un ciclo C di G\v (certificato che G\v non ammette topologial sort)
+   allora io restituisco il ciclo C di G (certificato che G\v non ammette topologial sort)
+
+Ma se non riasco a trovare un nodo v che sia pozzo?
+
+Allora lancio l'algoritmo del gessetto per ottenere un ciclo C.
+
+--------------------------------------------------------------------
+
+DAGs E PROGRAMMAZIONE DINAMICA:
+
+Un DAG è un luogo fantastico perchè possa attecchire la programmazione dinamica.
+
+Trovare in un grafo il cammino semplice (che non ripassa per uno stesso nodo) più lungo.
+
+Per grafi generici è facile vedere che questo è un probema NP-completo (riduzione da ciclo Hamiltoniano)
+ma per DAGS dove uno può marciare solo verso destro la cosa potrebbe essere molto diversa.
+
+In genere, in questi casi conviene sempre partire calcolandosi un topological sort del DAG e poi sfruttarlo per far cadere i problemi come birilli in quell'ordine.
+Quindi in linea di massima un problema per nodo.
+Potrebbe essere che per ogni nodo memorizzo il più lungo cammino che termina in quel nodo.
+Andando da sinistra verso destra nel topological sort dovrebbero cadere come i birilli
+
+(problema long-walk chiede di trovare la più lunga passeggiate dentro un grafo diretto)
+
+Un pò di algebra sui DAG.
+
+Un DAG è un partial order (V,<) dove u<v se e solo se c'è un cammino da u a v.
+1. riflessiva
+2. transitiva
+3. anti-simmetrica (dato che non abbiamo cicli)
+
+Dati due DAG (V,<_1) e (V,<_2) posso definire la relazione
+
+a <_{1 AND 2} b se e solo se a <_1 b AND a <_2 b
+
+Si noti che anche essa è:
+
+1. riflessiva
+2. transitiva
+3. anti-simmetrica (dato che non abbiamo cicli)
+
+Pertanto con questa operazione da due DAG ne ottengo uno nuovo.
+
+Un basic building block (Lego) è il total order.
+
+Quanto sopra potrebbe averci ricordato Poldo dove volevate trovare la più lunga sottosequenza crescente.
+
+<_1  è dato dall'ordine in cui i panini vi vengono esibiti
+<_2  è dato dall'ordine dei numeri natural che esprimono la quantità di colesterolo (e Poldo ha deciso che deve sempre crescere)
+
+Problemino:
+Avete delle scatole, ognuna caratterizzata da tre numeri:
+
+x_i, y_i, z_i sono la lunghezza, larghezza ed altezza della scatola i=1,..., N
+
+trovare la più lunga matrioska di scatole che potete mettere una dentro l'altra
+
+(senza poterle riotare, oppure poteedole ruotare ma dovendo rimanere ortogonale agli assi)
+
+
+ALTRO SETTING NATURALE DI PROGRAMMAZIONE DINAMICA:
+
+GLI ALBERI
+
+abbiamo visto arcobaleno
+aggiungo slalom al repo
+
+Scelto un qualsiasi non r come radice ed appeso l'albero T a quel nodo r.
+
+Dato un qualsiasi nodo v è univocamente definito il sottoalbero T[v] dei discendenti di v in T.
+
+Per ogni nodo v ed ogni h <= k calcolo il minimo peso di un sottoalbero di T[v] che usi v e di cardinalità h.
+Questa famiglia è chiusa rispetto ad induzione.
+
+Per rendere il calcolo per un nodo v polinomiale in funzione di quanto per i figli bisogna fare famiglia più fine di sottoproblemi.
+
+Per ogni nodo v, ogni h <= k, e per ogni i =1,..., num_figli[v],
+calcolo il minimo peso di un sottoalbero di T[v] che usi v ma non figli di v oltre l'i-esimo,
+e di cardinalità h.
+
