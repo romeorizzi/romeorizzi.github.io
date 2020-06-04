@@ -9,10 +9,8 @@ Sì, puoi consultare tutto liberamente.
 2. __Per sostenere l'esame di Ricerca Operativa, devo usare il browser speciale SEB (Safe Exam Browser) che blocca tutte le funzionalità e le applicazioni del mio pc?__
 
 No, per questo esame non è necessario, perché dovrai lavorare in locale sul tuo server Jupyter e dovrai caricare poi sulla piattaforma indicata l'archivio .zip contenente la tua consegna.
-Ricordiamo che la votazione istanziata con l'esame scritto dovrà poi trovare conferme in un colloquio
-oriale dove ci si accerterà che le cometenze espresse siano effettivamente nel bagaglio
-del candidato. Niente panico: l'orale vorrà comunque essere un momento rilassato
-e potrà essere affrontato serenamente.
+Ricordiamo che la votazione istanziata con l'esame scritto dovrà poi trovare conferma in un colloquio
+orale dove ci si accerterà che le competenze espresse siano effettivamente nel tuo bagaglio. Niente panico: l'orale vorrà comunque essere un momento rilassato e potrà essere affrontato serenamente.
 
 3. __Quale piattaforma useremo per l'esame?__
 
@@ -25,9 +23,9 @@ Sì, per tutta la durata dell'esame. La webcam servirà, oltre che per il monito
 5. __A cosa servirà la simulazione?__
 
 La simulazione servirà a verificare non solo il corretto funzionamento di microfono e webcam
-ma anche per venire a conscere come dovrete gestire i materiali all'esame.
+ma anche per venire a conoscere come dovrete gestire i materiali all'esame.
 Proverete la piattaforma precedentemente installata e configurata, dove a inizio esame scaricherete la cartella con il vostro tema e a conclusione dovrete necessariamente caricare il vostro archivio .zip
-per la consegna di quesnto prodotto. Inoltre, vi comunicheremo eventuali aggiornamenti sul formato del tema d'esame (i.e., se troverete verificatori, applet o altri tool di utilità che potrete usare, non presenti nel facsimile presentato il 03 giugno durante l'ultima esercitazione di tutoraggio).
+per la consegna di questo prodotto. Inoltre, vi comunicheremo eventuali aggiornamenti sul formato del tema d'esame (i.e., se troverete verificatori, applet o altri tool di utilità che potrete usare, non presenti nel facsimile presentato il 03 giugno durante l'ultima esercitazione di tutoraggio).
 
 6. __Se dovesse saltare la connessione durante l'esame, cosa succede?__
 
