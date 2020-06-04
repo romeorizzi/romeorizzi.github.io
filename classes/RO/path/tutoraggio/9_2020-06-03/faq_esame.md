@@ -31,10 +31,10 @@ Lavorando in locale sul tuo computer, non perderai nulla di quanto fatto fino al
 
 Puoi aggiungere tutte le immagini che vuoi nella sottocartella _allegati_, aggiungendo però un commento nelle celle degli esercizi a cui fanno riferimento. Per esempio, vuoi allegare un'immagine all'esercizio 5, richiesta 2; ecco come fare:
 - inserisci l'immagine nella cartella allegati, rinominandola "es5_richiesta2.EXT" (dove EXT è l'estensione del file);
-- scrivi il riferimento nell'esercizio, o in una cella Raw (e.g., "Si veda l'immagine es5_richiesta2") oppure in una cella Markdown ("<img src='allegati/es5_richiesta2.EXT" width=600>").
+- scrivi il riferimento nell'esercizio, o in una cella Raw (e.g., "Si veda l'immagine es5_richiesta2") oppure in una cella Markdown ("<img src='allegati/es5_richiesta2.EXT' width=600>").
 
 8. __Cosa devo fare per consegnare?__
 - Controlla tutte le celle del foglio Jupyter, salva e chiudi il file;
 - Comprimi _tutta la cartella_ in un archivio .zip (l'archivio dovrà contenere tutti i file che erano già presenti al momento del download e anche tutti gli eventuali file che hai aggiunto tu nella cartella _allegati_);
-- Rinomina l'archivio con il nome "esame_YYYY-MM-DD_VRXXXXX" (dove VRXXXXX è la tua matricola);
+- Rinomina l'archivio con il nome "esameRO_YYYY-MM-DD_VRXXXXX" (dove VRXXXXX è la tua matricola);
 - Carica l'archivio sulla piattaforma designata.
