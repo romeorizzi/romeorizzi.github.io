@@ -1,6 +1,6 @@
 # ESAME DI RICERCA OPERATIVA - FAQ #
 
-__Modalità__: test al computer su un foglio Jupyter (4-5 ore) + orale
+__Modalità__: test al computer su un foglio Jupyter (4-5 ore) + orale obbligatorio (a cui si accede conseguendo un voto positivo allo scritto su Jupyter)
 
 1. __Posso consultare gli appunti, le slides del tutoraggio, i codici sviluppati per risolvere gli esercizi del CMS?__
 
