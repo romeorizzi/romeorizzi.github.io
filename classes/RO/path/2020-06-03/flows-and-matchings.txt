@@ -1,0 +1,80 @@
+GRAFI
+
+Obiettivi di oggi:
+
+1. rivedere insieme sul solo piano concettuale il problema del max-flow min-cut.
+
+2. bipartite matching?
+
+G = (V,E) = (A,B; E), V = A \cap B
+
+Def: un matching è un sottoinsieme M di E tale che nessun nodo in V è incidente a più di un arco in E.
+
+Prima formulazione:
+
+max 1x
+x(delta(v)) <= 1 
+0 <= x <= 1, x integer 
+
+max \sum_{e in E} x_e
+\sum_{e in delta(v)} x_e <= 1 for every v in V 
+0 <= x_e <=1, x_e integer for every e in E 
+
+Formulazione ripulita:
+
+max 1x
+x(delta(v)) <= 1 
+x >= 0, x integer 
+
+max \sum_{e in E} x_e
+\sum_{e in delta(v)} x_e <= 1 for every v in V 
+x_e >= 0, x_e integer for every e in E 
+
+
+ora ignoro il vincolo di interezza e ottengo un problema di PL (detto il rilassamento continuo):
+
+max 1x
+x(delta(v)) <= 1 
+x >= 0, 
+
+max \sum_{e in E} x_e
+\sum_{e in delta(v)} x_e <= 1 for every v in V 
+x_e >= 0, for every e in E 
+
+Posso riferirmi al teorema delle dualità.
+
+min \sum_{v in V} y_v
+y_u + y_v >= 1  for every uv in E
+y_v >= 0, for every v in V 
+
+Nasce il concetto di minimimu node cover.
+
+Def: un node covere è un sottoinsieme X di V tale che ogni arco in E ha almeno un estremo in X.
+
+Osservazione ovvia (dualità debole): Per ogni node cover X e matching M deve valere che |M| <= |X|.
+
+Teorema di Konig [Hall, Dilworth]: si baciano.
+
+3 dimostrazioni di questo fatto:
+
+- Dimostrazione compatta basata su scarti complementari e relazione tra cert SI/NO.
+  > La trovi nel file cover.pdf
+  Nella cartella trovi anche miei altri lavori nei dintorni di questo argomento.
+
+- Dimostrazione classica basata sulla nozione di cammini aumentanti.
+  > La trovi nel file paolo_serafini.pdf
+  Per altro in tale file trovi anche molte altre considerazioni poliedrali e uno studio del caso pesato. 
+
+- Dimostrazione attraverso riduzione da max-flow min-cut theorem.
+  > La trovi nel file reduction_from_matching_to_flow.pdf
+
+
+Sai dove trovarci se:
+
+- Serve aiuto.
+
+- Vuoi fare ricerca con noi in algoritmi, o matematica discreta, o in applicazioni in bioinformatica o in controllabilità dinamica.
+
+- Vuoi condurre progetti in tecnologie per una didattica basata sui problemi.
+
+- Sei interessato a progetti e stage presso aziende come ricercatore operativo.
