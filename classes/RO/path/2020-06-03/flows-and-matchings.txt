@@ -8,7 +8,7 @@ Obiettivi proposti per oggi:
 
 Per quanto riguarda il max-flow mi avete detto che vi è chiaro dalle spiegazioni ricevutene da Alice.
 
-Passiamo quindi a 2 e poi magari 1 lo menzioneremo come modo alternativo per affrontare 2 (questo costituisce esempio di modeling ma anche di riduzione da un problema ad un altro ma anche di come avvenga nel concreto la trasmissione dei certificati da un problema ad un altro).
+Passiamo quindi a 2 e poi magari 1 lo menzioneremo come modo alternativo per affrontare 2 (questo costituisce esempio di modeling ma anche di riduzione da un problema ad un altro ma anche di come avvenga nel concreto la trasmissione dei certificati da un problema ad un altro lungo una catena di riduzioni).
 
 Per il problema del matching ci limiteremo al caso dei grafi bipartiti, accennando solo a cose che possano succedere in una coppia (matching versus cover) dopo il divorzio, ed a quanto il matching su grafi generali sia stato un problema con cui sono nate l'ottimizzazione combinatorica per come oggi intesa, e la combinatorica poliedrale.
 
