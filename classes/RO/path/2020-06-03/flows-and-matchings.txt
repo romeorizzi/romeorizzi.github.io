@@ -1,12 +1,50 @@
 GRAFI
 
-Obiettivi di oggi:
+Obiettivi proposti per oggi:
 
 1. rivedere insieme sul solo piano concettuale il problema del max-flow min-cut.
 
 2. bipartite matching?
 
+Per quanto riguarda il max-flow mi avete detto che vi è chiaro dalle spiegazioni ricevutene da Alice.
+
+Passiamo quindi a 2 e poi magari 1 lo menzioneremo come modo alternativo per affrontare 2 (questo costituisce esempio di modeling ma anche di riduzione da un problema ad un altro ma anche di come avvenga nel concreto la trasmissione dei certificati da un problema ad un altro).
+
+Per il problema del matching ci limiteremo al caso dei grafi bipartiti, accennando solo a cose che possano succedere in una coppia (matching versus cover) dopo il divorzio, ed a quanto il matching su grafi generali sia stato un problema con cui sono nate l'ottimizzazione combinatorica per come oggi intesa, e la combinatorica poliedrale.
+
+Def: un grafo bipartito è un grafo 2-colorabile. Ossia: posso colorare i suoi nodi con due colori in modo che i due estremi di ogni arco abbiano colore diverso.
+
+Dove A e B siano le due classi di colore, avremo:
+
+A \cup B = V
+
+E come notazione spesso preferiamo specificare le due classi di colore:
 G = (V,E) = (A,B; E), V = A \cap B
+
+In pratica un grafo è bipartito se i suoi nodi maschio e femmina li fece.
+Oppure, se E è un taglio del grafo (precisamente, E=delta(A)=delta(B)).
+
+Ma vediamo ora di comprendere nell'intimo il concetto. Tale conoscenza ci viene dischiusa dalla seguente:
+
+Buona caratterizzazione: un grafo è bipartito se e solo se non contiene cicli dispari.
+
+Un algoritmo per verificare se un grafo sia bipartito oppure nò
+può concentrarsi (spezzare prima il grafo) sulle singole componenti connesse.
+Vale infatti in generale che un grafo è k-colorabile se e solo se ciascuna delle sue componenti connesse è colorabile (spero vi sia ormai chiaro che questa affermazione non è una buona caratterizzazione anche se ne ha la forma. Questo perchè non entra nelle questione una volta scesi su una singola componente connessa. In effetti il problema di decidere la k-colorabilità di un grafo è NP-completo per ogni fissato k >= 3).
+
+Se il grafo G in input è connesso allora possiamo prendere in mano un suo qualsiasi albero ricoprente T (ne esiste almeno uno, è certificato di connessione).
+Si osservi che
+1. ogni albero è bipartito, ed anzi ha precisamente 2 bicolorazioni (una l'opposta dell'altra, in un certo senso la bipartizione dell'albero è unica);
+2. G è bipartito se e solo se l'unica bipartizione di T funziona anche come bipartizione di G.
+
+Della seconda affermazione una direzione non merita ulteriori considerazioni.
+L'altra trova ragione nell'unicità della bipartizione di T combinata al fatto che ogni bipartizione valida per G lo deve essere anche per T.
+Se vogliamo costruire il ciclo dispari possiamo quindi limitarci a considerare T ed un qualsiasi arco e di G\T cui non stia bene la bicolorazione imposta da T.
+Il ciclo fondamentae di e rispetto a T dovrà necessariamente essere un ciclo dispari.
+
+Consigliamo di giocare con il problema tecla reso disponibile entro il CMS a supporto del corso.
+_____
+
 
 Def: un matching è un sottoinsieme M di E tale che nessun nodo in V è incidente a più di un arco in E.
 
