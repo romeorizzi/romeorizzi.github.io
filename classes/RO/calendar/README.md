@@ -1,4 +1,4 @@
-## Calendario degli Incontri di Ricerca Operativa, Magistrale di Matematica, Verona
+## Calendario degli Incontri di Ricerca Operativa, Corso di laurea triennale in Matematica Applicata, Verona
 
 <iframe src="https://calendar.google.com/calendar/embed?src=n7rpsaovam5p15v7pnl9ft1f3g%40group.calendar.google.com&ctz=Europe%2FRome" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
