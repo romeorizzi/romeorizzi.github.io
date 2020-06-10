@@ -119,10 +119,10 @@ class Tableau:
         self.obj = array(self.obj + [0])
         
         # Setto le slack come variabili di base
-        if self.n==self.m:
+        if self.n >= self.m:
             for i in range(1,self.m+1):
                 self.basis += [self.n+i]
-        else: 
+        else: # self.n < self.m:
             for i in range(0,self.m):
                 self.basis += [(self.m-self.n)+self.n+i]
  
@@ -195,11 +195,11 @@ class Tableau:
             else:
                 print("Tale soluzione NON è né ammissibile né ottima")
                 
-c = [3,2]
-b = [4,2,1]
-A = [[2,1], [-2,1], [1,-1]]
-n = 2 # numero variabili
-m = 3 # numero vincoli
+c = [8,6,2]
+b = [4,12]
+A = [[1,0,4], [3,1,-1]]
+n = 3 # numero variabili
+m = 2 # numero vincoli
 
 t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
 # Vincoli
