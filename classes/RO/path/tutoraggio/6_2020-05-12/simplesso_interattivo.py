@@ -194,28 +194,23 @@ class Tableau:
                 print("Tale soluzione NON è ammissibile ma soddisfa le condizioni di ottimalità -> Continua con il simplesso duale")
             else:
                 print("Tale soluzione NON è né ammissibile né ottima")
-                
-c = [8,6,2]
-b = [4,12]
-A = [[1,0,4], [3,1,-1]]
-n = 3 # numero variabili
-m = 2 # numero vincoli
-
-t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
-# Vincoli
-for i in range(len(A)):
-    t.aggiungi_vincolo(A[i],b[i])
-t.crea_primo_tableau()
-t.mostra_tableau()
-nb_iter = 1
-while not t.is_optimal():
-    print('\nIterazione ' + str(nb_iter))
-    t.step_primale()
+        
+if __name__ == "__main__":
+    c = [8,6,2]
+    b = [4,12]
+    A = [[1,0,4], [3,1,-1]]
+    n = 3 # numero variabili
+    m = 2 # numero vincoli
+    
+    t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
+    # Vincoli
+    for i in range(len(A)):
+        t.aggiungi_vincolo(A[i],b[i])
+    t.crea_primo_tableau()
+    t.mostra_tableau()
+    nb_iter = 1
+    while not t.is_optimal():
+        print('\nIterazione ' + str(nb_iter))
+        t.step_primale()
     t.mostra_tableau()
     nb_iter += 1
-
-
-
-
-
-
