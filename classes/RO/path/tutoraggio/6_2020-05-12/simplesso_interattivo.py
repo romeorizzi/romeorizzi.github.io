@@ -12,12 +12,13 @@ from numpy import *
  
 class Tableau:
  
-    def __init__(self, n, m, obj, prob_type):
+    def __init__(self, n, m, obj, prob_type, term_noto_obj = 0):
         self.n = n
         self.m = m
         self.rows = []
         self.cons = []
         self.basis = []
+        self.term_noto_obj = term_noto_obj
         if prob_type == 'max':
             self.obj = [Fraction(1)] + [Fraction(x) for x in obj]
         elif prob_type == 'min':
@@ -103,8 +104,9 @@ class Tableau:
                 s += '\t' + str(self.rows[i][j])
         # Coefficienti di costo ridotto e funzione obiettivo
         s += '\nc.c.r.'
-        for i in range(1,len(self.obj)):
+        for i in range(1,len(self.obj)-1):
             s += '\t' + str(self.obj[i])
+        s += '\t' + str(self.obj[-1]-self.term_noto_obj)
         print(s)
         self.stampa_soluzione_base_corrente()
         
@@ -180,7 +182,7 @@ class Tableau:
             else:
                 s += str(sol[i]) + ')'
         print(s)
-        print('Funzione obiettivo = ' + str(-(self.obj[-1])))
+        print('Funzione obiettivo = ' + str(-(self.obj[-1])+self.term_noto_obj))
         
     def prossimo_step(self):
         self.stampa_soluzione_base_corrente()
@@ -196,13 +198,14 @@ class Tableau:
                 print("Tale soluzione NON è né ammissibile né ottima")
         
 if __name__ == "__main__":
-    c = [8,6,2]
-    b = [4,12]
-    A = [[1,0,4], [3,1,-1]]
-    n = 3 # numero variabili
+    c = [22,-10,10,-12]
+    term_noto_obj = 2 # è opzionale: se non si mette, il suo valore di default è 0
+    b = [8,-10]
+    A = [[10,-1,1,4], [10,-5,5,2]]
+    n = 4 # numero variabili
     m = 2 # numero vincoli
     
-    t = Tableau(n,m,c,'max') # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
+    t = Tableau(n,m,c,'max',term_noto_obj) # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
     # Vincoli
     for i in range(len(A)):
         t.aggiungi_vincolo(A[i],b[i])
@@ -212,5 +215,5 @@ if __name__ == "__main__":
     while not t.is_optimal():
         print('\nIterazione ' + str(nb_iter))
         t.step_primale()
-    t.mostra_tableau()
-    nb_iter += 1
+        t.mostra_tableau()
+        nb_iter += 1
