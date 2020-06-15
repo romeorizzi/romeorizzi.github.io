@@ -18,7 +18,7 @@ class Tableau:
         self.rows = []
         self.cons = []
         self.basis = []
-        self.term_noto_obj = term_noto_obj
+        self.term_noto_obj = Fraction(term_noto_obj)
         if prob_type == 'max':
             self.obj = [Fraction(1)] + [Fraction(x) for x in obj]
         elif prob_type == 'min':
