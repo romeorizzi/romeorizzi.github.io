@@ -18,11 +18,13 @@ class Tableau:
         self.rows = []
         self.cons = []
         self.basis = []
-        self.term_noto_obj = Fraction(term_noto_obj)
-        if prob_type == 'max':
+        self.prob_type = prob_type
+        if self.prob_type == 'max':
             self.obj = [Fraction(1)] + [Fraction(x) for x in obj]
-        elif prob_type == 'min':
+            self.term_noto_obj = Fraction(term_noto_obj)
+        elif self.prob_type == 'min':
             self.obj = [Fraction(1)] + [-Fraction(x) for x in obj]
+            self.term_noto_obj = Fraction(-term_noto_obj)
  
     def aggiungi_vincolo(self, expression, value):
         self.rows.append([Fraction(0)] + [Fraction(x) for x in expression])
@@ -106,7 +108,10 @@ class Tableau:
         s += '\nc.c.r.'
         for i in range(1,len(self.obj)-1):
             s += '\t' + str(self.obj[i])
-        s += '\t' + str(self.obj[-1]-self.term_noto_obj)
+        if self.prob_type == 'max':
+            s += '\t' + str(self.obj[-1]-self.term_noto_obj)
+        elif self.prob_type == 'min':
+            s += '\t' + str(self.obj[-1]+self.term_noto_obj)
         print(s)
         self.stampa_soluzione_base_corrente()
         
@@ -126,7 +131,8 @@ class Tableau:
                 self.basis += [self.n+i]
         else: # self.n < self.m:
             for i in range(0,self.m):
-                self.basis += [(self.m-self.n)+self.n+i]
+                self.basis += [self.n+i+1]
+            #print(self.basis)
  
     def _pivot(self, row, col):
         #print('row = ' + str(row))
@@ -182,7 +188,11 @@ class Tableau:
             else:
                 s += str(sol[i]) + ')'
         print(s)
-        print('Funzione obiettivo = ' + str(-(self.obj[-1])+self.term_noto_obj))
+        if self.prob_type == 'max':
+            print('Funzione obiettivo = ' + str(-(self.obj[-1])+self.term_noto_obj))
+        elif self.prob_type == 'min':
+            print('Funzione obiettivo = ' + str((self.obj[-1])+self.term_noto_obj))
+        
         
     def prossimo_step(self):
         self.stampa_soluzione_base_corrente()
@@ -198,12 +208,12 @@ class Tableau:
                 print("Tale soluzione NON è né ammissibile né ottima")
         
 if __name__ == "__main__":
-    c = [22,-10,10,-12]
-    term_noto_obj = 2 # è opzionale: se non si mette, il suo valore di default è 0
-    b = [8,-10]
-    A = [[10,-1,1,4], [10,-5,5,2]]
-    n = 4 # numero variabili
-    m = 2 # numero vincoli
+    c = [-3,5]
+    term_noto_obj = 1 # è opzionale: se non si mette, il suo valore di default è 0
+    b = [12,10,2]
+    A = [[1,1],[1,0],[0,1]]
+    n = 2 # numero variabili
+    m = 3# numero vincoli
     
     t = Tableau(n,m,c,'max',term_noto_obj) # dimensioni del problema, funzione obiettivo e tipologia di problema (sono consentiti 'max' e 'min')
     # Vincoli
@@ -217,3 +227,12 @@ if __name__ == "__main__":
         t.step_primale()
         t.mostra_tableau()
         nb_iter += 1
+
+    
+    
+    
+    
+    
+    
+    
+    
