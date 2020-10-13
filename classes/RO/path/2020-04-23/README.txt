@@ -115,8 +115,8 @@ PRESENTI INTRINSECAMENTE (quindi d'ora in poi li lasceremo impliciti)
 x,s >= 0
 
 Per persguire la compattezza, evitiamo anche, d'ora in poi, di riscivere i nomi delle variabili (li mettiamo solo come etichette di colonna e di riga)
-   | -  |   s1 ||  y
-___|____|______||____
+   | -  |   s1 |   y
+___|____|______|_____
 z  | 5  |   -1 |   1
 x  | 5/3| -1/3 | -2/3
 s2 | 5/3|  2/3 | -5/3
@@ -134,11 +134,11 @@ s1,s2 >= 0
 
 TABLEAU INIZIALE:
 
-   | - |   x ||  y
-___|___|_____||____
-z  | 0 |   3  |  3
-s1 | 5 |  -3  | -2
-s2 | 5 |  -22 | -3
+   | - |   x |  y
+___|___|_____|____
+z  | 0 |   3 |  3
+s1 | 5 |  -3 | -2
+s2 | 5 | -22 | -3
 
 COME SI FA' IL PIVOT SUL TABLEAU:
 
@@ -147,16 +147,23 @@ COME SI FA' IL PIVOT SUL TABLEAU:
 3. Tutti gli altri elementi della colonna di pivot vengono divisi per il pivot
 4. Ogni altro elemento viene aggiornato sottraendogli un termine correttivo.
 
-           |  |       
-           |a |       x
-____________|__|_____________ 
-            | p|        b
-____________|__|_____________
-            |  |
- 			|  |
-			
-ab/p  = (banane)^2/banane = banane
-forse ci siamo
+            | |
+            |a|.......x
+            | |       .
+____________|_|_______._____ 
+            |p|       b
+____________|_|_____________   <-- RIGA DI PIVOT
+            | |
+ 	    | |
+
+             ^ colonna di pivot
+
+per calcolare tale termine correttivo per la generica entry x che non sia nè sulla riga nè sulla colonna di pivot si individuano prima i termini a e b che gli corrispondono nella colonna e nella riga di pivot.
+
+Dopodichè:
+
+TERMINE CORRETTIVO = ab/p
+che dimensionalmente è un (banane)^2/banane = banane, forse ci siamo
 
 VERIFICHIAMO SPERIMENTALMENTE CHE L'ABBIAMO AZZECCATA:
 
@@ -164,8 +171,8 @@ Applichiamo queste regolette al
 
 TABLEAU INIZIALE:
            0     0 
-   | - |   x ||  y
-___|___|_____||____
+   | - |   x  |  y
+___|___|______|____
 z  | 0 |   3  |  3
 s1 | 5 |  -3  | -2
 s2 | 5 |  -2  | -3
@@ -180,8 +187,8 @@ le due domande hanno la stessa risposta.
 La riga di pivot è: s1
 Quindi facciamo pivot portando x in base ed s1 fuori base:
  
-   | -   |  s1 ||  y
-___|_____|_____||____
+   | -   |  s1  |  y
+___|_____|______|____
 z  | 5   |  -1  |  1
  x | 5/3 | -1/3 | -2/3
 s2 | 5/3 |  2/3 | -5/3

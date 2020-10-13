@@ -40,9 +40,7 @@ Sappiamo come i funzionali lineari offrano in generala la prima approssimazione,
 La programmazione lineare si pone il problema di massimizzare
 una funzione lineare
 
-$$\sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)$$
-[se sul vostro browswer non si vede il LaTex via MathJax, dentro Markdown: \sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)]
-
+sum_{i=1}^n c_i x_i = (c_1, ..., c_n) * (x_1, ..., x_n)
 
 ossia di guadagnare un punto che sia il più possibile in là nella direzione di dove ci porta il gradiente (e noi pensiamo esso sia un vento uniforme su tutto R^n).
 
@@ -56,7 +54,7 @@ Quindi:
 
 1 dimensione
 
-Raprresentiamo la diseguaglianza $x \leq 3$:
+Raprresentiamo la diseguaglianza $x <= 3$:
 ```
 #################
 ________________*___________________>
@@ -160,8 +158,8 @@ Potrei prenderne due e metterle spalla a spalla:
 <---| |--->
 
 Per rappresentare x libera, introduco una x^+ ed una x^- entrambe non-negative
-con x^+ che rappresante la parte non-negativa
-e   x^- che rappresante la parte non-positiva
+con x^+ che rappresenta la parte non-negativa
+e   x^- che rappresenta la parte non-positiva
 
 e sostituire ogni occorrenza di x come segue:
 
@@ -171,8 +169,8 @@ Esempio:
 
 max 3x +2y
 
-    x + y \leq 5
-    x -2y \leq 4
+    x + y <= 5
+    x -2y <= 4
     x >= 0, y free
 
 Lo rappresento come:
@@ -184,27 +182,6 @@ max 3x +2(y^+ -y^-) = 3x +2y^+ -2y^-
     x, y^+, y^- >= 0
 
 
-Solo per testare se il supporto a MathJax funzionerebbe per tutti, provo a riscrivere l'ultimo sistema sopra in LaTex embeddato via MathJax entro Markdown:
-
-$$
-\begin{array}{l}
-\max \; 3x +2(y^+ -y^-) = 3x +2y^+ -2y^-\\
-\left\{
- \begin{array}{l}  
-  \begin{array}{rrrcr}
-    x &+y^+ &-y^-  &\leq& 5\\
-    x &-2y^+ &-2y^- &\leq& 4
-  \end{array}
-\\
-  \begin{array}{l}
-     x, y^+, y^- \geq 0
-  \end{array}
- \end{array}
-\right.
-\end{array}
-$$
-
-In ogni caso, quale scrittura risulterebbe poi preferibile? Mah...
 __________
 
 
@@ -319,9 +296,9 @@ Come mai? Cosa è cambiato?
 
 All'inizio (per la soluzione di base = origine)
 
-|-----O x (x3 di bonus)
+|-----O x (poteva solo essere alzata, con un per 3 di bonus ad alzarla)
 
-|-----O y (x3 di bonus)
+|-----O y (poteva solo essere alzata, con un per 3 di bonus ad alzarla)
 
 Ora:
 
@@ -329,7 +306,7 @@ Ora:
   /       (può spostarsi in entrambe le direzioni)
 |/     
 
-|-----O y (x3 di bonus)
+|-----O y (può solo essere alzata)
 
 
 Quindi prima tutte le mie variabili erano a zero ed avrei potuto muoverle solo in una direzione, il che in principio mi consentiva di muoverle una alla volta e scomporre così in al più n passi il percorso che portava a casa il guadagno in termini di funzione obiettivo.
@@ -342,7 +319,7 @@ Forse non stò ancora guardando al problema dalla giusta prospettiva, con la giu
 
 _______________
 
-IL giro di boa: la soluzione viene con l'introduzione delle variabili di slack ed il salire dallo spazio ad n dimensioni a quello a m+n dimensioni.
+Il giro di boa: la soluzione viene con l'introduzione delle variabili di slack ed il salire dallo spazio ad n dimensioni a quello a m+n dimensioni.
 Tutte le variabili sono uguali (Orwell, la fattoria degli animali).
 _______________
 

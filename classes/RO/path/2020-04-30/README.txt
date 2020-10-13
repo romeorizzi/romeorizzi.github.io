@@ -25,12 +25,12 @@ PUNTO CAMPIONE (tutto non zero):
 
 TABLEAU INIZIALE:
                 0     0 
-        | - |   x ||  y
-     ___|___|_____||____
-  (5)z  | 0 |   3  |  3   interpretazione: z = 0 +3x +3y
-  (0)s1 | 5 |  -3  | -2   interpretazione: s1 = 5 -3x - 2y 
-(5/3)s2 | 5 |  -2  | -3
-              (5/3)  (0) 
+        | - |   x |  y
+     ___|___|_____|____
+  (5)z  | 0 |   3 |  3   interpretazione: z = 0 +3x +3y
+  (0)s1 | 5 |  -3 | -2   interpretazione: s1 = 5 -3x - 2y 
+(5/3)s2 | 5 |  -2 | -3
+             (5/3)  (0) 
 
 CON ALICE:
 
@@ -47,11 +47,11 @@ A questo tableau iniziale è associata la soluzione:
 
 TABLEAU DOVE ERAVAMO ARRIVATI:
  
-   | -   |  s1 ||  y
-___|_____|_____||____
-z  | 5   |  -1  |  1
- x | 5/3 | -1/3 | -2/3
-s2 | 5/3 |  2/3 | -5/3
+   | -   |  s1 |  y
+___|_____|_____|____
+z  | 5   |  -1 |  1
+ x | 5/3 | -1/3| -2/3
+s2 | 5/3 |  2/3| -5/3
 
 A questo tableau iniziale è associata la soluzione:
 (x,y,s1,s2,z) = (5/3,0,0,5/3,5)
@@ -76,8 +76,8 @@ LA PROVA DEL 9 (sul punto (x,y,s1,s2,z) = (0,0,5,5,0) ).
 
 
               (5)    (0)
-     | -   |  s1 ||  y
-   ___|_____|_____||____
+      | -   |  s1  |  y
+   ___|_____|______|____
 (0) z | 5   |  -1  |  1                    (0)= 5/3 -1/3(5) -2/3(0)
 (0) x | 5/3 | -1/3 | -2/3  interpretazione: x = 5/3 -1/3s1 -2/3y
 (5)s2 | 5/3 |  2/3 | -5/3
@@ -96,8 +96,8 @@ PURE CHE E' IDENTICO A QUELLO CHE AVEVAMO SCRITTO SOPRA.
 
 NEMO INNANZ
 
-   | -   |  s1 ||  y   
-___|_____|_____||____
+   | -   |  s1  |  y   
+___|_____|______|____
  z | 5   |  -1  |  1    interpretazione: z = 5 -s1 +y 
  x | 5/3 | -1/3 | -2/3
 s2 | 5/3 |  2/3 | -5/3 
@@ -109,8 +109,8 @@ RIGA PIVOT (primo vincolo di non-negatività a saltare): s2
 
 FACCIAMO PIVOT: (y <---> s2):
 
-   | -    |  s1 ||  s2   
-___|______|_____||____
+   | -    |  s1  |  s2   
+___|______|______|____
  z |  6   | -3/5 | -3/5     
  x |  1   | -3/5 |  2/5
  y |  1   |  2/5 | -3/5 
