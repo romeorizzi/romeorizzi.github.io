@@ -1,5 +1,0 @@
-HOMEWORK 1 - IMPROVING THE ant-model1.nlogo:
-a) plot how much a particular bug has eaten on average, maximum or minimum, then do the same for all bugs;
-b) try to visualize how many patches are left still to be eaten;
-c) implement a procedure to make the green patches re-grow, after a while (e.g., a certain number of ticks);
-d) add another feature to the bugs, making them go faster if they have just eaten, and/or go straight instead of going left or right.
