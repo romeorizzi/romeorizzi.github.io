@@ -9,3 +9,10 @@ If you have already attended an Operations Research class, you should know what 
 
 ___Worksheet1.pdf___
 Let's start reasoning about some problems inspired by real-life situations, trying to formulate, model or solve them already.
+
+
+Romeo (romeo.rizzi@univr.it)
+
+Alice (alice.raffaele@univr.it)
+
+Matteo (matteo.zavatteri@univr.it)
