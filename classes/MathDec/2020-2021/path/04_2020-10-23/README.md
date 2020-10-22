@@ -1,4 +1,4 @@
-# Mathematics for Decisions - 3rd Lecture #
+# Mathematics for Decisions - 4th Lecture #
 
 Let's start the ___modelling___ part of this course:
 
@@ -8,3 +8,5 @@ We start directly with a very famous problem of Operations Research: the Diet Pr
 Romeo (romeo.rizzi@univr.it)
 
 Alice (alice.raffaele@univr.it)
+
+Matteo (matteo.zavatteri@univr.it)
