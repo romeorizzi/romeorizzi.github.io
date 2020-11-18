@@ -22,7 +22,8 @@ Three phases:
 Status is distinguished through a field of the record itself. Typically what is used is a table of current (open) loans and a table of historical loans, and records migrate from one to the other when the load ends. The current system does not split records into 2 tables, but uses a field of the individual record to mark down the status.
 The type of loan (e.g., local, interlibrary) can be distinguished by looking at the fields (library_from, library_to, library_end).
 
-Transportation is done by a logistics company selected through public notice. Conditions of the agreement specify the acceptable delivery delays. The logistics company is responsible for path planning, not the library.
+Transportation is done by a logistics company selected through public notice. Conditions of the agreement specify the acceptable delivery delays. The logistics company is responsible for path planning, not 
+
 
 Paths that are being used now are the same used by the previous delivery company, for lack of alternative ideas. 
 
@@ -33,7 +34,7 @@ QUESTIONS:
 
 1) How is the cost of the service determined? What are the main terms defined in the current agreement with the logistics company?
 
-Details of how it works in the public admin (PA): looong, boring, partially ambiguos, often modified  document. The PA generates a sizeable percentage of national economic activity. 
+Details of how it works in the public admin (PA): long, boring, partially ambiguos, often modified  document. The PA generates a sizeable percentage of national economic activity. 
 In the contract: describe the desired output in the most accurate way possible. The what, not the how. The problem is described (input, available resources, desired output) together with the base price of the auction. Competitors bid a price for the overall solution. One also specifies conditions that may result in acceptable disruptions (force majeur). Example of desired output: average/maximum waiting time for the user to receive the item.
 There is no actual dialogue to reach an agreement between the two parts.
 
@@ -146,7 +147,7 @@ Expectation: the super-short times will certainly increase, but the super-long t
 
 Something to look at: are the long times the same before and after the switch to a centralized system?
 
-The driver stops at every stop and does not know in advance if there is anything to pick up. At times after interruptions (or near Christmans) there are more boxes than would fit in the truck. Motivation to increase frequency was not to improve speed, but to avoid not being able to pick up all the books. Now they pick up all the books (and if needed they will stop by more frequently)
+The driver stops at every stop and does not know in advance if there is anything to pick up. At times after interruptions (or near Christmas) there are more boxes than would fit in the truck. Motivation to increase frequency was not to improve speed, but to avoid not being able to pick up all the books. Now they pick up all the books (and if needed they will stop by more frequently)
 
 11) Is there a protocol? Every library has its own? Or libraries modify the official protocol?
 No protocol exists.
