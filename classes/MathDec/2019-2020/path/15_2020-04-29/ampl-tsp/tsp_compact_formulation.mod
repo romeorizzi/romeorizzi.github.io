@@ -43,7 +43,7 @@ subject to OnlyOneIncoming{j in V}: # to each vertex, only one incoming arc is s
 subject to Either{i in V, j in V: i <> j}: # the tour may contain either arc x[i,j] or x[j,i] or none of them
 	x[i,j] + x[j,i] <= 1;
 subject to MillerTuckerZemlin{i in V, j in V: i > 1 and j > 1 and i <> j}: # position constraints
-	u[i] - u[j] + n*x[i,j] - (n-2)*x[j,i] <= n-1;
+	u[i] - u[j] + n*x[i,j] + (n-2)*x[j,i] <= n-1;
 subject to InitialPosition: # the first vertex has position 1
 	u[1] = 1;
 subject to PositionsLB{i in V: i >= 2}: # LB on the positions of other vertices

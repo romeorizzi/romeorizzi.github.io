@@ -1,0 +1,46 @@
+set V := A B C D E F;
+set E := (A,B) (A,C) (A,D) (B,E) (B,F) (C,D) (C,F) (D,E) (E,F);
+
+param H1 := 
+[A,B] 0
+[A,C] 1
+[A,D] 1
+[B,E] 1
+[B,F] 1
+[C,D] 0
+[C,F] 1
+[D,E] 1
+[E,F] 0;
+
+param H2 := 
+[A,B] 1
+[A,C] 1
+[A,D] 0
+[B,E] 0
+[B,F] 1
+[C,D] 1
+[C,F] 0
+[D,E] 1
+[E,F] 1;
+
+param H3 := 
+[A,B] 1
+[A,C] 0
+[A,D] 1
+[B,E] 1
+[B,F] 0
+[C,D] 1
+[C,F] 1
+[D,E] 0
+[E,F] 1;
+
+param W := 
+[A,B] 0
+[A,C] 1
+[A,D] 1
+[B,E] 1
+[B,F] 1
+[C,D] 1
+[C,F] 0
+[D,E] 0
+[E,F] 1;
