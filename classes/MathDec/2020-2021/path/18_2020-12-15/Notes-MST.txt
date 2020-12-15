@@ -1,0 +1,123 @@
+OPTIMIZATION = SEPARATION thoerem (Grotschel, Lovasz, Schriver 1986, via the ellipsoid method)
+
+1. you can optimize in polynomial time over a polytope (=convex hull of the st of fasible solutions to an ptimization problem) for which you have a polynomial time cut-separation oracle (call-back function).
+2. if you can optimize in polynomial time over a polytope then you can separate the inequalities of that polytope in polynomial time. 
+
+
+
+We introduce one binary variable x_e for every edge e of the graph
+(in our intentions: x_e = 1 means we take that one edge, otherwise x_e = 0).
+
+Objective: minimize sum of (x_e * w_e for e in E)
+
+w_e >= 0
+
+Constraints: 
+ * for each n in Nodes : \sum_{ e edge with one ndpoint in {n} and the other in V\{n} } x_e >= 1
+ * for every subset X of V:  \sum_{ e edge with one ndpoint in X and the other in V\X } x_e >= 1
+
+Def: a forest of G is any acyclic subst of its edge set
+Def: a forest of G is called a tree of G when it is connected
+Def: a forest of G is called spanning G when it is touches all the nodes 
+
+Start with only the binary variables and the objctiv function to minimize.
+Whenevevr Gurobi calls you back with an integer solution, you look at it as an edge set,
+and 
+
+
+INPUT: an undirected graph G=(V,E) and a wighting function w:E--> N assigning a natural number to each one of its edges.
+TASK: Find a tree of G og minimum possible weight. The weight of a subset F of E is defined as \sum_{f\in F} w(f).
+
+Kruskal algorithm, Prim algorithm
+
+Lemma: if e is a maximum weight edge in a cycle C of G, then there exists a minimum spanning tree T of G not containing e.
+
+supposto X and Y are disjoint substs of V such that V = X\cup Y
+thn, the edges with one endoint in X and the other in Y are called a cut (denoted d(X,Y) )
+
+
+Lemma: if e is a minimum weight edge in a cut d(X,Y) of G, then there exists a minimum spanning tree T of G containing e.
+
+ 
+
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Dec 13 11:53:56 2017
+
+@author: alice
+"""
+
+#!/usr/bin/env python2
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Dec  7 17:04:19 2017
+
+@author: Alice Raffaele
+"""
+
+import math
+import random
+from gurobipy import *
+
+# -------------------------------------------------------------------
+# MODEL DEFINITION
+    
+# Create vertices and edges for our example
+vertices = [0,1,2,3,4,5] #vertices = ['A', 'B', 'C', 'D', 'E', 'F']
+# We do not use letters just to avoid issues with indexing and syntax errors
+edges = {
+    (0,1): 5,
+    (0,2): 5,
+    (0,3): 4,
+    (1,4): 2, #9
+    (1,5): 3,
+    (2,3): 3,
+    (2,5): 8,
+    (3,4): 4,
+    (4,5): 4}
+
+n = len(vertices)
+
+# Create the model
+m = Model()
+
+# Create the variables
+vars = {}
+for i,j in edges.keys():
+   vars[i,j] = m.addVar(obj=edges[i,j], vtype=GRB.BINARY,
+                        name='e[%d,%d]'%(i,j))
+for i,j in vars.keys():
+    vars[j,i] = vars[i,j] # Edges in both directions
+
+# To create the model data structure only once, after variables creation
+m.update()
+
+# Add the objective function
+m.setObjective(sum(vars[i,j]*edges[i,j] for (i,j) in edges.keys()),
+               GRB.MINIMIZE)
+
+# Add degree-2 constraint
+for i in vertices:
+    m.addConstr(sum(vars[i,j] for j in vertices
+                if (i,j) in edges.keys() or (j,i) in edges.keys()) == 2)
+
+def printSolution():
+    print '\n--------------------------------------------------------------\n'
+    solution = m.getAttr('x', vars)
+    selected = [(i,j) for i,j in edges.keys() if solution[i,j] > 0]
+    print 'Edges in solution: ' + str(selected)
+    print('Optimal cost: %g' % m.objVal)
+    
+# -------------------------------------------------------------------
+# MODEL OPTIMIZATION
+
+# Without SECs
+print '\n--------------------------------------------------------------\n'
+print 'Optimize model without SECs\n'
+m._vars = vars
+m.optimize()
+# Print optimal solution
+printSolution()
+
