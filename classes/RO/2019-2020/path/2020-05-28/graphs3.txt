@@ -1,0 +1,135 @@
+GRAFI
+
+Obiettivi di oggi:
+
+Kuratowski, Wagner, graph minor theorem
+2. max-flow min-cut? (difficile ci riusciamo)
+
+Per i seguenti argomenti DAGs, mst, dualità grafi planari vi aggiungerò dei video fatti di lezioni ad Algoritmi.
+
+In questa stessa cartella vedi file mst.txt che ho rubato dal percorso insieme per Algoritmi.
+
+_____
+
+Quando la teoria dei grafi si è reincontrata con la topologia
+dando nascita alla topologia algebrica (o combinatorica)
+
+[1930, teorema di Kuratowski](https://en.wikipedia.org/wiki/Planar_graph)
+
+In cartella di volta precedente (2020-05-28) trovi definizioni di grafi completi K_k e bipartiti completi K_{h,k}. Trovi inoltre delle proof che K_5 e K_{3,3}
+non sono grafi planari. Alcune delle proof sfruttano la formula di Eulero
+che invece abbiamo dimostrato oggi.
+
+Ecco quanto trascritto del percorso di oggi:
+
+Def [grafo planare]:
+un grafo è planare se e solo se ammette un planar embedding, ossi un suo disegno nel piano dove ogni punto del piano comune a due archi è estremo di entrambi gli archi.
+
+_______
+UNA NOTA: in base a questa definizione consideriamo la proprietà di planarità come una NP-property, dove il certificato è il disegno (tale soluzione potrebbe apparire nell'ultima pagina della settimana enigmistica).
+Tuttavia, i possibili disegni nel piano sono infiniti con la potenza del continuo!
+Per ovviare a questo fatto esistono delle nozioni combinatoriche di planare embedding (ad esempio, per ogni nodo v, un ordinamento ciclico dei nodi
+attorno a v tale che tutte queste n liste siano coerenti. Oppure, forse ti sarà più intuitivo e magico: dare un grafo duale. Anche se ho preferito non mettervelo in evidenza il grafo duale (inteso come che ha per suoi cicli i tagli dell'altro e viceversa) esiste solo per grafi planari ed è infatti unico solo quando il planar embedding in senso combinatorico è unico, cosa che vale non appena il grafo è 3-connesso).
+Chiaramente senza entrare in queste discretizzazioni al problema il fatto che esso sia in NP non è in tutto rigoroso,
+e tuttavia per noi umani che abbiamo il dono della scheda grafica (non sarà quella degli uccelli e purtroppo non tutti possono vantarsene, ma resta pur sempre una meraviglia portentosa della natura ed un dono che ci è stato affidato e da tenere di conto) il planar embedding appare come una forma di evidenza chiara e lo accettate volentieri come certificato di SI (io ai temi lo accetto, mi basta un bel disegno chiaro senza archi che si incrocino per darvi il vostro punto, purchè il grafo da voi rappresentato sia lo stesso grafo che nel testo del problema (con lettere riportate sui nodi perchè io non sono mago Merlino e quindi non posso risolvere per voi il Graph Isomorphism problem, che non è ancora noto essere in P, anzi si hanno serie evidenze non lo sia nonostante nel 2016 il mitico Babai sia infine riuscito ad ottenere un algoritmo O(n log n))).
+
+Giudicando bastante un bel disegno al convincere le genti ed il vostro proffete all'esame, non ho voluto entrare in queti certificati combinatorici e discreti, ma purtroppo anche più tecnici.
+Tutto questo significa che, evitati questi aspetti che in questo caso sono più noia che sostanza, non vi ho per una volta dato nessun algoritmo
+per decidere se il grafo fosse planare o meno. Ho omesso cioè di darvi la dimostrazione che Kuratowski diede del suo teorema (era algoritmica, conduce ad un algoritmo O(n^3)) e vi ho solo accennato che l'algoritmo lineare per questo problema fu infine ottenuto dal solito Tarjan non dopo diversi tentativi anche di altre celebrità.
+Quindi direte: ma allora non puoi all'esame chiederci una competenza che non ci hai mai fornito.
+Invece, eccezione nell'eccezzione, ci tengo a farlo.
+La prima ragione è che questo problema mi piace un sacco, e mi piace tenervelo in questa zona di grigio (anche se lui è ormai molto più pionierizzato ormai di quanto ve la racconto) dove prima arriva l'intuizione e solo dopo verrà che le cose si incastrano e funzionano. E' un'ottima occasione per trasmettervi questa sensazione, che è parte integrante del lavoro della ricerca, ed esprime la frontiera.
+
+Ma vi è anche un'altra ragione per cui vi voglio belli ignoranti sull'algoritmo.
+Voglio che sperimentiate un fenomeno misterioso e la forza occulta ma prepotente dei certificati, e questo problema offre a mio avviso un'occasione unica per farlo. Una volta che siete equipaggiati col vostro linguaggio per il SI (ed un bel disegno va benissimo per noi umani) e col vostro linguaggio per il NO (grazie Kura!) allora potrete scoprire, via via, di poter essere autonomi nel giungere alla verità ultima.
+Voglio che su un'istnza evochiate il vostro istinto e vi chiediate:
+secondo mè è planare oppure no?
+Credo che se lo giudicate planare non abbiate grosse difficoltà a produrre il disegno, perchè il planar embedding vi rimane come maggiormente intuitico. Passo pertanto a considere il caso in cui sareste propensi a scommettere sulla non planarità (uno nella vita ad un certo punto si deve buttare, poi potrà sempre rivedere le sue convinzioni quando gli arrivassero evidenze in senso contrario, ma se non vai a metterci il naso le evidenze non ti arriveranno mai da sole). Supponiamo quindi abbiate deciso che, ora come ora, per mè non-planare tu sei. Siete quindi chiamati a rendere ragione di una tale non-planarità. Ma, se avete deciso di affidarvi a questo vostro naso ed intuito di mago Merlinotti, perchè non usarlo fino in fondo come si deve? Cominciate a porvi la domanda di quali elementi del grafo in questione siano bastanti a determinarne la no planarità.
+Potete anche limitarvi a buttare via un arco alla volta e chiedervi: e senza questo arco diventa planare oppure no?
+Seguite il vostro istinto: se senza quell'arco il grafo vi diventa planare controllate se il suo planar embedding non possa farvi per caso cambiare idea sulla non planarità del grafo padre e sù e sù magari anche fino ad Adamo.
+Altrimenti, rinunciate a quell'arco: un certificato di non planarità del sottografo sarà giocoforza un certificato di non ottimalità del grafo tutto. 
+Voglio sfruttiate questo problema per comprendere come, in molti casi, il conoscere il linguaggio del SI ed anche il linguaggio del NO
+vi consenta di essere finalmente assertivi, ossia essere in grado di decidere.
+
+Sottolineo pertanto che mi fà grande piacere potervi proporre un problema dove ho esplicitato sia un lingaggio di SI che un linguaggio di NO perchè a quel punto potete realizzare e vivere di persona come avere al proprio fianco questi due certificati e linguaggi complementari vi metta nella condizione di poter crescere facile dentro di voi, coniugando il tutto col vostro infallibile intuito di maghi Merlino (in verità anche esso da coltivare) il potere si decidere autonomamente. Giudico molto importante e formativo viviate questa esperienza sulla vostra pelle.
+
+Ed eccoci a quella che potrebbe essere considerata come la seconda domanda per importanza (dopo P=NP?) ma la prima per fascino della matematica di frontiera:
+
+NC \cap coNP = P ?
+_______
+
+
+Def [(multi-)grafo (diretto)]: una coppia (V,E) dove V è un insieme di oggetti chiamati nodi, ed E è un (multi-)insieme di coppie non-ordinate (ordinate) di nodi.
+
+Def [sottografo]: H = (V',E') è un sottografo di G=(V,E) se
+1. V' sottoinsieme di V
+2. E' sottoinsieme di E
+3. H è un grafo.
+
+Per ottenere un sottografo di G, prenditi i nodi e gli archi di G che vuoi,
+ma assicurati essere un grafo (ossia ogni volta che prendi un arco (tra gli archi) devi prendene anche entrambi gli estremi (tra i nodi))
+
+Def [sottografo ricoprente]: H = (V',E') è un sottografo ricoprente di G=(V,E) se:
+1. H è un sottografo di G
+2. V' = V
+
+Def [sottografo indotto]: H = (V',E') è un sottografo di G=(V,E) se
+1. H è un sottografo di G
+2. per ogni {u,v} in E con u,v in V', {u,v} in E allora {u,v} in E'.
+
+Come un sottografo ma in più, ogni volta che prendi entrambi gli estremi di un arco, allora devi prendere anche l'arco.
+
+In realtà stai scegliendo solo sugli estremi e poi gli archi presi sono univocamente determinati.
+
+
+Buona Congettura:
+un grafo è planare a meno che non abbia K_{3,3} come sottografo.
+
+Def [subdivision]:
+è subdivision di un grafo un qualsiasi grafo ottenuto da lui piantando dei nodi in mezzo a degli archi e suddivendoli in cammini.
+
+Buona Congettura:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} come sottografo.
+
+Buona Congettura:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} oppure una suddivisione di K_5 come sottografo.
+
+Kaiser è vera!
+
+Buon Teorema di Kuratowski [1930]:
+un grafo è planare a meno che non contenga una subdivisione di K_{3,3} oppure una suddivisione di K_5 come sottografo.
+
+
+Wagner [1931]:
+
+Osservazione: la planarità è proprietà chiusa non solo rispetto a deletion ma anche rispetto a contraction.
+
+Def: un minore di un grafo G è un qualsiasi grafo che posso ottenere da G con delle opportune deletions e contractions.
+
+Buona Congettura: 
+un grafo è planare a meno che non posso ottenerne un K_{3,3} oppure un K_5 con una sequenza di deletions e contractions (ossia se non ha nè un K_{3,3} nè un K_5 minor).
+proof: corollario del seguente lemma ovvio.
+
+Lemma: Se G contiene una suddivisione di H allora ha H come minore.
+
+Il teorema di Wagner non è più debole del teorema di Kuratowski.
+
+Lemma: Se G contiene H come minore allora contiene una suddivisione di H (contiene H come topological minor). (Vero almeno quando il massimo grado di un nodo in H è al più 3).
+
+Congettura [Wagner 1931]:
+ogni proprietà di grafi che è chiusa rispetto a prendere minore presenta un numero finito di forbidden minors.
+
+[Graph Minor Meta-Conjecture](https://en.wikipedia.org/wiki/Robertson%E2%80%93Seymour_theorem):
+--> Theorem annunciato 1986 credo (ma preso avvio con primi paperi pubblicati nel 1983)
+dimostrazione conclusa nel 2001 (ultimi paperi necessari pubblicati nel 2004).
+
+Da questo teorema otteniamo come corollario dimostrazione esistenziale che dei problemi debbano essere in P. Questo è mlto utile per segnalare direzioni promettenti lungo cui sviluppare la ricerca.
+In fondo la Graph Minor Meta-Conjecture era stata utilizzata in questo modo ancora prima di essere dimostrata (da cui meritava l'appellativo di metacongettura).
+
+Una situazione simile l'avevamo vista col risultato ottimizzazione=separazione derivato dal metodo dell'elissoide per la PL, solo chè lì la dimostrazione era costrutiva nel senso che, chiamando il metodo dell'elissoide come oracolo, si otterrebbe un algoritmo effettivo (per quanto inutilizzabile nella pratica).
+
+
+Per la planarità mi piace darvi i linguaggi di SI (planar embedding, non discretizzato) e di NO (Kuratowski) e lasciarvi a fare i maghetti Merlinetti perchè entrare nelle rappresentazioni discrete di un planar embedding sarebbe pco siglificativo (aggiungerebbe solo una strato che probabilmente vi allontanerebbe la cosa) ed inoltre mi piace che realizzaite il potere dell'avere simultaneamente il linguaggio del SI e del NO.
+Da questo potere espressivo può prendere forza la vostra capacità di intuire e trovare da soli la verità.
+
+NP \cap coNP =? P
