@@ -1,0 +1,11 @@
+COLORS = {R, Y, B, G};
+ROWS = 4;
+COLUMNS = 5;
+
+GRID = [|Y, G, B, B, R|
+         R, B, R, Y, G|
+         G, Y, Y, R, R|
+         Y, R, G, G, Y|];
+
+AT_LEAST = [1, 0, 1, 0];
+AT_MOST  = [8, 4, 1, 0];  

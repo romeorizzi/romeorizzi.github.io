@@ -1,0 +1,161 @@
+INTERVIEW WITH MARCO GUSSAGO (Provincia di Brescia) [first part]
+AND FABIO BAZZOLI (Biblioteca di Chiari and Sistema Sudovest Bresciano) [second part]
+November 17, 2020
+14:30 -- 16:30
+
+[FIRST PART]
+
+HISTORY OF THE ILL SERVICE
+
+The system was radically reengineered in 2012. Beforehand, the system was not integrated with the OPAC catalogue. Users could not request items directly from the catalogue. The librarian was a mandatory intermediary and would attempt to borrow a specific copy of the desired resource. Now the computer system has a different logic and it is based on an opensource solution called CLAVIS (https://www.comperio.it/casostudio/casestudy-rbbc/). No more barriers between one library and the other. Data is shared. Users are not linked to a specific library, but to all the services of the library network. All users can access the resources through the same interface. 
+
+Now the user itself can trigger an ILL transaction through the OPAC catalogue (https://opac.provincia.brescia.it), without needing to go through the librarian. When the transaction is triggered, the resource is physically moved. The user's request is not on the physical copy of the resource, but the logical entity (any copy of the resource will satisfy the request). Booking also is not on a specific copy but on the type of resource; the user can only specify the library where to collect the copy.
+
+The system sends out loan-request notifications to all libraries having the desired resource. The first library that replies to the request is selected as the lender. The network spans up to 300 km. To limit the number of resources travelling very far, libraries are organized in groups and resources are requested preferentially from libraries in the same group (recently the criterion for grouping has changed from geographical proximity, to being on the same delivery line, to a grouping based on delivery frequency).
+
+Database records include: resource selected, user, borrowing library, lending library, library where the resource was returned. 
+Three phases:
+-- resource goes out of lender library
+-- resource reaches the user through the borrowing library
+-- resource is returned from the return library to the lender library. 
+
+Status is distinguished through a field of the record itself. Typically what is used is a table of current (open) loans and a table of historical loans, and records migrate from one to the other when the load ends. The current system does not split records into 2 tables, but uses a field of the individual record to mark down the status.
+The type of loan (e.g., local, interlibrary) can be distinguished by looking at the fields (library_from, library_to, library_end).
+
+Transportation is done by a logistics company selected through public notice. Conditions of the agreement specify the acceptable delivery delays. The logistics company is responsible for path planning, not 
+
+
+Paths that are being used now are the same used by the previous delivery company, for lack of alternative ideas. 
+
+- library end (where the user returns the item) --> What happens at this point?
+
+
+QUESTIONS:
+
+1) How is the cost of the service determined? What are the main terms defined in the current agreement with the logistics company?
+
+Details of how it works in the public admin (PA): long, boring, partially ambiguos, often modified  document. The PA generates a sizeable percentage of national economic activity. 
+In the contract: describe the desired output in the most accurate way possible. The what, not the how. The problem is described (input, available resources, desired output) together with the base price of the auction. Competitors bid a price for the overall solution. One also specifies conditions that may result in acceptable disruptions (force majeur). Example of desired output: average/maximum waiting time for the user to receive the item.
+There is no actual dialogue to reach an agreement between the two parts.
+
+The cost model is in the hands of the logistics company, not the library. The logistics company decides, for instance, the number of vehicles, routes, turnover of couriers.
+The contract says only what performance the company grants and at what cost. 
+The PA checks if the guarantees are met and then pays. 
+
+How can we write a contract that is advantageous for the PA and efficient from the point of view of service?
+
+Service overall comes at a fixed price. It is not necessary that the cost model is one fixed sum. Variable costs can be negotiated/specified on the next auction. Currently, cost estimates are used to calculate the base price for the auction. Approximately one ILL transaction costs 0.49 eur = overall price paid in the auction/number of transactions. The estimates are also used to partition the costs among libraries. 
+
+Each of the libraries has its own budget (it depends on a separate town government).
+
+Partitioning costs equitably across libraries: an application of collaborative game theory. At times adding a library to a consortium is not a benefit. In this sense it becomes an equilibrium problem. There is at least one (Nash Theorem). Each library would need to express its benefits in joining each of the possible coalitions (=library consortia).  
+
+2) Do we have data on how the libraries used to do deliveries?
+Libraries hand over to the courier a package (a box) containing multiple resources/books. On the basis of historical data, we can determine if we ought to switch to a different price model. 
+Is the data from the prior system also available (before 2012)? 
+
+3) What is the benefit to a library in being willing to loan their resouces?
+They are PA. They are fulfilling their mission to promote equal access through culture.
+The law that regulates libraries is Regional.
+We are not in a market setting. However, the question is a recurrent one. The law mandates participation. Some reasons have to do with efficient management in terms of fundings and other economical resources. Others regard the improvement of the service to users.
+
+Most local administrations serve <4000 inhabitants. When present, local libraries are really very small (e.g., 40-50 sq meters). With very limited book resources. Each year there are 30-50K new books printed. A small library can acquire at most 100-150 a year. But in a network it can access a large multiplier of the 100-150 new resources a year, allowing all users to get to all resources (main advantage to support the ILL).
+
+For large libraries there is benefit too. The sum of resources owned by small libraries is of the same order of magnitude as the big libraries, or even bigger.
+
+What is the benefit to a library in volunteering their own copy of a resource when other libraries could answer the same request? Are there incentives? No, not now. 
+
+Other factors: one thing is to transport a resource within the city of Brescia; another to deliver it to Lozio. The costs are VERY different. Thus, it is difficult to estimate an average cost. From the point of view of policy, it's fair that the small libraries have preferential treatment. 
+
+What is the cost for a library 
+a) of acquiring a given book and to have it there available for loan,
+b) of not providing the loaning service relatively to that book, and
+c) of asking to borrow it from other libraries
+as a function of the policy of the consortiums?
+Game theory applies. It's a complex problem. 
+
+Once there is clarity on the cost parameters to introduce, the amount of data needed to get answers from the model explodes (exponential), and so does the time of computation (double exponential). One possibility to simplify the model is treating "books" as a fluid, just one number. 
+Another possibility is to change the price model with which we interact with the external companies (here the logistics company). Question: is it beneficial to change it? 
+
+PA mandate:
+-- start from infinite weight for the priority of providing service: the user's requests must be served; 
+-- there are costs associated to loaning a book: packaging, labeling, time of the librarian in locating and delivering the books;
+-- how to apportion contributions?
+One possibility is considering economic costs that are operational in nature, as opposed to reflecting global optimizations (consortiums). We could reason at a smaller grain. 
+
+When libraries operate very similarly, one can think of switching the operational models as if they were of competence of the Region (a larger entity), merging the systems. At that point one could think of developing some further services.
+An idea is to place all resources with infrequent circulation in a deposit [centralized depot], and so free up resources (space occupancy) locally. 
+
+The starting point of the discussion was to provide a more realistic estimate of the costs than what we have now. The params of this estimate are useful. Library system administrators can use them to reason about policy and ways to intervene. Cost of logistics per resource is not as informative.
+It's boxes that are shipped, not books. 
+Ideally, our group would give them a model to predict costs from the parameters of the service.
+
+4) Prompts from Marco:
+-- Is it fair for the library to ask users to contribute economically? Which users could be asked to contribute? How much could be requested?
+-- The libraries could offer basic services to the user for free, and premiums for larger use [freemium model]. How could this factor in our approach to optimization?
+-- Why limit the interlibrary loan service? Why not expand it to the whole Lombardy?
+-- Why not use a centralized warehouse to contain all items not generally or frequently borrowed?
+
+5) What about the calendar followed by couriers?
+Couriers follow a fixed calendar, known in advance. The mechanism is very rigid. It's always the same procedure. At the moment the path is never modified, regardless of the system's loan requests. The path is fixed. Regardless of whether there are deliveries, the courier will visit all the libraries in the line.
+In fact, in-itinere sorting and deliveries have been evaluated as non convenient, even if it would be reasonable; sorting along the way is more expensive than centralized sorting (two different providers concur). It's possible that the reason is guaranteeing consistency of processing times for pickup/delivery at a library. There may be ways not to impact their model and do some along-the-way sorting, not by the driver but by the librarians packaging the books for pick up.
+
+When the books arrive at the hub for sorting, the operation needs time. Is it known whether we can "miss" the next opening for delivery? In that case we can treat the problem as if it were "offline", imagining that we know the requests that we need to serve.
+
+6) How many unnecessary stops does the courier do?
+Number of stops is important perhaps more than frequency of service. 
+The problem has many facets, but possibly they do not impact the overall cost. The core is evaluation of the past. 
+
+7) Is it logical to centralize the service in just one depot?
+Why not introduce several depots?
+Now the RBBC implements a "star model", transportation is centralized. Exchanges are privileged between libraries in the same line, rather than the same sub-area.
+
+CBT is an interesting model for overall policy, with one large automated deposit (https://www.cbt.biblioteche.provincia.tn.it/oseegenius).
+
+What could be interesting is analyzing the most frequent libraries that lend or receive items w.r.t. the time the items will be away. Libraries sending many items very far away should be restrained.
+
+8) Would it make sense to ask the user to speficy a window of interest, the time frame within which the book is desirable and outside of which it is not desired anymore? 
+Very difficult. Questionable even if the question would make sense to most users. University students, on the other hand, often have a predictable window of interest (before the exam!)
+What could be done: ask the user after the book has become available, before the book is sent out for transportation, if the user is still interested. Preliminary verification that the interest is still there. 
+"The document you have requested/booked could be available starting on __. Do you still need it?" 
+Users' reservations decay if they are not fulfilled within 240 days. Queues for bestsellers are LONG. Easily six months in some cases. 
+
+9) Are there any statistical analyses that would be useful for the library network to receive? 
+-- which libraries receive most items as a function of travel distance/time
+-- which libraries lend the most as a function of distance travelled by items
+Travel distance is expressed in terms of service frequency. A library that receives a courier 3 times a week is close to almost every library; one that sees pickup once a week is distant from every library. 
+
+Optimizing the criteria with which one chooses which library to borrow from: something we can do given
+-case 1- that we know what the frequency/pickup policy is
+-case 2- that we do not know what the frequency policy is, and we have to estimate it from the data
+
+Possibly we need an extra field in the table, correponding to when the item is set on its way ("in transit"). Actually, this date does not correspond exactly to the moment when the courier picks up the item, but when the item is ready for transportation. Similarly, the field "ready_to_loan_date" does not reflect the precise moment when the courier delivers the item to the destination library, but when the librarian has removed the item from its box and recorded the operation.
+
+[SECOND PART]
+
+Fabio Bazzoli is both the director of the library in Chiari and of the library system called Sistema Sudovest Bresciano. He is available for a similar meeting, possibly with Alessandro Cazzoletti. Alessandro coordinates services, handles troubleshooting and mistakes (very expensive) regarding the ILL service. He used to do sorting also, and so understands the task. Marco is responsible for IT systems, but he is a librarian too.
+
+10) Do you know why the errors in the ILL service occur? 
+Errors could merit a statistical analysis. The effect is always the same (i.e., longer delays). Analysis is needed to find out the reasons. Interacting with the user would be helpful too. 
+If a library has one day a week to devote to ILL, if the notifications/next step does not get done that day, it will take maybe a week before the next opportunity. Some libraries move in 1-week intervals. 
+
+Everyone was expecting a large reduction of waiting/delivery times after switching to a centralized system. This improvement did not materialize. Lots of little process errors.
+
+There are no monitoring tools.
+
+Expectation: the super-short times will certainly increase, but the super-long times will decrease. And it was not so: the super-short times increased, and the long times did not decrease. Possily determined by errors more than by normal functioning. 
+
+Something to look at: are the long times the same before and after the switch to a centralized system?
+
+The driver stops at every stop and does not know in advance if there is anything to pick up. At times after interruptions (or near Christmas) there are more boxes than would fit in the truck. Motivation to increase frequency was not to improve speed, but to avoid not being able to pick up all the books. Now they pick up all the books (and if needed they will stop by more frequently)
+
+11) Is there a protocol? Every library has its own? Or libraries modify the official protocol?
+No protocol exists.
+
+There are eight library systems, seven participate in ILL, one does not. RBBC is connected with two other networks, Bergamo and Mantova, Palazzolo sull'Oglio being a contact point for the former and Manerbio for the latter, respectively.
+It would be possible to sit down at a table, detect the different habits of the libraries, and share best-practices. But resources vary WILDLY in the libraries. 5 hours of opening times a week vs 40 hours of opening a week. Their processes are completely different. What maybe is needed is an alert system. Detecting anomalies that there is something wrong (there are systematic delays), where one can apply process engineering and correct the problem. Those librarians/managers who tried did not know how to handle the heterogeneity. Maybe analysis of the large numbers could be informative here. 
+
+
+INTERESTING LINKS:
+- Alessandra Alborghetti's blog: https://ziaclavicola.wordpress.com (Alessandra is another librarian in Chiari; she publishes these posts and tutorials in order to help other librarians dealing with Clavis and the OPAC catalogue).
+

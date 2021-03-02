@@ -1,0 +1,11 @@
+COLORS = {RED, YELLOW, BLUE, GREEN, BLACK};
+ROWS = 4;
+COLUMNS = 5;
+
+GRID = [|YELLOW, GREEN,  BLACK,  BLUE,   RED|
+         RED,    BLUE,   RED,    YELLOW, BLACK|
+         BLACK,  YELLOW, YELLOW, RED,    RED|
+         YELLOW, BLACK,  GREEN,  BLACK,  YELLOW|];
+
+AT_LEAST = [1, 0, 1, 0, 0];
+AT_MOST  = [8, 4, 1, 0, 0];  

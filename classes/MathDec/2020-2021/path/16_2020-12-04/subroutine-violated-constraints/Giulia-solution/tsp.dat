@@ -1,0 +1,36 @@
+set V := A B C D E F;
+set E := (A,B) (A,C) (A,D) (B,E) (B,F) (C,D) (C,F) (D,E) (E,F);
+param cost := 
+[A,B] 5
+[A,C] 5
+[A,D] 4
+[B,E] 2
+[B,F] 3
+[C,D] 3
+[C,F] 8
+[D,E] 4
+[E,F] 4;
+
+# nel caso constraint_1
+param c:=		
+[A,B] 0
+[A,C] 1
+[A,D] 1
+[B,E] 0
+[B,F] 0
+[C,D] 1
+[C,F] 0
+[D,E] 0
+[E,F] 0; 
+
+# nel caso constraint_2
+/* param c:=		
+[A,B] 1
+[A,C] 0
+[A,D] 0
+[B,E] 0
+[B,F] 0
+[C,D] 0
+[C,F] 1
+[D,E] 0
+[E,F] 0; */
