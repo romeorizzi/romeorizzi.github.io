@@ -2,7 +2,7 @@
 
 Welcome again!
 
-In this first folder you'll find ***two files***.
+In this first folder you'll find ***two PDF files***.
 
 ***0\_Introduction.pdf***
 
