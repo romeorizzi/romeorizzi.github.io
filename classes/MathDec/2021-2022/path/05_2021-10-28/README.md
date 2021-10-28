@@ -11,6 +11,7 @@ If you have already attended an Operations Research class, you should know what 
 
 Let's begin our worksheets series by reasoning about some problems inspired by real-life situations, trying to formulate, model, or solve them already.
 
+_Lecture notes_: https://etherpad.wikimedia.org/p/MathDecisions2021-10-28
 
 Romeo (romeo.rizzi@univr.it)
 
