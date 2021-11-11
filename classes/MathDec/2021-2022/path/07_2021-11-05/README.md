@@ -27,8 +27,9 @@ Implementation of the Diet problem (.mod and .dat files) with AMPL.
 
 **ampl-swimming** 
 
-Implementation of the Swimmint Team problem (.mod and .dat files), described in the previous **WS-1a\_Modelling\_Exercises.pdf**, with AMPL.
+Implementation of the Swimming Team problem (.mod and .dat files), described in the previous **WS-1a\_Modelling\_Exercises.pdf**, with AMPL.
 
+Lecture notes: https://etherpad.wikimedia.org/p/MathDecisions2021-11-05
 
 Romeo (romeo.rizzi@univr.it)
 
