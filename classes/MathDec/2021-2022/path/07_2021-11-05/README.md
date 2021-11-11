@@ -1,6 +1,6 @@
 # Mathematics for Decisions – 7th Lecture
 
-In this folder you'll fine ***three PDF files*** and **two folders**.
+In this folder you'll find ***three PDF files*** and **two folders**.
 
 Files:
 
