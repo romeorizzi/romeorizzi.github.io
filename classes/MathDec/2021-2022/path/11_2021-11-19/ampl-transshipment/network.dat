@@ -1,0 +1,48 @@
+set NODES := A B C D E F;
+set ARCS :=
+A B
+A C
+B C
+B D
+B E
+C E
+D E
+D F
+E F; # (i,j)
+
+param capacity :=
+A B 80
+A C 80
+B C 80
+B D 80
+B E 80
+C E 80
+D E 80
+D F 80
+E F 80;
+
+param cost :=
+A B 13
+A C 12
+B C 1
+B D 6
+B E 9
+C E 7
+D E 4
+D F 13
+E F 12;
+
+param supply :=
+A 100
+B 50
+C 0
+D 0
+E 0
+F 0;
+param demand :=
+A 0
+B 0
+C 0
+D 0
+E 30
+F 120;

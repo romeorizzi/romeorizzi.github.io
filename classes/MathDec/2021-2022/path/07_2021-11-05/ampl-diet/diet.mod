@@ -9,7 +9,7 @@ param max_portions{N}; # maximum daily number of portions of a given food
 param minimum_amount{M}; # minimum amounts of nutrients to get daily
 
 # VARIABLES
-var x{N}>=0; # number of portions of a given food
+var x{N}>=0, integer; # number of portions of a given food
 # OBJECTIVE FUNCTION
 minimize total_cost: sum{i in N} cost[i] * x[i];
 # CONSTRAINTS

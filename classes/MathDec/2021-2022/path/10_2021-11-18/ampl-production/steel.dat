@@ -1,0 +1,11 @@
+set PRODUCTS := BANDS COILS;
+param rate :=
+BANDS 200
+COILS 140;
+param profit :=
+BANDS 25
+COILS 30;
+param ub :=
+BANDS 6000
+COILS 4000;
+param nb_hours := 40;
