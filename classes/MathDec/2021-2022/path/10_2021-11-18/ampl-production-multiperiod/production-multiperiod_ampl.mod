@@ -13,5 +13,5 @@ var y{S} >= 0;
 minimize TotalCosts: sum{i in S}(COST_PROD[i] * x[i] + COST_WAREHOUSING[i] * y[i]); # minimize total costs
 # CONSTRAINTS DEFINITION
 subject to cap{i in S}: x[i] <= CAPACITY[i]; # quantity produced cannot exceed capacity, each week
-subject to warehousing{i in 2..N}: y[i] = y[i-1] + x[i] - DEMAND[i]; # warehouse update
-subject to initial_warehousing: y[1] = x[1] - DEMAND[1]; # warehousing the first week
+subject to warehousing{i in 1..N}: i >= 2 ==> y[i] = y[i-1] + x[i] - DEMAND[i] else y[1] = x[1] - DEMAND[1]; # warehouse update
+#subject to initial_warehousing: y[1] = x[1] - DEMAND[1]; # warehousing the first week
