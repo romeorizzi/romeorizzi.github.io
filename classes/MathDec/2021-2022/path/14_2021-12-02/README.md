@@ -1,8 +1,4 @@
-# Mathematics for Decisions – 13th Lecture
-
-In this folder you'll find one file:
-
-***2a\_ConstraintProgramming\_Introduction.pdf***
+# Mathematics for Decisions – 14th Lecture
 
 Introduction to another paradigm widely used to model and solve constraints problem: Constraint Programming.
 The tool we are going to use is [MiniZinc](https://www.minizinc.org/).

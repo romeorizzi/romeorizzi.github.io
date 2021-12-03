@@ -1,11 +1,8 @@
 # Mathematics for Decisions – 12th Lecture
 
-In this folder you'll find one file:
+We study the flow problems and the Ford-Fulkerson algorithm.
 
-***CompanySeminar\_Iotinga.pdf***
-
-Slides of the seminar held by Matteo Bissoli to present some open issues the companies Iotinga and SIME are currently facing, in the context of thermostats management and efficiency. 
-
+*Lecture notes*: [https://etherpad.wikimedia.org/p/MathDecisions2021-11-25](https://etherpad.wikimedia.org/p/MathDecisions2021-11-25)
 
 Romeo (romeo.rizzi@univr.it)
 
