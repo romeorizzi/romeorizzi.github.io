@@ -1,0 +1,11 @@
+Categories = {
+  Maintenance,
+  Replacements,
+  NewPurchases
+};
+
+JobsToDo = [
+  {Lab1WhiteWashing, Lab2WhiteWashing, Elevators, HallRefurbishing, Gardening},
+  {Lab1Computers, Lab2Computers, Floor1Furniture, Floor2Furniture},
+  {CarParkingExtension, CCTV, BicycleParking}
+];
