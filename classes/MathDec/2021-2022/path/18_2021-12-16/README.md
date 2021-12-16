@@ -2,7 +2,7 @@
 
 In this folder you'll find one file:
 
-***3a\_IntegerLinearProgramming\_TSP.pdf***
+***3a\_IntegerLinearProgramming-TSP-BB.pdf***
 
 Introduction to Integer Linear Programming and one of the most famous and studied problems in combinatorial optimization and theoretical computer science: the Traveling Salesman Problem.
 
