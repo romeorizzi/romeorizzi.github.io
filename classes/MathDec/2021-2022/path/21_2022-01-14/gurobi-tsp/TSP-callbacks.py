@@ -22,7 +22,7 @@ def subtourelim(model, where):
         vals = model.cbGetSolution(model._vars)
         selected = tuplelist((i,j) for i,j in model._vars.keys()
                                 if vals[i,j] > 0.5)
-        
+
         # Find the shortest cycle in the selected edge list
         tour = subtour(selected)
         if len(tour) < n:
@@ -46,7 +46,7 @@ def subtour(edges):
     selected = [[] for i in vertices]
     for x,y in edges:
         selected[x].append(y)
-        selected[y].append(x) # Edges in both directions 
+        selected[y].append(x) # Edges in both directions
     while True:
         current = visited.index(False)
         thiscycle = [current]
@@ -65,7 +65,7 @@ def subtour(edges):
 
 # -------------------------------------------------------------------
 # MODEL DEFINITION
-    
+
 # Create vertices and edges for our example
 vertices = [0,1,2,3,4,5] #vertices = ['A', 'B', 'C', 'D', 'E', 'F']
 # We do not use letters just to avoid issues with indexing and syntax errors
@@ -100,11 +100,11 @@ m.update()
 m.setObjective(sum(vars[i,j]*edges[i,j]
                 for (i,j) in edges.keys()),GRB.MINIMIZE)
 
-# Add degree-2 constraint
+# Add degree-2 constraints
 for i in vertices:
     m.addConstr(sum(vars[i,j] for j in vertices
                 if (i,j) in edges.keys() or (j,i) in edges.keys()) == 2)
-    
+
 
 def printSolution():
     print('\n--------------------------------------------------------------\n')
@@ -124,14 +124,13 @@ print('Optimize model without SECs\n')
 m._vars = vars
 m.optimize()
 # Print optimal solution
-printSolution()
 
 input()
 # With Lazy Constraints
 print('\n--------------------------------------------------------------\n')
 print('Adding Lazy Constraints\n')
 m.reset()
-m.params.LazyConstraints = 1
+m.params.LazyConstraints = 1 # m.setParam('LazyConstraints', 1)
 m.setParam('OutputFlag', 0)
 m.optimize(subtourelim)
 # Print optimal solution
