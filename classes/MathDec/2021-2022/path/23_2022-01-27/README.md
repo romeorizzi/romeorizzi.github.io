@@ -2,7 +2,7 @@
 
 In this folder you'll find one file:
 
-***Gilmore1963-LPApproachToTheCuttingStockProblem.pdf (the reference paper)***
+***GilmoreGomory1961-A_Linear_Programming_Approach_to_the_Cutting_Stock.pdf (the reference paper)***
 
 We start talking about an advanced decomposition technique used to solve large Linear Programming models: **Column Generation**. We introduce it by discussing the **Cutting Stock Problem**.
 
