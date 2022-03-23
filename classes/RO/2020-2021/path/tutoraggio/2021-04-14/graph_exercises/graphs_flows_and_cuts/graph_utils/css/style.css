@@ -1,0 +1,31 @@
+.btn-group_1{
+    margin-left: 1%;
+    align-items: flex-start;
+    justify-content: center;
+    position: contents;
+    display: contents;
+    vertical-align: middle;
+}
+
+.button {
+    margin-top: 15px;
+    text-align: center!important;
+    width: 120px;
+    color: #fff;
+    background-color: #1e6add;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: .25rem;
+    margin-left:10px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.button:hover {
+    opacity: 0.6
+}

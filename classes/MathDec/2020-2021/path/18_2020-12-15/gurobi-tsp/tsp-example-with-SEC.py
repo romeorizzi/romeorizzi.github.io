@@ -126,11 +126,13 @@ m.optimize()
 # Print optimal solution
 printSolution()
 
+input()
 # With Lazy Constraints
 print('\n--------------------------------------------------------------\n')
 print('Adding Lazy Constraints\n')
 m.reset()
 m.params.LazyConstraints = 1
+m.setParam('OutputFlag', 0)
 m.optimize(subtourelim)
 # Print optimal solution
 printSolution()

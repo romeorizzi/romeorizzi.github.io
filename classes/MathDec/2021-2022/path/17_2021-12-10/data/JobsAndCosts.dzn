@@ -1,0 +1,29 @@
+Jobs = {
+  Lab1WhiteWashing,
+  Lab2WhiteWashing,
+  Elevators,
+  HallRefurbishing,
+  Gardening,
+  Lab1Computers,
+  Lab2Computers,
+  Floor1Furniture,
+  Floor2Furniture,
+  CarParkingExtension,
+  CCTV,
+  BicycleParking
+};
+
+cost = [
+  5200, 
+  7500, 
+  3790, 
+  11740, 
+  8540, 
+  46950, 
+  65730, 
+  62540, 
+  85720, 
+  57900, 
+  22360, 
+  11350
+];
